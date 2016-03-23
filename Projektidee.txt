@@ -1,1 +1,6 @@
-Die Projektidee
+Die Projektidee: Ein 2D Game
+
+-Geschicklichkeitsspiel
+
+-Der Nutzer soll mit Hilfe der Tastatur eine Spielfigur bewegen. Ziel ist es Geldscheine zu sammeln und dabei Hindernissen
+auszuweichen.
