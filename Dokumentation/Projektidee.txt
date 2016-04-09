@@ -4,8 +4,13 @@ Die Projektidee: Ein 2D Game
 
 -Geschicklichkeitsspiel
 
--Der Nutzer soll mit Hilfe der Tastatur eine Spielfigur bewegen. Ziel ist es Geldscheine zu sammeln und dabei Hindernissen
-auszuweichen.
+-Der Nutzer erstellt ein Account (seine Daten werden in einer Datenbank gespeichert)/ Der Nutzer loggt sich ein(falls Account schon vorhanden).
+-Der Nutzer soll eine Spielfigur bewegen. Ziel ist es Geldscheine zu sammeln und dabei Hindernissen
+auszuweichen. Hindernisse nehmen mit der Zeit zu.
+-Die Bewegungen der Spielfigur: links, rechts, unten, oben.
+-Der Spieler hat 30 Lebenspunkte.
+-In einem Intervall(alle 30 Sekunden) tauchen Objekte(Herze) auf, die man sammeln kann um seine Lebenspunkte zu erhöhen.
+
 
 === Feedback Alpers, 2016-04-07 ===
 
