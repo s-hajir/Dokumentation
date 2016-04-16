@@ -7,20 +7,16 @@ Die Projektidee: Ein 2D Game
 -Der Nutzer erstellt ein Account (seine Daten werden in einer Datenbank gespeichert)/ Der Nutzer loggt sich ein(falls Account schon vorhanden).
 -Der Nutzer soll eine Spielfigur bewegen. Ziel ist es Geldscheine zu sammeln und dabei Hindernissen
 auszuweichen. Hindernisse nehmen mit der Zeit zu.
+-jede Berührung mit einem Hindernis kostet Lebenspunkte
 -Die Bewegungen der Spielfigur: links, rechts, unten, oben.
 -Der Spieler hat 30 Lebenspunkte.
 -In einem Intervall(alle 30 Sekunden) tauchen Objekte(Herze) auf, die man sammeln kann um seine Lebenspunkte zu erhöhen.
+-am Ende wird der Highscore angezeigt(sowie eine Übersicht der Highscores aller Nutzer)
 
 
 === Feedback Alpers, 2016-04-07 ===
 
-Gleich vorweg: In der Aufgabenbeschreibung war vorgegeben, dass sie diese Datei im Verzeichnis Dokumentation speichern sollten. Bitte holen Sie das noch nach.
-
 Auch wenn die Interaktionsmöglichkeiten hier recht beschränkt sind, ist das eine gute Projektidee.
-
-Bei der Umsetzung wird dieser Vorschlag aber darauf hinauslaufen, dass Sie vorrangig damit beschäftigt sind, Levels zu programmieren und das ist (im Gegensatz zu eigentlichen Leveldesign) eine sehr langweilige Aufgabe.
-
-Streichen Sie bitte die Vorgabe, dass die Bedienung mit der Tastatur erfolgen soll; wichtig ist für die Programmierung der Interaktion anfangs nicht, mit welchen Mitteln Nutzer interagieren, sondern wie viele Interaktionsmöglichkeiten es gibt. Bei Ihrem Vorschlag dürfte das hoch, runter, links, rechts sein.
 
 Sie können jetzt an dieser Projektidee weiterarbeiten, in dem Fall überlegen Sie sich bitte noch weitere Interaktionsmöglichkeiten. (Und vor allem: Denken Sie bitte daran, dass es eine Anwendung sein soll, die Sie schon immer haben wollten, keine Anwendung, die Sie schon kennen und nachprogrammieren wollen.) Alternativ dazu können Sie auch das folgende Brettspiel als Vorlage nehmen, um darauf basierend eine neue Projektbeschreibung zu erstellen: Aquaretto http://www.brettspiele-report.de/aquaretto/
 
