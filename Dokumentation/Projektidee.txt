@@ -95,5 +95,26 @@ Es ist dabei sehr wahrscheinlich, dass Sie (vielleicht auch erst später währen
 
 Viele Grüße,
 Markus Alpers
-Status API Training Shop Blog About
-© 2016 GitHub, Inc. 
+
+===================================
+=== Feedback Alpers, 2016-04-29 ===
+===================================
+
+Leider haben Sie keine neuen Interaktionsmöglichkeiten beschrieben. Mit Interaktionsmöglichkeiten ist gemeint, dass Spieler wesentlich mehr Möglichkeiten haben, um mit dem Spiel zu interagieren. Die Anzeige einer Highscoreliste oder die Festlegung, dass eine Kollision Lebenspunkte kostet sind beides leider keine Interaktionsmöglichkeiten. Mir ist klar, dass es bei Ihrer Spielidee schwierig ist, mehr Interaktionen zu integrieren, aber genau deshalb hatte ich Ihnen ja auch einen Alternativvorschlag gemacht.
+
+Bevor Sie den nächsten Aufgabenteil bearbeiten können müssen Sie sich jetzt entscheiden:
+
+Entweder Sie entwickeln für dieses Spiel mehr Interaktionsmöglichkeiten oder Sie beschreiben ein Spiel, das auf dem Alternativvorschlag basiert und mehrere Interaktionsmöglichkeiten bietet.
+
+Bitte erweitern Sie die Beschreibung so, dass das Spiel von mehreren Spielern gleichzeitig gespielt werden kann. Es soll ja eine webbasierte Anwendung werden.
+
+Wertung 2: Projektbeschreibung: gesamt: 7 / 10
+- Interaktionsmöglichkeiten: 2 (Bewegung in vier Richtungen)
+- Knappe aber klare Beschreibung: 5
+- Werbeslogans u.ä.: 0
+- Designaspekte: 0
+- Voraussetzung bekannten Wissens: 0
+
+=====================
+=== Feedback Ende ===
+=====================
