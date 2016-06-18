@@ -51,3 +51,10 @@ Wertung 2: Projektbeschreibung: gesamt: 7 / 10
 ===================================
 
 Leider haben Sie seit dem letzten Feedback keine Änderugen am Projekt durchgeführt.
+
+===================================
+=== Shahir Hajir, 2016-06-18 ===
+===================================
+
+Nach langem intensivem Überlegen bin ich zu dem Entschluss gekommen das Projekt komplett zu ändern.
+Fortan möchte ich eine Tagesplanerapplikation mit Tagebuchfunktion und sozialem Netzwerk-Aspekt entwickeln.
