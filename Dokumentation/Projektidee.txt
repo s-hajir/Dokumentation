@@ -58,3 +58,12 @@ Leider haben Sie seit dem letzten Feedback keine Änderugen am Projekt durchgef�
 
 Nach langem intensivem Überlegen bin ich zu dem Entschluss gekommen das Projekt komplett zu ändern.
 Fortan möchte ich eine Tagesplanerapplikation mit Tagebuchfunktion und sozialem Netzwerk-Aspekt entwickeln.
+
+===================================
+=== Shahir Hajir, 2016-06-20 ===
+===================================
+Persönliches Gespräch mit Herrn Alpers gehabt
+---------------------------------------------
+Gesprächsergebnis: -Ich füge die neue Projektidee an den Anfang der Datei 'Projektidee.txt'
+                   -Ich verschiebe alle Dateien des alten Projektes in das neuangelegte Verzeichnis 'altes-Projekt'
+                   -Ich fange mit der Bearbeitung des neuen Projektes an
