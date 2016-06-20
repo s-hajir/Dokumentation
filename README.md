@@ -1,5 +1,5 @@
-Projekt A SoSe16
+#Projekt: Tagesplaner mit social network Feature
 
-Idee: 2D Game. Geldscheine sammeln & Hindernissen ausweichen
-
+SoSe 2016
+Shahir Hajir
 Dozent: Markus Alpers
