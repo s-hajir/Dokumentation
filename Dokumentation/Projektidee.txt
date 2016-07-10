@@ -4,85 +4,77 @@
 Tagesplaner App mit sozialem Netzwerk Feature
 
 Account
+
 --Nutzer legt Account an
 --Profil kann ergänzt werden mit Profilbild & persönlichen Infos
-
+-----------------------------------------------------------------------------------------------------------------------------
 Plan erstellen
---über die Tagesplanerfunktion kann Nutzer für einen bestimmten Tag (oder eine 
-    Menge an Tagen) einen Plan machen
- ---Der Plan setzt sich aus einzelnen Tasks zusammen, die einzeln angelegt
-        werden müssen. Bei einer Task-Erzeugung müssen Titel, Anfangs, Endzeit, Art(z.B. Sport,Arbeit,Freizeit), Beschreibung(optiona) und Markierung(optional) angegeben werden
-         bei der Markierung werden andere Nutzer/Freunde angegeben, die an diesem
-	 Task beteiligt sein sollen(diese werden darüber informiert und können zusagen/
-  absagen). Markierte Nutzer mit Zusage und Absage werden unterschiedlich
-  gekennzeichnet 
----Nutzer kann an jedem Task Foto/Video/Audio anhängen. Entweder kann er
-      bereits vorhandene Dateien anhängen oder direkt neue Bilder/Videos mit der Kamera aufnehmen
+
+--über die Tagesplanerfunktion kann Nutzer für einen bestimmten Tag (oder eine Menge an Tagen) einen Plan machen
+
+---Der Plan setzt sich aus einzelnen Tasks zusammen, die einzeln angelegt werden müssen. Bei einer Task-Erzeugung müssen Titel, 
+    Anfangs, Endzeit, Art(z.B. Sport,Arbeit,Freizeit), Beschreibung(optional) und Markierung(optional) angegeben werden
+         ->bei der Markierung werden andere Nutzer/Freunde angegeben, die an diesem Task beteiligt sein sollen(diese werden darüber 
+           informiert und können zusagen/absagen). Markierte Nutzer mit Zusage und Absage werden unterschiedlich gekennzeichnet 
+---Nutzer kann an jedem Task Foto/Video/Audio anhängen. Entweder kann er bereits vorhandene Dateien anhängen oder direkt neue 
+   Bilder/Videos mit der Kamera aufnehmen
 -------------------------------------------------------------------------------------------------------------------------------
 Notifikation & Plan ändern
----ist der Plan erzeugt, wird der Nutzer über Notifikationen informiert, bevor
-     ein (neuer) Task beginnt
---Nutzer kann aktuelle & alte Tagespläne, sowie einzelne Tasks oder Foto/Video/Audio Dateien einsehen, kommentieren und löschen. Im aktuellen Plan kann er neue Tasks hinzufügen
----------------------------------------------------------------------------------------------------------------------------
+
+---ist der Plan erzeugt, wird der Nutzer über Notifikationen informiert, bevor ein (neuer) Task beginnt
+
+--Nutzer kann aktuelle & alte Tagespläne, sowie einzelne Tasks oder Foto/Video/Audio Dateien einsehen, kommentieren und löschen. 
+  Im aktuellen Plan kann er neue Tasks hinzufügen
+-------------------------------------------------------------------------------------------------------------------------------
 Freunde & Chat
---Nutzer kann über eine Suche nach anderen Nutzern suchen & ihnen Freundschaftsanfragen
-  senden. Anfragen können akzeptiert/abgelehnt werden
+--Nutzer kann über eine Suche nach anderen Nutzern suchen & ihnen Freundschaftsanfragen senden. Anfragen können akzeptiert/abgelehnt werden
 
 --Nutzer kann mit Freunden über einen Chat kommunizieren
----------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------
 Plan teilen
---Nutzer kann einzelne Tasks, einzelne Pläne oder eine Menge von 
-  Plänen für einzelne andere Nutzer/Freunde (oder Menge von Nutzern) 
-  freischalten 
-   andere Nutzer(mit den entsprechenden Rechten) können diese einsehen. Sie können 
-      den Plan, die Tasks und die Foto/Video/Audio Dateien (im Task) je nach freigegebenen Rechten
-      auch kommentieren oder ändern/löschen
+--Nutzer kann einzelne Tasks, einzelne Pläne oder eine Menge von Plänen für einzelne andere Nutzer/Freunde (oder Menge von Nutzern) freischalten 
+   ->andere Nutzer(mit den entsprechenden Rechten) können diese einsehen. Sie können den Plan, die Tasks und die Foto/Video/Audio 
+     Dateien (im Task) je nach freigegebenen Rechten auch kommentieren oder ändern/löschen
 
---Nutzer kann die vorher (an die anderen Nutzer) vergebenen Rechte einzeln
-  wieder wegnehmen
----------------------------------------------------------------------------------------------------------------------------
+--Nutzer kann die vorher (an die anderen Nutzer) vergebenen Rechte einzeln wieder wegnehmen
+-------------------------------------------------------------------------------------------------------------------------------
 Feed
 --es gibt ein Activity Feed, hier werde ich(als Nutzer) informiert: 
 			-falls ich in einem Task markiert wurde
-			 ich bekomme die Task(Titel, Zeit , Beschreibung, Markierung)
-                                            angezeigt und kann zusagen/absagen 
+			 
+ 			-falls ein anderer Nutzer seinen Plan oder einzelne Tasks für mich freigeschaltet hat
+			 
+			-falls ein anderer Nutzer einen Task von mir kommentiert oder gelöscht hat
 			
- -falls ein anderer Nutzer seinen Plan oder einzelne Tasks für mich 
-			  freigeschaltet hat
-			  ich kann dorthin (zum Plan/Task) wechseln
-
-			-falls ein anderer Nutzer einen Task von mir
-			 kommentiert oder gelöscht hat
-			 ich kann bekomme den Task angezeigt & kann das Löschen
-                                            rückgängig machen und Kommentar entfernen
-
--falls ein anderer Nutzer Foto/Video/Audio Dateien von mir
-			 kommentiert oder gelöscht hat
-			  ich kann bekomme den Task angezeigt & kann das Löschen
-                                            rückgängig machen und Kommentar entfernen
-
-			-falls ein anderer Nutzer neue Tasks oder Dateien in meinen Plan
-			 hinzugefügt hat
-			 ich kann bekomme das Hinzugefügte angezeigt und kann es löschen
-
-			-falls ein anderer Nutzer mir eine Freundschaftsanfrage gesendet
-		  	 hat 
-			  Anfrage wird angezeigt, ich kann akzeptieren/ablehnen
-
+			-falls ein anderer Nutzer Foto/Video/Audio Dateien von mir kommentiert oder gelöscht hat
+			
+			-falls ein anderer Nutzer neue Tasks oder Dateien in meinen Plan hinzugefügt hat
+			
+			-falls ein anderer Nutzer mir eine Freundschaftsanfrage gesendet hat 
+			 
 			-falls meine Freundschaftsanfrage akzeptiert wurde
-			 es wird angezeigt von wem sie akzeptiert wurde
---------------------------------------------------------------------------------------------------------------------------
+			 
+------------------------------------------------------------------------------------------------------------------------------
 Pläne Übersicht
 
 --über einen Kalender kann man auf die vergangenen Pläne zugreifen
 --über eine Suche kann man nach einzelnen Tasks suchen
-
-Interaktivität/Adaptivität:
-Das Programm lernt mein Verhalten/ meine Vorlieben anhand meiner eingegebenen Daten
+------------------------------------------------------------------------------------------------------------------------------
+Interaktivität/Adaptivität: Das Programm lernt mein Verhalten & meine Vorlieben anhand meiner eingegebenen Daten
 
 -Markierung bei der Taskerstellung:  oft markierte Freunde werden vorgeschlagen
+				     ->bei bestimmten Task-Arten werden Freunde, die früher oft in solchen Tasks markiert wurden als
+				       Markierung vorgeschlagen 
+				     ->auto-complete beim Tippen
 
-
+-Taskvorschläge an bestimmten Tagen: Programm merkt sich welche Art von Tasks ich an welchem Wochentagen oft mache 
+				     ->darauf basierend macht es Vorschläge welche Tasks ich in meinen Plan integrieren soll
+				    
+-Planvorschläge für bestimmte Tage: Programm merkt sich die Konstellation der Pläne, die ich an bestimmten Tagen oft mache
+				    ->darauf basierend macht es mir komplette Planvorschläge(mit fertigen Tasks), die zu diesem Wochentag
+				      passen könnten -> Vorteil für mich: ich kann den vorgegebenen Plan leicht ändern & muss selbst
+				      nicht viel machen
+-------------------------------------------------------------------------------------------------------------------------------
 
 
 
