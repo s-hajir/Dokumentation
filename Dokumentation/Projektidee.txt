@@ -53,7 +53,6 @@ Feed
 			-falls ein anderer Nutzer mir eine Freundschaftsanfrage gesendet hat 
 			 
 			-falls meine Freundschaftsanfrage akzeptiert wurde
-			 
 ------------------------------------------------------------------------------------------------------------------------------
 Pläne Übersicht
 
@@ -75,11 +74,6 @@ Interaktivität/Adaptivität: Das Programm lernt mein Verhalten & meine Vorliebe
 				      passen könnten -> Vorteil für mich: ich kann den vorgegebenen Plan leicht ändern & muss selbst
 				      nicht viel machen
 -------------------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
 
 
 
@@ -153,3 +147,5 @@ Persönliches Gespräch mit Herrn Alpers gehabt
 Gesprächsergebnis: -Ich füge die neue Projektidee an den Anfang der Datei 'Projektidee.txt'
                    -Ich verschiebe alle Dateien des alten Projektes in das neuangelegte Verzeichnis 'altes-Projekt'
                    -Ich fange mit der Bearbeitung des neuen Projektes an
+                   
+                   
