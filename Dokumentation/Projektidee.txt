@@ -155,3 +155,10 @@ Gesprächsergebnis: -Ich füge die neue Projektidee an den Anfang der Datei 'Pro
 ===================================
 
 Gut, das ist eine Basis für für ein Projekt. Dann machen Sie jetzt mit der strukt.html weiter.
+
+Wertung 2: Projektbeschreibung: gesamt: 8 / 10
+- Interaktionsmöglichkeiten: 3
+- Knappe aber klare Beschreibung: 5
+- Werbeslogans u.ä.: 0
+- Designaspekte: 0
+- Voraussetzung bekannten Wissens: 0
