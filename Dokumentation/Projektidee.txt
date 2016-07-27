@@ -151,7 +151,7 @@ Gesprächsergebnis: -Ich füge die neue Projektidee an den Anfang der Datei 'Pro
                    
 
 ===================================
-=== Feedback Alpers, 2016-06-08 ===
+=== Feedback Alpers, 2016-07-14 ===
 ===================================
 
 Gut, das ist eine Basis für für ein Projekt. Dann machen Sie jetzt mit der strukt.html weiter.

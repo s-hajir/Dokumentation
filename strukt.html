@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-
-<html>
-  <head>
-    <title> Titel </title> 
-  </head>
-  <body>
-  	
-  <!--  Um die Struktur zu konzipieren wurden folgende Annahmen gemacht: Eine einfache Gruppe enthält nur strukturelle Elemente. Eine komplexe Gruppe enthält zusätzlich noch andere Gruppen als Elemente. Ansichten enthalten nur Gruppen.
+<!--  Um die Struktur zu konzipieren wurden folgende Annahmen gemacht: Eine einfache Gruppe enthält nur strukturelle Elemente. Eine komplexe Gruppe enthält zusätzlich noch andere Gruppen als Elemente. Ansichten enthalten nur Gruppen.
 
 == strukturelle Elemente ==
   1--Werbebanner
@@ -392,3 +384,50 @@
     -->
   </body>
 </html>
+
+<!--
+===================================
+=== Feedback Alpers, 2016-07-27 ===
+===================================
+
+== I ==
+Das ist zunächst ein guter Anfang, auch wenn Sie im Detail noch einige Nachbesserungen durchführen müssen:
+
+Die strukturellen Elemente haben Sie am Anfang aufgeführt, aber leider nicht mit den Nummern in den Gruppen eingetragen. Genau das ist aber der Sinn dieser Unterteilung: Durch die Aufstellung der strukturellen Elemente am Anfang können Sie dort Duplikate herausfiltern. Wenn Sie dann bei zwei Gruppen sehen, dass die gleich oder zumindest sehr ähnlich sind, können Sie hier ebenfalls Duplikate streichen. Bei Ihnen ist das dagegen nicht möglich, da Sie in den Gruppen die verwendeten strukturellen Elemente nicht aus der o.a. Liste übernehmen, sondern sie nochmal extra angeben. Bitte überarbeiten Sie das.
+
+Bei den Ansichten führen Sie dann nicht nur die darin enthaltenen Gruppen, sondern auch die in den Gruppen enthaltenen strukturellen Elemente auf. Das ist aber überflüssig: Bis auf wenige Ausnahmen, bei denen es keinen Sinn macht, sollten strukturellen Elemente ausschließlich als Teile von Gruppen aufgeführt werden.
+
+== II ==
+
+Kommen wir jetzt zu den Details bei den strukturellen Elementen:
+
+1--Werbebanner
+Ein solches strukturelles Element gibt es nicht. Es gibt strukturelle Elemente für Bilder, Texte, Videos, Aufzählungen usw. 
+
+2--Textfeld / Nutzername
+Wenn Sie damit meinen, dass hier ein Eingabefeld für den Nutzernamen eingefügt werden soll, dann nennen Sie den bitte so. Einen Textcontainer selbst gibt es nicht, sondern lediglich eine Vielzahl an unterschiedlichen Containern, die auch für die Anzeige von Text verwendet werden können.
+
+Denken Sie bitte auch daran, dass zu jedem Eingabefeld ein Label gehört.
+
+4--Schaltfläche / Login
+Hier gibt es drei Varianten:
+a) Sie meinen tatsächlich eine Schaltfläche.
+b) Sie meinen einen Link in Form eines Bildes (was für Nutzer wie eine Schaltfläche aussieht), durch den eine Ansicht mit einem Registrierungsformular angezeigt wird.
+c) Sie meinen den Eingabecontainer, über den die Eingaben von Nutzern in einem Formular an das Programm weitergeleitet werden, das die Eingaben auswertet.
+
+7--Suche / Eingabe Suchtext. sucht in den Tasks aller Pläne dieses Users nach dem eingegebenen Textabschnitt
+Auch eine Suche ist keine Struktur, sondern eine Funktion. Prüfen Sie, welches strukturelle Element Sie hier verwenden wollen.
+
+11--Menüschaltfläche / Drücken -> klappt weitere Optionen aus:
+Ein Menü ist ein Menü und eine Schaltfläche eine Schaltfläche. Sie müssen sich hier entscheiden, welches strukturelle Element Sie nutzen wollen, nicht wie es aussehen soll. Lesen Sie ggf. im Buch/Skript nochmal nach, was es mit Menüs auf sich hat.
+
+12-- >Schaltfläche / Tagesplan-> öffnet Tagesplan-Ansicht 
+In Menüs gibt es keine Schaltflächen.
+
+Wie oben geschrieben haben Sie sich einige Gedanken über die Struktur gemacht und diese recht weit ausgearbeitet. Diese Beispiele zeigen aber, dass Sie momentan noch zu sehr aus der Sicht von NutzerInnen arbeiten. Arbeiten Sie deshalb die Elemente durch, die Sie oben notiert haben und schauen Sie jeweils, welcher Container in HTML der Struktur entspricht, die Sie haben wollen.
+
+Wichtig noch: Das hier sind lediglich einige ausgewählte Beispiele; leider müssen Sie ungefähr die Hälfte der notierten strukturellen Elemente nochmal überarbeiten.
+
+Deshalb kann ich momentan auch noch keine Wertung erstellen. Bitte verstehen Sie das aber nicht als negative Wertung; es ist keine negative Wertung, sondern hier geht es wichtige Detailarbeiten.
+
+-->
