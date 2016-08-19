@@ -1,22 +1,26 @@
 <!--  Um die Struktur zu konzipieren wurden folgende Annahmen gemacht: Eine einfache Gruppe enthält nur strukturelle Elemente. Eine komplexe Gruppe enthält zusätzlich noch andere Gruppen als Elemente. Ansichten enthalten nur Gruppen.
 
 == strukturelle Elemente ==
-  1--Werbebanner
-  2--Textfeld / Nutzername
-  3--Textfeld / Passwort mit Punkten maskiert
-  4--Schaltfläche / Login
-  5--Schaltfläche / Registrierung
+  0--Werbebanner
+  1--Label
+  2--Input text/ Nutzername
+  3--Input password/ Passwort mit Punkten maskiert
+  4--Button / Login
+  5--Link / führt zu Registrierung-Ansicht
   6--Bildbereich / Applikationsname mit Logo
-  7--Suche / Eingabe Suchtext. sucht in den Tasks aller Pläne dieses Users nach dem eingegebenen Textabschnitt
-  8--Schaltfläche / erzeugt neuen Tagesplan
-  9--Textfeld / Eingabe Titel des Planes (optional)
- 10--Schaltfläche mit Kalender / Eingabe Datum des Planes (Pflicht)
- 11--Menüschaltfläche / Drücken -> klappt weitere Optionen aus:
-   12-- >Schaltfläche / Tagesplan-> öffnet Tagesplan-Ansicht 
-   13-- >Schaltfläche / Feed-> öffnet Feed-Ansicht   
-   14-- >Schaltfläche / Chat-> öffnet Chat-Ansicht
- 15--Notifikationen / zeigt Anzahl der nicht gelesenen Nofifikationen im Feed in Kurzform an. Drücken -> klappt scrollbare Liste aus:
-	 16-- >scrollbare Liste / jeder Eintrag besteht aus einem Tupel: Profilbild des anderen Nutzers + Aktivitäts-Info(Beispiel: "[Bild] Peter hat einen Task von dir kommentiert"). Einträge sind anklickbar und öffnen die entsprechende Notifikation in Feed-Ansicht  
+  7--Input search / Eingabe Suchtext. sucht in den Tasks aller Pläne dieses Users nach dem eingegebenen Textabschnitt
+  8--Button / erzeugt neuen Tagesplan
+  9--Input text / Eingabe Titel des Planes (optional)
+ 10--Input date / Eingabe Datum des Planes (Pflicht)
+ 11--Button / Drücken -> klappt weitere Elemente aus:
+   12-- >Link / Tagesplan-> öffnet Tagesplan-Ansicht 
+   13-- >Link / Feed-> öffnet Feed-Ansicht   
+   14-- >Link / Chat-> öffnet Chat-Ansicht
+ 15--Button data-badge / zeigt Anzahl der nicht gelesenen Nofifikationen an. Drücken -> klappt scrollbare Liste aus:
+	 16-- >Unordered List / Liste von Notifikationen
+	 	17-- >li / jeder Eintrag besteht aus einem Tupel: 
+	 		18-- >img / Profilbild des Nutzers 
+	 		19-- >Link / Aktivitäts-Info des Nutzers.  (Beispiel: "[Bild] Peter hat einen Task von dir kommentiert"). Link führt zur Feed-Ansicht, dort sind alle Notifikationen detailliert dargestellt.  
  17--Schaltfläche mit Profilbild des eingeloggten Nutzers / Drücken -> öffnet Einstellungen-Ansicht
   
  18--Liste von Freunden / mit Suchfunktion & autocomplete (Auswahl eines oder mehrerer Freunde möglich)
@@ -71,8 +75,8 @@
 == einfache Gruppen ==
 
 (I)Login/Registrierung
-  --Textfeld / Nutzername
-  --Textfeld / Passwort mit Punkten maskiert
+  2
+  3
   --Schaltfläche / Login
   --Schaltfläche / Registrierung
 
