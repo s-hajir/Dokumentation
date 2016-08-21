@@ -1,13 +1,18 @@
 <!--  Um die Struktur zu konzipieren wurden folgende Annahmen gemacht: Eine einfache Gruppe enthält nur strukturelle Elemente. Eine komplexe Gruppe enthält zusätzlich noch andere Gruppen als Elemente. Ansichten enthalten nur Gruppen.
 
 == strukturelle Elemente (mit Duplikaten)==
-  1--img mit link / Werbebanner 
+  0--aside / Werbung
+  	1-- >img mit link / Werbebanner 
   2--input text/ Nutzername
   3--input password/ Passwort mit Punkten maskiert
   4--button / Login
   5--link / führt zu Registrierung-Ansicht
   6--label / Applikationsname
   6--img / Logo
+  7--header / Kopfteil der Seite
+  7--main / Hauptteil der Seite 
+  7--footer / Fußteil der Seite
+  7--nav / Navigationsleiste
   7--input search / Eingabe Suchtext. sucht in den Tasks aller Pläne dieses Users nach dem eingegebenen Textabschnitt
   8--button / erzeugt neuen Tagesplan
   9--Input text / Eingabe Titel des Planes (optional)
@@ -24,35 +29,36 @@
  17--img mit link / Drücken -> klappt weitere Elemente aus:
  	18-- >li-Element mit link / öffnet Profil-Einstellung
  	19-- >li-Element mit link / loggt aus
-  
- 18--input search/ Suche & Auswahl eines Freundes (autocomplete)
+ 18--input search/ Suche eines Freundes (autocomplete)
  19--label und img(in einem div) / Anzeige des Ergebnisses: Name und Profilbild des gesuchten Nutzers
  20--button / bestätigen & freischalten
  21--button / bestätigen & markieren
  22--button / bestätigen & Anfrage senden
 
- 23--input file / öffnet Fenster zum auswählen einer Bilddatei -> zum Profilbild ändern
+ 23--input file / öffnet Fenster zum auswählen einer Bilddatei -> Profilbild ändern
  24--input text / alter Nutzername
  25--input text/ neuer Nutzername
  26--input password / altes Passwort
  27--input password / neues Passwort
  28--button / Submit
- 29--div / Feed beinhaltet Notifikationen(detailliert). Jede Notifikation im Feed besteht aus einem Quadrupel.
+ 29--section / Feed beinhaltet Notifikationen(detailliert). Jede Notifikation im Feed besteht aus einem Quadrupel.
     	30-- >div / Notifikation:
    		30-- >img / Profilbild des Nutzers
    		31-- >label / Aktivitäts-Info 
    		32-- >link / Name des betroffenen Tasks (oder Planes) mit Verweis-Link
    		33-- >label / Datum des Ereignisses
- 33--img / zeigt den Chatpartner an
- 34--div / beinhaltet den Chatverlauf an:
- 	35-- >unordered list / beinhaltet einzelne Nachrichten
- 		36-- >li-Element mit label / eine Nachricht
- 35--input text / Chat Texteingabe
- 36--Tabelle mit 3 Spalten / Anzeige der gesuchten Tasks. Anzahl der Treffer bestimmt Anzahl der Zeilen. Jedes Feld bekommt einen Task. Die Tasks sind nach Datum ihres zugehörigen Eltern-Planes sortiert
- 37--link / Drücken -> führt zum Ort, wo der Task sich befindet
- 38--radio-button mit label / Toggel zwischen Anzeige der Suchergebnisse in Form von: betroffenen Tasks oder betroffenen Tagesplänen
+ 32--section / Chat
+ 	33-- >img / zeigt den Chatpartner an
+ 	34-- >div / beinhaltet den Chatverlauf:
+ 		35-- >unordered list / beinhaltet einzelne Nachrichten
+ 			36-- >li-Element mit label / eine Nachricht
+ 	35--input text / Chat Texteingabe
+ 36 section / Task-und Plan-Suchergebnis
+ 	36-- >Tabelle mit 3 Spalten / Anzeige der gesuchten Tasks. Anzahl der Treffer bestimmt Anzahl der Zeilen. Jedes Feld bekommt einen Task. Die Tasks sind nach Datum ihres zugehörigen Eltern-Planes sortiert
+ 		37-- >link / Drücken -> führt zum Ort, wo der Task sich befindet
+ 	38--radio-button mit label / Toggel zwischen Anzeige der Suchergebnisse in Form von: betroffenen Tasks oder betroffenen Tagesplänen
 
- 38--großer Kalender / zeigt alle Tage im Monat tabellenförmig an. jeder Tag ist ein Feld. Tage mit Tagesplänen sind markiert. alle Felder sind anklickbar
+ 38--großer Kalender als Tabelle / zeigt alle Tage im Monat tabellenförmig an. jeder Tag ist ein Feld. Tage mit Tagesplänen sind markiert. alle Felder sind anklickbar
  39--2 buttons / mit 'Vor' und 'Zurück'. Monatsweise geht es im Kalender vor und zurück
  40--canvas /Graph zeigt die Häufigkeit der Nutzung der App an
  41--input text / Eingabe Titel des Tasks
