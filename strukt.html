@@ -2,120 +2,155 @@
 
 == strukturelle Elemente (mit Duplikaten)==
   0--aside / Werbung
-  	1-- >img mit link / Werbebanner 
+  	1-- >img mit hyperlink / Werbebanner 
   2--input text/ Nutzername
   3--input password/ Passwort mit Punkten maskiert
   4--button / Login
-  5--link / führt zu Registrierung-Ansicht
+  5--hyperlink / führt zu Registrierung-Ansicht
   6--label / Applikationsname
-  6--img / Logo
-  7--header / Kopfteil der Seite
-  7--main / Hauptteil der Seite 
-  7--footer / Fußteil der Seite
-  7--nav / Navigationsleiste
-  7--input search / Eingabe Suchtext. sucht in den Tasks aller Pläne dieses Users nach dem eingegebenen Textabschnitt
-  8--button / erzeugt neuen Tagesplan
-  9--Input text / Eingabe Titel des Planes (optional)
- 10--Input date / Eingabe Datum des Planes (Pflicht)
- 11--button / Drücken -> klappt weitere Elemente aus:
-   12-- >link / Tagesplan-> öffnet Tagesplan-Ansicht 
-   13-- >link / Feed-> öffnet Feed-Ansicht   
-   14-- >link / Chat-> öffnet Chat-Ansicht
- 15--link mit badge / badge zeigt Anzahl der nicht gelesenen Nofifikationen an. Drücken -> klappt scrollbare Liste aus:
-	 16-- >unordered list / Liste von Notifikationen(nicht-detailliert)
-	 	17-- >li-Element / jeder Eintrag besteht aus einem Tupel: 
-	 		18-- >img / Profilbild des Nutzers 
-	 		19-- >link / Aktivitäts-Info des Nutzers.  (Beispiel: "[Bild] Peter hat einen Task von dir kommentiert"). Link führt zur Feed-Ansicht, dort sind alle Notifikationen detailliert dargestellt.  
- 17--img mit link / Drücken -> klappt weitere Elemente aus:
- 	18-- >li-Element mit link / öffnet Profil-Einstellung
- 	19-- >li-Element mit link / loggt aus
- 18--input search/ Suche eines Freundes (autocomplete)
- 19--label und img(in einem div) / Anzeige des Ergebnisses: Name und Profilbild des gesuchten Nutzers
- 20--button / bestätigen & freischalten
- 21--button / bestätigen & markieren
- 22--button / bestätigen & Anfrage senden
+  7--img / Logo
+  8--header / Kopfteil der Seite
+  9--main / Hauptteil der Seite 
+  10--footer / Fußteil der Seite
+  11--nav / Navigationsleiste
+  12--form / Suche
+  	13-- >input search / Eingabe Suchtext. sucht in den Tasks aller Pläne dieses Users nach dem eingegebenen Textabschnitt
+  	14-- >input submit
+  15--button / erzeugt neuen Tagesplan
+  16--Input text / Eingabe Titel des Planes (optional)
+ 17--Input date / Eingabe Datum des Planes (Pflicht)
+ 18--button / Drücken -> klappt weitere Elemente aus:
+   19-- >hyperlink / Tagesplan-> öffnet Tagesplan-Ansicht 
+   20-- >hyperlink / Feed-> öffnet Feed-Ansicht   
+   21-- >hyperlink / Chat-> öffnet Chat-Ansicht
+ 22--hyperlink mit badge / badge zeigt Anzahl der nicht gelesenen Nofifikationen an. Drücken -> klappt scrollbare Liste aus:
+	 23-- >unordered list / Liste von Notifikationen(nicht-detailliert)
+	 	24-- >li-Element / jeder Eintrag besteht aus einem Tupel: 
+	 		25-- >img / Profilbild des Nutzers 
+	 		26-- >hyperlink / Aktivitäts-Info des Nutzers.  (Beispiel: "[Bild] Peter hat einen Task von dir kommentiert"). Link führt zur Feed-Ansicht, dort sind alle Notifikationen detailliert dargestellt.  
+ 27--img mit hyperlink / Drücken -> klappt weitere Elemente aus:
+ 	28-- >li-Element mit hyperlink / öffnet Profil-Einstellung
+ 	29-- >li-Element mit hyperlink / loggt aus
+ 30--input search/ Suche eines Freundes (autocomplete)
+ 31--label und img(in einem div) / Anzeige des Ergebnisses: Name und Profilbild des gesuchten Nutzers
+ 32--button / bestätigen & freischalten
+ 33--button / bestätigen & markieren
+ 34--button / bestätigen & Anfrage senden
 
- 23--input file / öffnet Fenster zum auswählen einer Bilddatei -> Profilbild ändern
- 24--input text / alter Nutzername
- 25--input text/ neuer Nutzername
- 26--input password / altes Passwort
- 27--input password / neues Passwort
- 28--button / Submit
- 29--section / Feed beinhaltet Notifikationen(detailliert). Jede Notifikation im Feed besteht aus einem Quadrupel.
-    	30-- >div / Notifikation:
-   		30-- >img / Profilbild des Nutzers
-   		31-- >label / Aktivitäts-Info 
-   		32-- >link / Name des betroffenen Tasks (oder Planes) mit Verweis-Link
-   		33-- >label / Datum des Ereignisses
- 32--section / Chat
- 	33-- >img / zeigt den Chatpartner an
- 	34-- >div / beinhaltet den Chatverlauf:
- 		35-- >unordered list / beinhaltet einzelne Nachrichten
- 			36-- >li-Element mit label / eine Nachricht
- 	35--input text / Chat Texteingabe
- 36 section / Task-und Plan-Suchergebnis
- 	36-- >Tabelle mit 3 Spalten / Anzeige der gesuchten Tasks. Anzahl der Treffer bestimmt Anzahl der Zeilen. Jedes Feld bekommt einen Task. Die Tasks sind nach Datum ihres zugehörigen Eltern-Planes sortiert
- 		37-- >link / Drücken -> führt zum Ort, wo der Task sich befindet
- 	38--radio-button mit label / Toggel zwischen Anzeige der Suchergebnisse in Form von: betroffenen Tasks oder betroffenen Tagesplänen
+ 35--input file / öffnet Fenster zum auswählen einer Bilddatei -> Profilbild ändern
+ 36--input text / alter Nutzername
+ 37--input text/ neuer Nutzername
+ 38--input password / altes Passwort
+ 39--input password / neues Passwort
+ 40--button / Submit
+ 41--section / Feed beinhaltet Notifikationen(detailliert). Jede Notifikation im Feed besteht aus einem Quadrupel.
+    	42-- >div / Notifikation:
+   		43-- >img / Profilbild des Nutzers
+   		44-- >label / Aktivitäts-Info 
+   		45-- >hyperlink / Name des betroffenen Tasks (oder Planes) mit Verweis darauf
+   		46-- >label / Datum des Ereignisses
+ 47--section / Chat
+ 	48-- >img / zeigt den Chatpartner an
+ 	49-- >div / beinhaltet den Chatverlauf:
+ 		50-- >unordered list / beinhaltet einzelne Nachrichten
+ 			51-- >li-Element mit label / eine Nachricht
+ 	52--input text / Chat Texteingabe
+ 53 section / Task-und Plan-Suchergebnis
+ 	54-- >Tabelle mit 3 Spalten / Anzeige der gesuchten Tasks. Anzahl der Treffer bestimmt Anzahl der Zeilen. Jedes Feld bekommt einen Task. Die Tasks sind nach Datum ihres zugehörigen Eltern-Planes sortiert
+ 		55-- >hyperlink / Drücken -> führt zum Ort, wo der Task sich befindet
+ 	56--input radio / Toggel zwischen Anzeige der Suchergebnisse in Form von: betroffenen Tasks oder betroffenen Tagesplänen
 
- 38--großer Kalender als Tabelle / zeigt alle Tage im Monat tabellenförmig an. jeder Tag ist ein Feld. Tage mit Tagesplänen sind markiert. alle Felder sind anklickbar
- 39--2 buttons / mit 'Vor' und 'Zurück'. Monatsweise geht es im Kalender vor und zurück
- 40--canvas /Graph zeigt die Häufigkeit der Nutzung der App an
- 41--input text / Eingabe Titel des Tasks
- 42--input time / Auswahl Anfangs-und Endzeit
- 43--input text / Eingabe Beschreibung (optional)
- 44--button / Auswahl der Art z.B. Sport,Arbeit,Freizeit ->klappt eine scrollbare Liste aus:
-	  45-- >scrollbare Liste / jeder Eintrag besteht aus einem anklickbarem Tupel: Icon + Bezeichnung
- 46--input text / Titel des Tasks
- 47--input text / Anfangs-und Endzeit des Tasks
- 48--input text / Beschreibung des Tasks
- 49--input text / Art des Tasks: z.B. Sport,Arbeit,Freizeit
- 50--input search / Markierungen der Freunde
- 51--button ->klappt Optionen aus:
-   52-- >input file / Bild/Video/Audio -> hinzufügen
-   53-- >button 'Ändern' -> triggert Task-Input-Dialog:
- 54--Diashow / der angefügten Bilder/Videos
- 55--Schaltfläche / Kommentarbereich für diesen Task wird geöffnet:
-   56-- >Textfeld / Name und Kommentar aller Nutzer wird angezeigt
-   57-- >Textfeld / hier kann der aktuell eingeloggte Nutzer kommentieren
- 58--Schaltfläche mit Kalender / Datum kann ausgewählt werden -> der Plan mit diesem Datum wird angezeigt, falls er existiert
- 59--Bearbeiten des aktuell angezeigten Plans -> klappt Optionen auf:
-   60-- >Schalfläche mit Kalender / Datum des Planes ändern
-   61-- >Schaltfäche / Löschen des Planes
- 62--Schaltfläche / neuer Task 
- 63--Liste von Tasks (Tabelle mit 1 Spalte) / Anzeige aller Tasks in diesem Plan. 1 Task pro Feld
+ 57--großer Kalender / zeigt alle Tage im Monat tabellenförmig an. jeder Tag ist ein Feld. Tage mit Tagesplänen sind markiert. alle Felder sind anklickbar
+ 58--2 buttons / mit 'Vor' und 'Zurück'. Monatsweise geht es im Kalender vor und zurück
+ 59--canvas /Graph zeigt die Häufigkeit der Nutzung der App an
+ 60--input text / Eingabe Titel des Tasks
+ 60--input time / Auswahl Anfangs-und Endzeit
+ 61--input text / Eingabe Beschreibung (optional)
+ 62--button / Auswahl der Art z.B. Sport,Arbeit,Freizeit ->klappt eine scrollbare Liste aus:
+ 	  63-- >unordered List / Liste
+ 	  	64 -- >li-Element mit img und hyperlink / jeder Eintrag besteht aus einem anklickbarem Tupel: Icon + Bezeichnung
+ 65--input text / Titel des Tasks
+ 66--input text / Anfangs-und Endzeit des Tasks
+ 67--input text / Beschreibung des Tasks
+ 68--input text / Art des Tasks: z.B. Sport,Arbeit,Freizeit
+ 69--input search / Markierungen der Freunde
+ 70--button ->klappt Optionen aus:
+   71-- >input file / Bild/Video/Audio -> hinzufügen
+   72-- >button / triggert Task-Input-Dialog:
+ 73--figure /Slideshow der angefügten Bilder/Videos
+ 	74-- >img / Bild
+ 	75-- >video /Video
+ 	76-- >button / löschen des Bilde/Videos
+ 	77-- >2 buttons / mit 'Vor' und 'Zurück'
+ 78--button / Kommentarbereich für diesen Task wird geöffnet:
+ 	79-- >unordered list / Kommentare
+   		80-- >li-Element mit label / Name und Kommentar eines Nutzers wird angezeigt(davon kann es viele geben)
+   		81-- >li-Element mit input text / hier kann der aktuell eingeloggte Nutzer kommentieren
+ 82--input date / Datum kann ausgewählt werden -> der Plan mit diesem Datum wird angezeigt, falls er existiert
+ 83--button / Bearbeiten des aktuell angezeigten Plans, klappt Optionen auf:
+   84-- >input date / Datum des Planes ändern
+   85-- >buton / Löschen des Planes
+ 86--button / neuer Task 
+ 87--Tabelle mit 1 Spalte / Anzeige aller Tasks in diesem Plan. 1 Task pro Feld
  -------------------------------------------------------------------------------------------------------------------------------------
+== strukturelle Elemente (ohne Duplikate)==
+1 aside
+2 input text
+3 input password
+4 button
+5 hyperlink (a-Element)
+6 label
+7 img
+8 header
+9 main
+10 footer
+11 nav
+12 input search
+13 input date
+14 hyperlink mit badge
+15 unordered list
+16 li-Element
+17 div
+18 input file
+19 section
+20 table
+21 input radio
+22 canvas
+23 input time
+24 figure
+25 video
+26 input submit
+27 form
+28 span
+--------------------------------------------------------------------------------------------------------------------------------------
 == einfache Gruppen ==
 
 (I)Login/Registrierung
+  19
+  1
   2
-  3
-  --Schaltfläche / Login
-  --Schaltfläche / Registrierung
+  4
+  5
 
 (II)Navigationsleiste
-  --Bildbereich / Applikationsname mit Logo
-  --Suche / Eingabe Suchtext. sucht in den Tasks aller Pläne dieses Users nach dem eingegebenen Textabschnitt
-  --Schaltfläche / erzeugt neuen Tagesplan:
-    -- >Textfeld / Eingabe Titel des Planes (optional)
-    -- >Schaltfläche mit Kalender / Eingabe Datum des Planes (Pflicht)
-  --Menüschaltfläche / Drücken -> klappt weitere Optionen aus:
-    -- >Schaltfläche / Tagesplan-> öffnet Tagesplan-Ansicht 
-    -- >Schaltfläche / Feed-> öffnet Feed-Ansicht   
-    -- >Schaltfläche / Chat-> öffnet Chat-Ansicht
-  --Notifikationen / zeigt Anzahl der nicht gelesenen Nofifikationen im Feed in Kurzform an. Drücken -> klappt scrollbare Liste aus:
-    -- >scrollbare Liste / jeder Eintrag besteht aus einem Tupel: Profilbild des anderen Nutzers + Aktivitäts-Info(Beispiel: "[Bild] Peter hat einen Task von dir kommentiert"). Einträge sind anklickbar und öffnen die entsprechende Notifikation in Feed-Ansicht  
-  --Schaltfläche mit Profilbild des eingeloggten Nutzers / Drücken -> öffnet Einstellungen-Ansicht
+  8
+  11
+  17
+  27
+  2
+  26
+  15
+  16
+  4
+  5
 
-(III)Freischalten für Freunde
-  --Liste von Freunden / mit Suchfunktion & autocomplete (Auswahl eines oder mehrerer Freunde möglich)
-  --Textfeld mit Bildbereich / Anzeige des Ergebnisses: Name und Profilbild des gesuchten Nutzers
-  --Schltfläche / bestätigen & freischalten
-
-(IV)Markierung von Freunden
-  --Liste von Freunden / mit Suchfunktion & autocomplete (Auswahl eines oder mehrerer Freunde möglich)
-  --Textfeld mit Bildbereich / Anzeige des Ergebnisses: Name und Profilbild des gesuchten Nutzers
-  --Schltfläche / bestätigen & markieren
+(III)Freischalten für Freunde/ Markieren von Freunden
+  19
+  12
+  17
+  6
+  7
+  4
 
 (V)Freundschaftsanfrage
   --Liste aller öffentlichen Nutzer / mit Suchfunktion & autocomplete
@@ -209,19 +244,7 @@
 --- view_index ---
 ------------------
 (II)Navigationsleiste
-  --Bildbereich / Applikationsname mit Logo
-  --Suche / Eingabe Suchtext. sucht in den Tasks aller Pläne dieses Users nach dem eingegebenen Textabschnitt
-  --Schaltfläche / erzeugt neuen Tagesplan:
-    -- >Textfeld / Eingabe Titel des Planes (optional)
-    -- >Schaltfläche mit Kalender / Eingabe Datum des Planes (Pflicht)
-  --Menüschaltfläche / Drücken -> klappt weitere Optionen aus:
-    -- >Schaltfläche / Tagesplan-> öffnet Tagesplan-Ansicht 
-    -- >Schaltfläche / Feed-> öffnet Feed-Ansicht   
-    -- >Schaltfläche / Chat-> öffnet Chat-Ansicht
-  --Notifikationen / zeigt Anzahl der nicht gelesenen Nofifikationen im Feed in Kurzform an. Drücken -> klappt scrollbare Liste aus:
-    -- >scrollbare Liste / jeder Eintrag besteht aus einem Tupel: Profilbild des anderen Nutzers + Aktivitäts-Info(Beispiel: "[Bild] Peter hat einen Task von dir kommentiert"). Einträge sind anklickbar und öffnen die entsprechende Notifikation in Feed-Ansicht  
-  --Schaltfläche mit Profilbild des eingeloggten Nutzers / Drücken -> öffnet Einstellungen-Ansicht
-    
+
 (I)Login/Registrierung
   --Textfeld / Nutzername
   --Textfeld / Passwort mit Punkten maskiert
@@ -232,18 +255,7 @@
 --- view_task-Suchergebnis ---
 ------------------------------
 (II)Navigationsleiste
-  --Bildbereich / Applikationsname mit Logo
-  --Suche / Eingabe Suchtext. sucht in den Tasks aller Pläne dieses Users nach dem eingegebenen Textabschnitt
-  --Schaltfläche / erzeugt neuen Tagesplan:
-    -- >Textfeld / Eingabe Titel des Planes (optional)
-    -- >Schaltfläche mit Kalender / Eingabe Datum des Planes (Pflicht)
-  --Menüschaltfläche / Drücken -> klappt weitere Optionen aus:
-    -- >Schaltfläche / Tagesplan-> öffnet Tagesplan-Ansicht 
-    -- >Schaltfläche / Feed-> öffnet Feed-Ansicht   
-    -- >Schaltfläche / Chat-> öffnet Chat-Ansicht
-  --Notifikationen / zeigt Anzahl der nicht gelesenen Nofifikationen im Feed in Kurzform an. Drücken -> klappt scrollbare Liste aus:
-    -- >scrollbare Liste / jeder Eintrag besteht aus einem Tupel: Profilbild des anderen Nutzers + Aktivitäts-Info(Beispiel: "[Bild] Peter hat einen Task von dir kommentiert"). Einträge sind anklickbar und öffnen die entsprechende Notifikation in Feed-Ansicht  
-  --Schaltfläche mit Profilbild des eingeloggten Nutzers / Drücken -> öffnet Einstellungen-Ansicht
+
     
  (IX)Task-Suchergebnis
   --Tabelle mit 3 Spalten / Anzeige der gesuchten Tasks. Anzahl der Treffer bestimmt Anzahl der Zeilen. Jedes Feld bekommt einen Task. Die Tasks sind nach Datum ihres zugehörigen Eltern-Planes sortiert
@@ -253,18 +265,7 @@
 --- view_tagesplan ---
 ----------------------
 (II)Navigationsleiste
-  --Bildbereich / Applikationsname mit Logo
-  --Suche / Eingabe Suchtext. sucht in den Tasks aller Pläne dieses Users nach dem eingegebenen Textabschnitt
-  --Schaltfläche / erzeugt neuen Tagesplan:
-    -- >Textfeld / Eingabe Titel des Planes (optional)
-    -- >Schaltfläche mit Kalender / Eingabe Datum des Planes (Pflicht)
-  --Menüschaltfläche / Drücken -> klappt weitere Optionen aus:
-    -- >Schaltfläche / Tagesplan-> öffnet Tagesplan-Ansicht 
-    -- >Schaltfläche / Feed-> öffnet Feed-Ansicht   
-    -- >Schaltfläche / Chat-> öffnet Chat-Ansicht
-  --Notifikationen / zeigt Anzahl der nicht gelesenen Nofifikationen im Feed in Kurzform an. Drücken -> klappt scrollbare Liste aus:
-    -- >scrollbare Liste / jeder Eintrag besteht aus einem Tupel: Profilbild des anderen Nutzers + Aktivitäts-Info(Beispiel: "[Bild] Peter hat einen Task von dir kommentiert"). Einträge sind anklickbar und öffnen die entsprechende Notifikation in Feed-Ansicht  
-  --Schaltfläche mit Profilbild des eingeloggten Nutzers / Drücken -> öffnet Einstellungen-Ansicht
+
  
 (XIII)Tagesplan
   --Schaltfläche mit Kalender / Datum kann ausgewählt werden -> der Plan mit diesem Datum wird angezeigt, falls er existiert
@@ -319,18 +320,7 @@
 --- view_feed ---
 -----------------
 (II)Navigationsleiste
-  --Bildbereich / Applikationsname mit Logo
-  --Suche / Eingabe Suchtext. sucht in den Tasks aller Pläne dieses Users nach dem eingegebenen Textabschnitt
-  --Schaltfläche / erzeugt neuen Tagesplan:
-    -- >Textfeld / Eingabe Titel des Planes (optional)
-    -- >Schaltfläche mit Kalender / Eingabe Datum des Planes (Pflicht)
-  --Menüschaltfläche / Drücken -> klappt weitere Optionen aus:
-    -- >Schaltfläche / Tagesplan-> öffnet Tagesplan-Ansicht 
-    -- >Schaltfläche / Feed-> öffnet Feed-Ansicht   
-    -- >Schaltfläche / Chat-> öffnet Chat-Ansicht
-  --Notifikationen / zeigt Anzahl der nicht gelesenen Nofifikationen im Feed in Kurzform an. Drücken -> klappt scrollbare Liste aus:
-    -- >scrollbare Liste / jeder Eintrag besteht aus einem Tupel: Profilbild des anderen Nutzers + Aktivitäts-Info(Beispiel: "[Bild] Peter hat einen Task von dir kommentiert"). Einträge sind anklickbar und öffnen die entsprechende Notifikation in Feed-Ansicht  
-  --Schaltfläche mit Profilbild des eingeloggten Nutzers / Drücken -> öffnet Einstellungen-Ansicht
+
 
 (VII)Feed
   --Feed / zeigt alle Aktivitäten von mir und meinen Freunden an. jede Notifikation im Feed besteht aus einem Quadrupel: 
@@ -353,19 +343,7 @@
 --- view_uebersicht ---
 -----------------------
 (II)Navigationsleiste
-  --Bildbereich / Applikationsname mit Logo
-  --Suche / Eingabe Suchtext. sucht in den Tasks aller Pläne dieses Users nach dem eingegebenen Textabschnitt
-  --Schaltfläche / erzeugt neuen Tagesplan:
-    -- >Textfeld / Eingabe Titel des Planes (optional)
-    -- >Schaltfläche mit Kalender / Eingabe Datum des Planes (Pflicht)
-  --Menüschaltfläche / Drücken -> klappt weitere Optionen aus:
-    -- >Schaltfläche / "Tagesplan"-> öffnet Tagesplan-Ansicht 
-    -- >Schaltfläche / "Feed"-> öffnet Feed-Ansicht   
-    -- >Schaltfläche / "Chat"-> öffnet Chat-Ansicht
-    -- >Schaltfläche / "Übersicht"-> öffnet Übersicht-Ansicht
-  --Notifikationen / zeigt Anzahl der nicht gelesenen Nofifikationen im Feed in Kurzform an. Drücken -> klappt scrollbare Liste aus:
-    -- >scrollbare Liste / jeder Eintrag besteht aus einem Tupel: Profilbild des anderen Nutzers + Aktivitäts-Info(Beispiel: "[Bild] Peter hat einen Task von dir kommentiert"). Einträge sind anklickbar und öffnen die entsprechende Notifikation in Feed-Ansicht  
-  --Schaltfläche mit Profilbild des eingeloggten Nutzers / Drücken -> öffnet Einstellungen-Ansicht
+
 
 (X)Übersicht	
   --großer Kalender / zeigt alle Tage im Monat tabellenförmig an. jeder Tag ist ein Feld. Tage mit Tagesplänen sind markiert. alle Felder sind anklickbar
@@ -377,19 +355,7 @@
 --- view_einstellungen ---
 --------------------------
 (II)Navigationsleiste
-  --Bildbereich / Applikationsname mit Logo
-  --Suche / Eingabe Suchtext. sucht in den Tasks aller Pläne dieses Users nach dem eingegebenen Textabschnitt
-  --Schaltfläche / erzeugt neuen Tagesplan:
-    -- >Textfeld / Eingabe Titel des Planes (optional)
-    -- >Schaltfläche mit Kalender / Eingabe Datum des Planes (Pflicht)
-  --Menüschaltfläche / Drücken -> klappt weitere Optionen aus:
-    -- >Schaltfläche / "Tagesplan"-> öffnet Tagesplan-Ansicht 
-    -- >Schaltfläche / "Feed"-> öffnet Feed-Ansicht   
-    -- >Schaltfläche / "Chat"-> öffnet Chat-Ansicht
-    -- >Schaltfläche / "Übersicht"-> öffnet Übersicht-Ansicht
-  --Notifikationen / zeigt Anzahl der nicht gelesenen Nofifikationen im Feed in Kurzform an. Drücken -> klappt scrollbare Liste aus:
-    -- >scrollbare Liste / jeder Eintrag besteht aus einem Tupel: Profilbild des anderen Nutzers + Aktivitäts-Info(Beispiel: "[Bild] Peter hat einen Task von dir kommentiert"). Einträge sind anklickbar und öffnen die entsprechende Notifikation in Feed-Ansicht  
-  --Schaltfläche mit Profilbild des eingeloggten Nutzers / Drücken -> öffnet Einstellungen-Ansicht
+
   
 (VI)Profil
   --Profilbild  mit Upload Schaltfläche / ändert Profilbild
