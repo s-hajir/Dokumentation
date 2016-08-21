@@ -122,6 +122,7 @@
 26 input submit
 27 form
 28 span
+29 textarea
 --------------------------------------------------------------------------------------------------------------------------------------
 == einfache Gruppen ==
 
@@ -152,45 +153,66 @@
   7
   4
 
-(V)Freundschaftsanfrage
-  --Liste aller öffentlichen Nutzer / mit Suchfunktion & autocomplete
-  --Textfeld mit Bildbereich / Anzeige des Ergebnisses: Name und Profilbild des gesuchten Nutzers
-  --Schltfläche / bestätigen & Anfrage senden
+(V)Freundschaftsanfrage senden
+  19
+  12
+  17
+  6
+  7
+  4
 
 (VI)Profil
-  --Profilbild  mit Upload Schaltfläche / ändert Profilbild
-  --Textfeld / alter Nutzername
-  --Textfeld / neuer Nutzername
-  --Textfeld / altes Passwort
-  --Textfeld / neues Passwort
-  --Schalfläche / Submit
+  9
+  19
+  27
+  18
+  7
+  2
+  3
+  26
 	
 (VII)Feed
-  --Feed / zeigt alle Aktivitäten von mir und meinen Freunden an. jede Notifikation im Feed besteht aus einem Quadrupel: 
-    -- >Profilbild des Nutzers
-    -- >Aktivitäts-Info 
-    -- >Textfeld / Name des betroffenen Tasks (oder Planes) mit Verweis-Link (falls es dabei um eine Aktivität mit einem Task/Plan geht)
-    -- >Textfeld / Datum des Ereignisses
+  9
+  19
+  17
+  7
+  6
+  4
+  5
 
-(VIII)Chat	
-  --Liste von Freunden / mit Suchfunktion & autocomplete (Auswahl eines oder mehrerer Freunde möglich)
-    -- >großes Textfeld / zeigt den Chatverlauf an und nimmt Einträge entgegen
-    -- >Textfeld mit Bildbereich / Nutzername und Profilbild des Chatpartners
+(VIII)Chat
+  19
+  17
+  7
+  30
+  6
+  2
+  4
 	
-(IX)Task-Suchergebnis
-  --Tabelle mit 3 Spalten / Anzeige der gesuchten Tasks. Anzahl der Treffer bestimmt Anzahl der Zeilen. Jedes Feld bekommt einen Task. Die Tasks sind nach Datum ihres zugehörigen Eltern-Planes sortiert
-  --Schaltfläche (Drücken -> öffnet den entsprechenden Ort des Tasks (Tagesplan) )  
-	
-(X)Übersicht	
-  --großer Kalender / zeigt alle Tage im Monat tabellenförmig an. jeder Tag ist ein Feld. Tage mit Tagesplänen sind markiert. alle Felder sind anklickbar
-  --Schaltfläche / mit 'Vor' und 'Zurück'. Monatsweise geht es im Kalender vor und zurück
-  --Graph / zeigt die Häufigkeit der Nutzung der App und Anzahl der Pläne im aktuellem Monat an
-  --Werbebanner
+(IX)Task-Plan-Suchergebnis
+  9
+  19
+  20
+  6
+  7
+  4
+  21
+  15
+  16
+ 
+(X)Übersicht
+  9
+  19
+  17
+  15
+  16
+  4
+  22
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 == komplexe Gruppen ==
 
 (XI)Task-Input-Dialog	
-  --Textfeld / Eingabe Titel des Tasks
+  --Textfeld / Eingabe Titel des Tasks 
   --Timepicker / Auswahl Anfangs-und Endzeit
   --Textfeld / Eingabe Beschreibung (optional)
   --Schaltfläche / Auswahl der Art z.B. Sport,Arbeit,Freizeit ->klappt eine scrollbare Liste aus:
