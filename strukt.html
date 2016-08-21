@@ -121,8 +121,12 @@
 25 video
 26 input submit
 27 form
-28 span
-29 textarea
+28 span (neu)
+29 textarea (neu)
+30 tr (neu)
+31 td (neu)
+32 p (neu)
+33 time (neu)
 --------------------------------------------------------------------------------------------------------------------------------------
 == einfache Gruppen ==
 
@@ -159,7 +163,7 @@
   7
   4
 
-(VI)Profil
+(VI)Profil-Einstellung
   9
   19
   18
@@ -175,12 +179,13 @@
   6
   4
   5
+  33
 
 (VIII)Chat
   19
   7
   30
-  6
+  33
   2
   4
 	
@@ -189,53 +194,50 @@
   19
   20
   6
+  33
   7
   4
   21
   15
   16
+  30
+  31
  
-(X)Übersicht
+(X)Übersicht der Pläne
   9
   19
   15
   16
   4
   22
+  33
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 == komplexe Gruppen ==
 
-(XI)Task-Input-Dialog	
-  --Textfeld / Eingabe Titel des Tasks 
-  --Timepicker / Auswahl Anfangs-und Endzeit
-  --Textfeld / Eingabe Beschreibung (optional)
-  --Schaltfläche / Auswahl der Art z.B. Sport,Arbeit,Freizeit ->klappt eine scrollbare Liste aus:
-    -- >scrollbare Liste / jeder Eintrag besteht aus einem anklickbarem Tupel: Icon + Bezeichnung
-  --Markierung von Freunden:
-    --Liste von Freunden / mit Suchfunktion & autocomplete (Auswahl eines oder mehrerer Freunde möglich)
-    --Textfeld mit Bildbereich / Anzeige des Ergebnisses: Name und Profilbild des gesuchten Nutzers
-    --Schltfläche / bestätigen & markieren
-  --Freischalten für Freunde:
-    --Liste von Freunden / mit Suchfunktion & autocomplete (Auswahl eines oder mehrerer Freunde möglich)
-    --Textfeld mit Bildbereich / Anzeige des Ergebnisses: Name und Profilbild des gesuchten Nutzers
-    --Schltfläche / bestätigen & freischalten
-  --Schaltfläche / Submit
+(XI)Task-Input-Dialog
+   9
+   19
+   2
+   27
+   23
+   7
+   12
+   28
+  (III)Freischalten für Freunde/ Markieren von Freunden
+   4
 
 (XII)Task
-  --Textfeld / Titel des Tasks
-  --Textfeld / Anfangs-und Endzeit des Tasks
-  --Textfeld / Beschreibung des Tasks
-  --Textfeld mit Bildbereich / Art des Tasks: z.B. Sport,Arbeit,Freizeit
-  --Textfeld / Markierungen der Freunde
-  --Bearbeiten ->klappt Optionen aus:
-    -- >Bild/Video/Audio -> hinzufügen
-    -- >Schaltfläche "Ändern" -> triggert Task-Input-Dialog:
-       --Task-Input-Dialog
-  --Diashow / der angefügten Bilder/Videos
-  --Schaltfläche / Kommentarbereich für diesen Task wird geöffnet
-    -- >Textfeld / Name und Kommentar aller Nutzer wird angezeigt
-    -- >Textfeld / hier kann der aktuell eingeloggte Nutzer kommentieren
-
+    15
+    16
+    28
+    33
+    7
+   (XI)Task-Input-Dialog
+    4
+    25
+    5
+    27
+    2
 
 (XIII)Tagesplan
   --Schaltfläche mit Kalender / Datum kann ausgewählt werden -> der Plan mit diesem Datum wird angezeigt, falls er existiert
