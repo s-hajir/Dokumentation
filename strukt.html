@@ -1,68 +1,73 @@
 <!--  Um die Struktur zu konzipieren wurden folgende Annahmen gemacht: Eine einfache Gruppe enthält nur strukturelle Elemente. Eine komplexe Gruppe enthält zusätzlich noch andere Gruppen als Elemente. Ansichten enthalten nur Gruppen.
 
-== strukturelle Elemente ==
-  0--link / Link zum Werbebanner
-  0--img / Werbebanner 
-  1--label
+== strukturelle Elemente (mit Duplikaten)==
+  1--img mit link / Werbebanner 
   2--input text/ Nutzername
   3--input password/ Passwort mit Punkten maskiert
   4--button / Login
   5--link / führt zu Registrierung-Ansicht
   6--label / Applikationsname
   6--img / Logo
-  7--Input search / Eingabe Suchtext. sucht in den Tasks aller Pläne dieses Users nach dem eingegebenen Textabschnitt
-  8--Button / erzeugt neuen Tagesplan
+  7--input search / Eingabe Suchtext. sucht in den Tasks aller Pläne dieses Users nach dem eingegebenen Textabschnitt
+  8--button / erzeugt neuen Tagesplan
   9--Input text / Eingabe Titel des Planes (optional)
  10--Input date / Eingabe Datum des Planes (Pflicht)
- 11--Button / Drücken -> klappt weitere Elemente aus:
-   12-- >Link / Tagesplan-> öffnet Tagesplan-Ansicht 
-   13-- >Link / Feed-> öffnet Feed-Ansicht   
-   14-- >Link / Chat-> öffnet Chat-Ansicht
- 15--Button data-badge / zeigt Anzahl der nicht gelesenen Nofifikationen an. Drücken -> klappt scrollbare Liste aus:
-	 16-- >Unordered List / Liste von Notifikationen
-	 	17-- >li / jeder Eintrag besteht aus einem Tupel: 
+ 11--button / Drücken -> klappt weitere Elemente aus:
+   12-- >link / Tagesplan-> öffnet Tagesplan-Ansicht 
+   13-- >link / Feed-> öffnet Feed-Ansicht   
+   14-- >link / Chat-> öffnet Chat-Ansicht
+ 15--link mit badge / badge zeigt Anzahl der nicht gelesenen Nofifikationen an. Drücken -> klappt scrollbare Liste aus:
+	 16-- >unordered list / Liste von Notifikationen(nicht-detailliert)
+	 	17-- >li-Element / jeder Eintrag besteht aus einem Tupel: 
 	 		18-- >img / Profilbild des Nutzers 
-	 		19-- >Link / Aktivitäts-Info des Nutzers.  (Beispiel: "[Bild] Peter hat einen Task von dir kommentiert"). Link führt zur Feed-Ansicht, dort sind alle Notifikationen detailliert dargestellt.  
- 17--Schaltfläche mit Profilbild des eingeloggten Nutzers / Drücken -> öffnet Einstellungen-Ansicht
+	 		19-- >link / Aktivitäts-Info des Nutzers.  (Beispiel: "[Bild] Peter hat einen Task von dir kommentiert"). Link führt zur Feed-Ansicht, dort sind alle Notifikationen detailliert dargestellt.  
+ 17--img mit link / Drücken -> klappt weitere Elemente aus:
+ 	18-- >li-Element mit link / öffnet Profil-Einstellung
+ 	19-- >li-Element mit link / loggt aus
   
- 18--Liste von Freunden / mit Suchfunktion & autocomplete (Auswahl eines oder mehrerer Freunde möglich)
- 19--Textfeld mit Bildbereich / Anzeige des Ergebnisses: Name und Profilbild des gesuchten Nutzers
- 20--Schltfläche / bestätigen & freischalten
- 21--Schltfläche / bestätigen & markieren
- 22--Schltfläche / bestätigen & Anfrage senden
+ 18--input search/ Suche & Auswahl eines Freundes (autocomplete)
+ 19--label und img(in einem div) / Anzeige des Ergebnisses: Name und Profilbild des gesuchten Nutzers
+ 20--button / bestätigen & freischalten
+ 21--button / bestätigen & markieren
+ 22--button / bestätigen & Anfrage senden
 
- 23--Profilbild  mit Upload Schaltfläche / ändert Profilbild
- 24--Textfeld / alter Nutzername
- 25--Textfeld / neuer Nutzername
- 26--Textfeld / altes Passwort
- 27--Textfeld / neues Passwort
- 28--Schalfläche / Submit
- 29--Feed / zeigt alle Aktivitäten von mir und meinen Freunden an. jede Notifikation im Feed besteht aus einem Quadrupel: 
-   30-- >Profilbild des Nutzers
-   31-- >Aktivitäts-Info 
-   32-- >Textfeld / Name des betroffenen Tasks (oder Planes) mit Verweis-Link (falls es dabei um eine Aktivität mit einem Task/Plan geht)
-   33-- >Textfeld / Datum des Ereignisses
- 34--großes Textfeld / zeigt den Chatverlauf an & nimmt Eingabe entgegen
- 35--Textfeld mit Bildbereich / Nutzername und Profilbild des Chatpartners
+ 23--input file / öffnet Fenster zum auswählen einer Bilddatei -> zum Profilbild ändern
+ 24--input text / alter Nutzername
+ 25--input text/ neuer Nutzername
+ 26--input password / altes Passwort
+ 27--input password / neues Passwort
+ 28--button / Submit
+ 29--div / Feed beinhaltet Notifikationen(detailliert). Jede Notifikation im Feed besteht aus einem Quadrupel.
+    	30-- >div / Notifikation:
+   		30-- >img / Profilbild des Nutzers
+   		31-- >label / Aktivitäts-Info 
+   		32-- >link / Name des betroffenen Tasks (oder Planes) mit Verweis-Link
+   		33-- >label / Datum des Ereignisses
+ 33--img / zeigt den Chatpartner an
+ 34--div / beinhaltet den Chatverlauf an:
+ 	35-- >unordered list / beinhaltet einzelne Nachrichten
+ 		36-- >li-Element mit label / eine Nachricht
+ 35--input text / Chat Texteingabe
  36--Tabelle mit 3 Spalten / Anzeige der gesuchten Tasks. Anzahl der Treffer bestimmt Anzahl der Zeilen. Jedes Feld bekommt einen Task. Die Tasks sind nach Datum ihres zugehörigen Eltern-Planes sortiert
- 37--Schaltfläche (Drücken -> öffnet den entsprechenden Ort des Tasks (Tagesplan)) 
+ 37--link / Drücken -> führt zum Ort, wo der Task sich befindet
+ 38--radio-button mit label / Toggel zwischen Anzeige der Suchergebnisse in Form von: betroffenen Tasks oder betroffenen Tagesplänen
 
  38--großer Kalender / zeigt alle Tage im Monat tabellenförmig an. jeder Tag ist ein Feld. Tage mit Tagesplänen sind markiert. alle Felder sind anklickbar
- 39--Schaltfläche / mit 'Vor' und 'Zurück'. Monatsweise geht es im Kalender vor und zurück
- 40--Graph / zeigt die Häufigkeit der Nutzung der App und Anzahl der Pläne im aktuellem Monat an
- 41--Textfeld / Eingabe Titel des Tasks
- 42--Timepicker / Auswahl Anfangs-und Endzeit
- 43--Textfeld / Eingabe Beschreibung (optional)
- 44--Schaltfläche / Auswahl der Art z.B. Sport,Arbeit,Freizeit ->klappt eine scrollbare Liste aus:
+ 39--2 buttons / mit 'Vor' und 'Zurück'. Monatsweise geht es im Kalender vor und zurück
+ 40--canvas /Graph zeigt die Häufigkeit der Nutzung der App an
+ 41--input text / Eingabe Titel des Tasks
+ 42--input time / Auswahl Anfangs-und Endzeit
+ 43--input text / Eingabe Beschreibung (optional)
+ 44--button / Auswahl der Art z.B. Sport,Arbeit,Freizeit ->klappt eine scrollbare Liste aus:
 	  45-- >scrollbare Liste / jeder Eintrag besteht aus einem anklickbarem Tupel: Icon + Bezeichnung
- 46--Textfeld / Titel des Tasks
- 47--Textfeld / Anfangs-und Endzeit des Tasks
- 48--Textfeld / Beschreibung des Tasks
- 49--Textfeld mit Bildbereich / Art des Tasks: z.B. Sport,Arbeit,Freizeit
- 50--Textfeld / Markierungen der Freunde
- 51--Bearbeiten ->klappt Optionen aus:
-   52-- >Bild/Video/Audio -> hinzufügen
-   53-- >Schaltfläche 'Ändern' -> triggert Task-Input-Dialog:
+ 46--input text / Titel des Tasks
+ 47--input text / Anfangs-und Endzeit des Tasks
+ 48--input text / Beschreibung des Tasks
+ 49--input text / Art des Tasks: z.B. Sport,Arbeit,Freizeit
+ 50--input search / Markierungen der Freunde
+ 51--button ->klappt Optionen aus:
+   52-- >input file / Bild/Video/Audio -> hinzufügen
+   53-- >button 'Ändern' -> triggert Task-Input-Dialog:
  54--Diashow / der angefügten Bilder/Videos
  55--Schaltfläche / Kommentarbereich für diesen Task wird geöffnet:
    56-- >Textfeld / Name und Kommentar aller Nutzer wird angezeigt
