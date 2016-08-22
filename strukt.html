@@ -59,40 +59,41 @@
  53 section / Task-und Plan-Suchergebnis
  	54-- >Tabelle mit 3 Spalten / Anzeige der gesuchten Tasks. Anzahl der Treffer bestimmt Anzahl der Zeilen. Jedes Feld bekommt einen Task. Die Tasks sind nach Datum ihres zugehörigen Eltern-Planes sortiert
  		55-- >hyperlink / Drücken -> führt zum Ort, wo der Task sich befindet
- 	56--input radio / Toggel zwischen Anzeige der Suchergebnisse in Form von: betroffenen Tasks oder betroffenen Tagesplänen
+ 	56-- >input radio / Toggel zwischen Anzeige der Suchergebnisse in Form von: betroffenen Tasks oder betroffenen Tagesplänen
 
  57--großer Kalender / zeigt alle Tage im Monat tabellenförmig an. jeder Tag ist ein Feld. Tage mit Tagesplänen sind markiert. alle Felder sind anklickbar
  58--2 buttons / mit 'Vor' und 'Zurück'. Monatsweise geht es im Kalender vor und zurück
  59--canvas /Graph zeigt die Häufigkeit der Nutzung der App an
- 60--input text / Eingabe Titel des Tasks
- 60--input time / Auswahl Anfangs-und Endzeit
- 61--input text / Eingabe Beschreibung (optional)
- 62--button / Auswahl der Art z.B. Sport,Arbeit,Freizeit ->klappt eine scrollbare Liste aus:
- 	  63-- >unordered List / Liste
- 	  	64 -- >li-Element mit img und hyperlink / jeder Eintrag besteht aus einem anklickbarem Tupel: Icon + Bezeichnung
- 65--input text / Titel des Tasks
- 66--input text / Anfangs-und Endzeit des Tasks
- 67--input text / Beschreibung des Tasks
- 68--input text / Art des Tasks: z.B. Sport,Arbeit,Freizeit
- 69--input search / Markierungen der Freunde
- 70--button ->klappt Optionen aus:
-   71-- >input file / Bild/Video/Audio -> hinzufügen
-   72-- >button / triggert Task-Input-Dialog:
- 73--figure /Slideshow der angefügten Bilder/Videos
- 	74-- >img / Bild
- 	75-- >video /Video
- 	76-- >button / löschen des Bilde/Videos
- 	77-- >2 buttons / mit 'Vor' und 'Zurück'
- 78--button / Kommentarbereich für diesen Task wird geöffnet:
- 	79-- >unordered list / Kommentare
-   		80-- >li-Element mit label / Name und Kommentar eines Nutzers wird angezeigt(davon kann es viele geben)
-   		81-- >li-Element mit input text / hier kann der aktuell eingeloggte Nutzer kommentieren
- 82--input date / Datum kann ausgewählt werden -> der Plan mit diesem Datum wird angezeigt, falls er existiert
- 83--button / Bearbeiten des aktuell angezeigten Plans, klappt Optionen auf:
-   84-- >input date / Datum des Planes ändern
-   85-- >buton / Löschen des Planes
- 86--button / neuer Task 
- 87--Tabelle mit 1 Spalte / Anzeige aller Tasks in diesem Plan. 1 Task pro Feld
+ 60--dialog / Task-Input-Dialog. Öffnet sich bei Task-Erstellung & Task-Änderung
+ 61--input text / Eingabe Titel des Tasks
+ 62--input time / Auswahl Anfangs-und Endzeit
+ 63--input text / Eingabe Beschreibung (optional)
+ 64--button / Auswahl der Art z.B. Sport,Arbeit,Freizeit ->klappt eine scrollbare Liste aus:
+ 	  65-- >unordered List / Liste
+ 	  	66 -- >li-Element mit img und hyperlink / jeder Eintrag besteht aus einem anklickbarem Tupel: Icon + Bezeichnung
+ 67--input text / Titel des Tasks
+ 68--input text / Anfangs-und Endzeit des Tasks
+ 69--input text / Beschreibung des Tasks
+ 70--input text / Art des Tasks: z.B. Sport,Arbeit,Freizeit
+ 71--input search / Markierungen der Freunde
+ 72--button ->klappt Optionen aus:
+   73-- >input file / Bild/Video/Audio -> hinzufügen
+   74-- >button / triggert Task-Input-Dialog:
+ 75--figure /Slideshow der angefügten Bilder/Videos
+ 	76-- >img / Bild
+ 	77-- >video /Video
+ 	78-- >button / löschen des Bilde/Videos
+ 	79-- >2 buttons / mit 'Vor' und 'Zurück'
+ 80--button / Kommentarbereich für diesen Task wird geöffnet:
+ 	81-- >unordered list / Kommentare
+   		82-- >li-Element mit label / Name und Kommentar eines Nutzers wird angezeigt(davon kann es viele geben)
+   		83-- >li-Element mit input text / hier kann der aktuell eingeloggte Nutzer kommentieren
+ 84--input date / Datum kann ausgewählt werden -> der Plan mit diesem Datum wird angezeigt, falls er existiert
+ 85--button / Bearbeiten des aktuell angezeigten Plans, klappt Optionen auf:
+   86-- >input date / Datum des Planes ändern
+   87-- >buton / Löschen des Planes
+ 88--button / neuer Task 
+ 89--Tabelle mit 1 Spalte / Anzeige aller Tasks in diesem Plan. 1 Task pro Feld
  -------------------------------------------------------------------------------------------------------------------------------------
 == strukturelle Elemente (ohne Duplikate)==
 1 aside
@@ -122,13 +123,13 @@
 25 video
 26 input submit
 27 form
-28 span (neu)
+28 dialog
 29 textarea (neu)
 30 tr (neu)
 31 td (neu)
 32 p (neu)
 33 time (neu)
-34 dialog (neu)
+34 span (neu)
 --------------------------------------------------------------------------------------------------------------------------------------
 == einfache Gruppen ==
 
@@ -213,53 +214,55 @@
   4
   22
   33
+  
+(XI)Werbung:
+  1
+  7
+  5
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 == komplexe Gruppen ==
 
-(XI)Task-Input-Dialog:
-   9
+(XII)Task-Input-Dialog:
    19
-   34
+   28
    2
    27
    23
    7
    12
-   28
+   34
   (III)Freischalten für Freunde/ Markieren von Freunden
    4
 
-(XII)Task:
-    15
-    16
-    28
-    33
-    7
-   (XI)Task-Input-Dialog
-    4
-    25
-    5
-    27
-    2
+(XIII)Task:
+   15
+   16
+   34
+   33
+   7
+  (XII)Task-Input-Dialog
+   4
+   25
+   5
+   27
+   2
 
-(XIII)Tagesplan:
-  --Schaltfläche mit Kalender / Datum kann ausgewählt werden -> der Plan mit diesem Datum wird angezeigt, falls er existiert
-  --Schaltfläche / neuer Tagesplan -> klappt Eingabe-Dialog aus:
-    -- >Textfeld / Eingabe Titel des Planes (optional)
-    -- >Schaltfläche mit Kalender / Eingabe Datum des Planes (Pflicht)
-    -- >Schaltfläche / Submit
-  --Bearbeiten des aktuell angezeigten Plans -> klappt Optionen auf:
-    -- >Schalfläche mit Kalender / Datum des Planes ändern
-    -- >Schaltfäche / Löschen des Planes
-	--Freischalten für Freunde:
-    --Liste von Freunden / mit Suchfunktion & autocomplete (Auswahl eines oder mehrerer Freunde möglich)
-    --Textfeld mit Bildbereich / Anzeige des Ergebnisses: Name und Profilbild des gesuchten Nutzers
-    --Schltfläche / bestätigen & freischalten
-  --Schaltfläche / neuer Task -> triggert Task-Input-Dialog:
-    --Task-Input-Dialog
-  --Liste von Tasks (Tabelle mit 1 Spalte) / Anzeige aller Tasks in diesem Plan. 1 Task pro Feld
-  --Werbebanner
-  ----------------------------------------------------------------------------------------------------------------------------------
+(XIV)Tagesplan:
+   9
+   19
+   13
+   4
+   27
+   2
+   26
+  (III)Freischalten für Freunde/ Markieren von Freunden
+  (XIII)Task
+   20
+   15
+   16
+   30
+   31
+ ----------------------------------------------------------------------------------------------------------------------------------
 == Ansichten ==
 ------------------
 --- view_index ---
@@ -267,128 +270,53 @@
 (II)Navigationsleiste
 
 (I)Login/Registrierung
-  --Textfeld / Nutzername
-  --Textfeld / Passwort mit Punkten maskiert
-  --Schaltfläche / Login
-  --Schaltfläche / Registrierung
 
+(XI)Werbung
 ------------------------------
 --- view_task-Suchergebnis ---
 ------------------------------
 (II)Navigationsleiste
 
-    
- (IX)Task-Suchergebnis
-  --Tabelle mit 3 Spalten / Anzeige der gesuchten Tasks. Anzahl der Treffer bestimmt Anzahl der Zeilen. Jedes Feld bekommt einen Task. Die Tasks sind nach Datum ihres zugehörigen Eltern-Planes sortiert
-  --Schaltfläche (Drücken -> öffnet den entsprechenden Ort des Tasks (Tagesplan) )  
+(IX)Task-Suchergebnis
 
 ---------------------- 
 --- view_tagesplan ---
 ----------------------
 (II)Navigationsleiste
 
- 
-(XIII)Tagesplan
-  --Schaltfläche mit Kalender / Datum kann ausgewählt werden -> der Plan mit diesem Datum wird angezeigt, falls er existiert
-  --Schaltfläche / neuer Tagesplan -> klappt Eingabe-Dialog aus:
-    -- >Textfeld / Eingabe Titel des Planes (optional)
-    -- >Schaltfläche mit Kalender / Eingabe Datum des Planes (Pflicht)
-    -- >Schaltfläche / Submit
-  --Bearbeiten des aktuell angezeigten Plans -> klappt Optionen auf:
-    -- >Schalfläche mit Kalender / Datum des Planes ändern
-    -- >Schaltfäche / Löschen des Planes
-	--Freischalten für Freunde:
-    --Liste von Freunden / mit Suchfunktion & autocomplete (Auswahl eines oder mehrerer Freunde möglich)
-    --Textfeld mit Bildbereich / Anzeige des Ergebnisses: Name und Profilbild des gesuchten Nutzers
-    --Schltfläche / bestätigen & freischalten
-  --Schaltfläche / neuer Task -> triggert Task-Input-Dialog:
-    --Task-Input-Dialog
-  --Liste von Tasks (Tabelle mit 1 Spalte) / Anzeige aller Tasks in diesem Plan. 1 Task pro Feld
-  --Werbebanner
- 
-(XI)Task-Input-Dialog	
-  --Textfeld / Eingabe Titel des Tasks
-  --Timepicker / Auswahl Anfangs-und Endzeit
-  --Textfeld / Eingabe Beschreibung (optional)
-  --Schaltfläche / Auswahl der Art z.B. Sport,Arbeit,Freizeit ->klappt eine scrollbare Liste aus:
-    -- >scrollbare Liste / jeder Eintrag besteht aus einem anklickbarem Tupel: Icon + Bezeichnung
-  --Markierung von Freunden:
-    --Liste von Freunden / mit Suchfunktion & autocomplete (Auswahl eines oder mehrerer Freunde möglich)
-    --Textfeld mit Bildbereich / Anzeige des Ergebnisses: Name und Profilbild des gesuchten Nutzers
-    --Schltfläche / bestätigen & markieren
-  --Freischalten für Freunde:
-    --Liste von Freunden / mit Suchfunktion & autocomplete (Auswahl eines oder mehrerer Freunde möglich)
-    --Textfeld mit Bildbereich / Anzeige des Ergebnisses: Name und Profilbild des gesuchten Nutzers
-    --Schltfläche / bestätigen & freischalten
-  --Schaltfläche / Submit
-
-(XII)Task
-  --Textfeld / Titel des Tasks
-  --Textfeld / Anfangs-und Endzeit des Tasks
-  --Textfeld / Beschreibung des Tasks
-  --Textfeld mit Bildbereich / Art des Tasks: z.B. Sport,Arbeit,Freizeit
-  --Textfeld / Markierungen der Freunde
-  --Bearbeiten ->klappt Optionen aus:
-    -- >Bild/Video/Audio -> hinzufügen
-    -- >Schaltfläche "Ändern" -> triggert Task-Input-Dialog:
-       --Task-Input-Dialog
-  --Diashow / der angefügten Bilder/Videos
-  --Schaltfläche / Kommentarbereich für diesen Task wird geöffnet
-    -- >Textfeld / Name und Kommentar aller Nutzer wird angezeigt
-    -- >Textfeld / hier kann der aktuell eingeloggte Nutzer kommentieren
+(XIV)Tagesplan
 
 -----------------
 --- view_feed ---
 -----------------
 (II)Navigationsleiste
 
-
 (VII)Feed
-  --Feed / zeigt alle Aktivitäten von mir und meinen Freunden an. jede Notifikation im Feed besteht aus einem Quadrupel: 
-    -- >Profilbild des Nutzers
-    -- >Aktivitäts-Info 
-    -- >Textfeld / Name des betroffenen Tasks (oder Planes) mit Verweis-Link (falls es dabei um eine Aktivität mit einem Task/Plan geht)
-    -- >Textfeld / Datum des Ereignisses
-    
-(V)Freundschaftsanfrage
-  --Liste aller öffentlichen Nutzer / mit Suchfunktion & autocomplete
-  --Textfeld mit Bildbereich / Anzeige des Ergebnisses: Name und Profilbild des gesuchten Nutzers
-  --Schltfläche / bestätigen & Anfrage senden
 
-(VIII)Chat	
-  --Liste von Freunden / mit Suchfunktion & autocomplete (Auswahl eines oder mehrerer Freunde möglich)
-    -- >großes Textfeld / zeigt den Chatverlauf an und nimmt Einträge entgegen
-    -- >Textfeld mit Bildbereich / Nutzername und Profilbild des Chatpartners
+(V)Freundschaftsanfrage senden
+
+(VIII)Chat
 
 -----------------------
 --- view_uebersicht ---
 -----------------------
 (II)Navigationsleiste
 
+(X)Übersicht der Pläne	
 
-(X)Übersicht	
-  --großer Kalender / zeigt alle Tage im Monat tabellenförmig an. jeder Tag ist ein Feld. Tage mit Tagesplänen sind markiert. alle Felder sind anklickbar
-  --Schaltfläche / mit 'Vor' und 'Zurück'. Monatsweise geht es im Kalender vor und zurück
-  --Graph / zeigt die Häufigkeit der Nutzung der App und Anzahl der Pläne im aktuellem Monat an
-  --Werbebanner
- 
 --------------------------
 --- view_einstellungen ---
 --------------------------
 (II)Navigationsleiste
 
-  
-(VI)Profil
-  --Profilbild  mit Upload Schaltfläche / ändert Profilbild
-  --Textfeld / alter Nutzername
-  --Textfeld / neuer Nutzername
-  --Textfeld / altes Passwort
-  --Textfeld / neues Passwort
-  --Schalfläche / Submit
-    -->
-  </body>
-</html>
+(VI)Profil-Einstellung
 
+(XI)Werbung
+
+--------------------------------------------------------------------------------------------------------------------------------------    
+    -->
+    
+    
 <!--
 ===================================
 === Feedback Alpers, 2016-07-27 ===
