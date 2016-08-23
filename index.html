@@ -6,7 +6,42 @@
   <title>ProjektA</title>
 </head>
 <body>
-
-
+    <section>                                                                             <!--Bereich Login-Registrieren-Formular -->
+    <form action="login.php" method="get">                                                <!--Login-Formular -->
+      <h1 class="login-title">Login</h1>                                                  <!--Überschrift -->
+      <label for="Nutzername">Nutzername</label><br>                                      <!--Label für Nutzername -->
+      <input type="text" id="Nutzername" name="Nutzername" required="required"/> <br><br> <!--Input Nutzername -->
+      <label for="Passwort">Passwort</label><br>                                          <!--Label für Passwort -->
+      <input type="password" id="Passwort" name="Passwort" required="required"/><br><br>  <!--Input Passwort -->
+      
+      <button type="submit">OK</button>                                                   <!--Submit Button -->
+    </form>
+    
+    <form action="register.php" method="get">                                             <!--Registrieren-Formular -->
+      <h1 class="register-title">Registrieren</h1>                                        <!--Überschrift -->
+      <label for="Nutzername">Nutzername</label><br>                                      <!--Label für Nutzername -->
+      <input type="text" id="Nutzername" name="Nutzername" required="required"/> <br><br> <!--Input Nutzername -->
+      <label for="r-Passwort">Passwort</label><br>                                        <!--Label für Passwort -->
+      <input type="password" id="r-Passwort" name="r-Passwort" required="required"/><br>  <!--Input Passwort -->
+      <label for="r-Passwort-wdh">Passwort wiederholen</label><br>                        <!--Label für Passwort-wdh -->
+      <input type="password" id="r-Passwort-wdh" name="r-Passwort-wdh" required="required"/><br><br>  <!--Input Passwort-wdh -->
+      
+      <button type="submit">OK</button>                                                   <!--Submit Button -->
+    </form>
+  </section>
+  <script>    //Passwörter des Regeistrieren-Formulars checken
+      var password = document.getElementById("r-Passwort"), confirm_password = document.getElementById("r-Passwort-wdh");
+      
+      function validatePassword(){
+        if(password.value != confirm_password.value) {
+          confirm_password.setCustomValidity("Passwoerter stimmen nicht ueberein");
+        } else {
+          confirm_password.setCustomValidity('');
+        }
+      }
+    
+      password.onchange = validatePassword;
+      confirm_password.onkeyup = validatePassword;
+  </script>
 </body>
 </html>
