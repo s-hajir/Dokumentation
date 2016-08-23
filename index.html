@@ -6,13 +6,51 @@
   <title>ProjektA</title>
 </head>
 <body>
+  <header> 
+    <nav>                                                                                   <!--Navigations-Bereich-->
+    	<ul>                                                                                  <!--Navigation besteht aus Liste von Links-->
+    		<li><a href="index.html"><img src="logo.gif"></a></li>                              <!--Logo-->
+    		<li>                                                                                
+    		  <form>                                                                            <!--Suche nach Tasks/Plänen-->
+    		      <input id="navbar-suche" type="search" value="Suche...">
+    		      <button type="submit">Suchen</button>                                         
+    		  </form>
+    		</li>
+    		<li><button id="Neuer-Plan">+ neuer Plan</button></li>                          <!--startet Dialog für Erstellung eines neuen Planes-->
+    		<li><a href="#">Mehr</a>                                                            <!--Dropdown-Liste -->                                                                    
+    				<ul>
+    					<li><a href="products.html#chair">Chair</a></li>
+    					<li><a href="products.html#table">Table</a></li>
+    					<li><a href="cooker.html">Cooker</a></li>
+    				</ul>
+    		</li>
+    		<li><a href="about.html">About</a></li>
+    		<li><a href="help.html">Help</a></li>
+    	</ul>
+    </nav>
+  </header>
+  <main>
+    <dialog id="dialog">                                                                 <!--Dialog Bereich. Wird angezeigt bei Klick auf "+neuer plan" --> -->
+      <h2>Neuen Plan erstellen</h2>
+      <form action="tagesplan.php" method="get">                                         <!--Bereich Neuer-Plan-Formular -->
+        <label for="titel"></label><br>                                                  <!--Label für Titel -->
+        <input type="text" id="titel" name="titel"/> <br>                                <!--Input Titel -->
+        <label for="datum"></label><br>                                                  <!--Label für Datum -->
+        <input type="date" id="datum" name="datum"/> <br>                                <!--Input Datum -->
+        <section>Freischalten/Markieren</section>                                        <!-- Bereich: Freischalten für Freunde/Markieren von Freunden--> 
+        <button type="submit" id="Erstelle">Erstelle</button>                            <!--Button schickt Formular ab -->
+        <button type="button" id="Zurueck">Zurueck</button>                              <!--Button schickt Formular nicht ab -->
+      </form>
+    </dialog>
+    
+    
     <section>                                                                             <!--Bereich Login-Registrieren-Formular -->
     <form action="login.php" method="get">                                                <!--Login-Formular -->
       <h1 class="login-title">Login</h1>                                                  <!--Überschrift -->
-      <label for="Nutzername">Nutzername</label><br>                                      <!--Label für Nutzername -->
-      <input type="text" id="Nutzername" name="Nutzername" required="required"/> <br><br> <!--Input Nutzername -->
-      <label for="Passwort">Passwort</label><br>                                          <!--Label für Passwort -->
-      <input type="password" id="Passwort" name="Passwort" required="required"/><br><br>  <!--Input Passwort -->
+      <label for="nutzername">Nutzername</label><br>                                      <!--Label für Nutzername -->
+      <input type="text" id="nutzername" name="nutzername" required="required"/> <br><br> <!--Input Nutzername -->
+      <label for="passwort">Passwort</label><br>                                          <!--Label für Passwort -->
+      <input type="password" id="passwort" name="passwort" required="required"/><br><br>  <!--Input Passwort -->
       
       <button type="submit">OK</button>                                                   <!--Submit Button -->
     </form>
@@ -29,19 +67,44 @@
       <button type="submit">OK</button>                                                   <!--Submit Button -->
     </form>
   </section>
+</main>
   <script>    //Passwörter des Regeistrieren-Formulars checken
       var password = document.getElementById("r-Passwort"), confirm_password = document.getElementById("r-Passwort-wdh");
       
-      function validatePassword(){
-        if(password.value != confirm_password.value) {
-          confirm_password.setCustomValidity("Passwoerter stimmen nicht ueberein");
-        } else {
-          confirm_password.setCustomValidity('');
-        }
+      function validatePassword(){         
+        if(checkPassword(password.value)){                                                 //check Passwortformat-und-Länge
+            if(password.value != confirm_password.value) {                                 //check ob Passwörter nicht überinstimmen
+              confirm_password.setCustomValidity("Passwoerter stimmen nicht ueberein");
+            } else {confirm_password.setCustomValidity('');}
+            
+        }else {password.setCustomValidity("Passwortlänge muss 6 sein. Mindestens 1 Zahl, 1 Kleinbuchstabe, 1 Großbuchstabe");}
       }
-    
+      
+      function checkPassword(str){
+        var re = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;  //Regulärer Ausdruck: Mindestens 1 Zahl, 1 Kleinbuchstabe, 1 Großbuchstabe
+        return re.test(str);                            // Länge mind. 6 Zeichen. test() liefert true/false
+        }
       password.onchange = validatePassword;
       confirm_password.onkeyup = validatePassword;
   </script>
+  
+  <script>                                                  //öffnet und schließt Dialog
+     var startbutton = document.getElementById("Neuer-Plan"),
+      dialog = document.getElementById('dialog'),
+      erstellebutton = document.getElementById("Erstelle"),
+      zurueckbutton = document.getElementById("Zurueck");
+     startbutton.addEventListener('click', zeigeFenster);
+     erstellebutton .addEventListener('click', schließeFenster);
+     zurueckbutton .addEventListener('click', schließeFenster);
+    
+     function zeigeFenster() {
+      dialog.showModal();
+     }
+    
+     function schließeFenster() {
+      dialog.close();
+     }
+
+</script>
 </body>
 </html>
