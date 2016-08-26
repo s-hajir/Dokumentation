@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--Die Datei wurde mit .php-Endung gespeichert, da sonst <?php include?> nicht funktioniert. Aus Gewohnheit werden bei Attribut Wertzuweisungen Anführungszeichen benutzt --> 
+<!--Die Datei wurde mit .php-Endung gespeichert, da sonst <?php include ?> nicht funktioniert. Aus Gewohnheit werden bei Attribut Wertzuweisungen Anführungszeichen benutzt --> 
 <html lang="de">
 <head>
   <meta charset="utf-8" />
