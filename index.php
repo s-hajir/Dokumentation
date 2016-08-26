@@ -7,7 +7,7 @@
 </head>
 <body>
   <header> 
-    <?php include "navigation.php" ?>
+    <?php include "navigationsleiste.php" ?>
   </header>
   <main>
     <?php include "neuer_plan_dialog.php" ?>
