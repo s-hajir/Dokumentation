@@ -33,6 +33,7 @@
       <button type="submit">OK</button>                                                   <!--Submit Button -->
     </form>
   </section>
+  <?php include "werbung.html"; ?>
 </main>
   <script>    //Passwörter des Regeistrieren-Formulars checken
       var password = document.getElementById("r-Passwort"), confirm_password = document.getElementById("r-Passwort-wdh");
@@ -54,23 +55,6 @@
       confirm_password.onkeyup = validatePassword;
   </script>
   
-  <script>                                                  //öffnet und schließt Dialog für neue Plan-Erstellung
-     var startbutton = document.getElementById("Neuer-Plan"),
-      dialog = document.getElementById('dialog'),
-      erstellebutton = document.getElementById("Erstelle"),
-      zurueckbutton = document.getElementById("Zurueck");
-     startbutton.addEventListener('click', zeigeFenster);
-     erstellebutton .addEventListener('click', schließeFenster);
-     zurueckbutton .addEventListener('click', schließeFenster);
-    
-     function zeigeFenster() {
-      dialog.showModal();
-     }
-    
-     function schließeFenster() {
-      dialog.close();
-     }
-</script>
 <footer>&copy; Copyright 2016 Hajir</footer>
 </body>
 </html>
