@@ -37,7 +37,8 @@
       <button type="submit">OK</button>                                                   <!--Submit Button -->
     </form>
   </section>
-  <?php include "werbung.html"; ?>
+  
+  <aside><?php include "werbung.html"; ?></aside>
 </main>
   <script>    //Passwörter des Regeistrier-Formulars checken
       var password = document.getElementById("r-Passwort"), confirm_password = document.getElementById("r-Passwort-wdh");
