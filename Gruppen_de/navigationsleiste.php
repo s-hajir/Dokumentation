@@ -26,7 +26,7 @@
     		</li>
     	</ul>
     </nav>
-    <script>                                                  //?ffnet und schlie?t Dialog f?r neue Plan-Erstellung
+    <script>                                                  //öffnet und schliesst Dialog für neue Plan-Erstellung
          var startbutton = document.getElementById("Neuer-Plan"),
          dialog = document.getElementById('dialog'),
          erstellebutton = document.getElementById("Erstelle"),
