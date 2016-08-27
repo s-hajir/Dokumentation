@@ -4,4 +4,6 @@ SoSe 2016,
 Shahir Hajir,
 Dozent: Markus Alpers
 
-#Ordner 'Serverseite' beinhaltet serverseitige Scripte(PHP)
+#info 
+
+Ordner 'Serverseite' beinhaltet serverseitige Scripte(PHP)
