@@ -129,9 +129,7 @@
           }
           xhttp.open("GET", "login.php?password=" +login_password.value+"&username="+ login_username.value , true);
           xhttp.send();
-
-       }
-
+      }
               function register() {
                   var xhttp = new XMLHttpRequest();
                   xhttp.onreadystatechange = function () {
@@ -150,7 +148,6 @@
                               while (register_form.firstChild) {                                 
                                   register_form.removeChild(register_form.firstChild);
                               }
-
                           }
                        //respnse_container füllen
                        document.getElementById("response_container2").innerHTML = serverResponse;
