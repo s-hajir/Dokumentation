@@ -67,17 +67,16 @@
                 }
             };
             
-  			//String splitten -> String Array -> letztes Element zum Server schicken
-  			var str2 = str;
-  			var strArray;
-  			if(str.includes(",")){                    //falls mehr als 1 Item vom Nutzer gewählt wurde
+  		//String splitten -> String Array -> letztes Element zum Server schicken
+  		var str2 = str;
+  		var strArray;
+  		if(str.includes(",")){                    //falls mehr als 1 Item vom Nutzer gewählt wurde
   				strArray = str.split(" ");              //split beim " "-Leerzeichen, dann Array bilden
   				str2 = strArray[strArray.length - 1];   //letztes Element des Array enthält kein "," und kein " ".
-  			}
-  			console.log("Dein Input: "+str2);
+  		}
         xhttp.open("GET", "form_eval_freischalten_markieren_freunde.php?keyword=" + str2, true);
         xhttp.send();
-          }
+    }
     </script>
 
     <section class="ui-widget">
