@@ -1,0 +1,87 @@
+
+    <script>
+        function showHint(str) {
+            var xhttp;
+            if (str.length == 0) {
+                return;
+            }
+            xhttp = new XMLHttpRequest();
+            //Antwort vom Server verarbeiten
+            xhttp.onreadystatechange = function () {
+            if (xhttp.readyState == 4 && xhttp.status == 200) {
+                var serverResponse = xhttp.responseText;            //server schickt JSON-String
+      					var jsObjArray = JSON.parse(serverResponse);  //liefert Array von JS-Objekten
+      					var nameArray = new Array();
+      					var imgUrlProfilArray = new Array();
+      					var username ="";
+      					for (var i = 0; i < jsObjArray.length; i++) {
+      					    username = jsObjArray[i].username;
+      					    nameArray[i] = jsObjArray[i].name.concat("("+username+")");
+      					    imgUrlProfilArray[i] = jsObjArray[i].imgUrlProfil;
+      					}
+      					
+      					$( function() {
+      						function split( val ) {
+      						  return val.split( /,\s*/ );
+      						}
+      						function extractLast( term ) {
+      						  return split( term ).pop();
+      						}
+      						$( "#tags" )
+      						  .on("keydown", function (event) {
+      							if ( event.keyCode ===$.ui.keyCode.TAB &&
+      								$( this ).autocomplete( "instance" ).menu.active ) {
+      							  event.preventDefault();
+      							}
+      						  })
+      						  .autocomplete({
+      							minLength: 0,
+      							source: function( request, response ) {
+      							  response( $.ui.autocomplete.filter(
+      								nameArray, extractLast(request.term)));
+      							},
+      							focus: function() {
+      							  return false;
+      							},
+      							select: function( event, ui ) {
+      							  var terms = split( this.value );
+      							  terms.pop();
+      							  terms.push( ui.item.value );
+      							  terms.push( "" );
+      							  this.value = terms.join(", ");
+      							  var imgName = ui.item.value.replace(/\s/g, "_").concat("_profil.jpg"); //ui.item.value -> Wert des vom Nutzer ausgewähltem Item
+      							  var src = "";
+      							  for (var i = 0; i < imgUrlProfilArray.length; i++) {
+      							      var imgUrl = imgUrlProfilArray[i];
+      							      if (imgUrl.includes(imgName)) {                                     //und hier mit match(regex) suchen
+      							          src = imgUrl;
+      							      }
+      							  }
+      							  $('#img_container').append('<figure><img src="' + src + '" width=95 height=80>');    //Bild + Url anzeigen
+      							  $('#img_container').append('<figcaption>' + imgName + '</figcaption></figure><br>');
+      							  return false;
+      							}
+      						  });
+      					  } );
+
+                }
+            };
+            
+  			//String splitten -> String Array -> letztes Element zum Server schicken
+  			var str2 = str;
+  			var strArray;
+  			if(str.includes(",")){                    //falls mehr als 1 Item vom Nutzer gewählt wurde
+  				strArray = str.split(" ");              //split beim " "-Leerzeichen, dann Array bilden
+  				str2 = strArray[strArray.length - 1];   //letztes Element des Array enthält kein "," und kein " ".
+  			}
+  			console.log("Dein Input: "+str2);
+        xhttp.open("GET", "form_eval_freischalten_markieren_freunde.php?keyword=" + str2, true);
+        xhttp.send();
+          }
+    </script>
+
+    <section class="ui-widget">
+        <label for="tags" >Schalte Plan frei für </label>
+        <input id="tags" name="fuer_freunde_freischalten" size="50" onkeyup="showHint(this.value)">
+        <div id="img_container">  </div>
+    </section>
