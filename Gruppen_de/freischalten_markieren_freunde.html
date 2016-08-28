@@ -27,7 +27,7 @@
       						function extractLast( term ) {
       						  return split( term ).pop();
       						}
-      						$( "#tags" )
+      						$( ".tags" )
       						  .on("keydown", function (event) {
       							if ( event.keyCode ===$.ui.keyCode.TAB &&
       								$( this ).autocomplete( "instance" ).menu.active ) {
@@ -80,7 +80,7 @@
     </script>
 
     <section class="ui-widget">
-        <label for="tags" >Schalte frei für </label>
-        <input id="tags" name="fuer_freunde_freischalten" size="50" onkeyup="showHint(this.value)">
+        <label>Schalte frei für </label>
+        <input class="tags" name="fuer_freunde_freischalten" size="50" onkeyup="showHint(this.value)">
         <div id="img_container">  </div>
     </section>
