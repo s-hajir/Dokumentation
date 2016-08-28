@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <nav>                                                                                   <!--Navigations-Bereich-->
     	<ul>                                                                            <!--Navigation besteht aus Liste von Links-->
     		<li><a href="index.php"><img src="logo.gif"></a></li>                       <!--Logo-->
@@ -17,7 +18,7 @@
     				</ul>
     		</li>
     		<li><a href="feed.php" class="notifikation" data-badge="5">Notifikationen</a></li>     <!--Notifikationen mit einem Badge. Badge gibt Anzahl der Notifikationen an -->
-    		<li><a href="#"><?php echo $nutzername;?></a>                                   <!--Nutzername -->                                                              
+    		<li><a href="#"><?php echo $_SESSION['username'];?></a>                                <!--Nutzername -->                                                              
     		    <ul>                                                                        <!--Dropdown-Liste -->
     					<li><a href="profil.php">Dein Profil</a></li>                       <!--Link zu Profil-Ansicht -->
     					<li><a href="einstellung.php">Einstellungen</a></li>                <!--Link zu Einstellungen-Ansicht -->
@@ -26,22 +27,6 @@
     		</li>
     	</ul>
     </nav>
-    <script>                                                  //öffnet und schliesst Dialog für neue Plan-Erstellung
-         var startbutton = document.getElementById("Neuer-Plan"),
-         dialog = document.getElementById('dialog'),
-         erstellebutton = document.getElementById("Erstelle"),
-         zurueckbutton = document.getElementById("Zurueck");
-         startbutton.addEventListener('click', zeigeFenster);
-         erstellebutton .addEventListener('click', schliesseFenster);
-         zurueckbutton .addEventListener('click', schliesseFenster);
-         
-         function zeigeFenster() {
-          dialog.showModal();
-         }
-         function schliesseFenster() {
-          dialog.close();
-         }
-    </script>
     <script>
         function showHint(str) {
             //AJAX : Autocomplete ähnlich, wie in 'freischalten_markieren_freunde.html' implementiert
