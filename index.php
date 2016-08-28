@@ -59,7 +59,8 @@
             <section id="response_container2"></section>                                <!--wird als Container für die AJAX Antwort genutzt-->
         </section>
     </main>
-    <script>    //Passwörter des Regeistrier-Formulars checken
+    <script>    
+//Passwörter des Regeistrier-Formulars checken
       var password = document.getElementById("r-password"), confirm_password = document.getElementById("r-password-cnf");
       function validatePassword(){
         if(checkPassword(password.value)){                                                 //check Passwortformat-und-Länge
@@ -75,8 +76,7 @@
         }
       password.onchange = validatePassword;
       confirm_password.onkeyup = validatePassword;
-
-        //Vorname und Nachname des Regeistrier-Formulars checken
+//Vorname und Nachname des Regeistrier-Formulars checken
       var r_firstname = document.getElementById("r_firstname"), r_lastname = document.getElementById("r_lastname"), r_username = document.getElementById("r_username");
       function validateVorname() {
           var re = /^[a-zA-Z]*$/;                      //Regulärer Ausdruck: Nur a-z und A-Z erlaubt, keine Leerzeichen erlaubt
@@ -92,8 +92,7 @@
       }
       r_firstname.onkeyup = validateVorname;
       r_lastname.onkeyup = validateNachname;
-
-      //Nutzername des Regeistrier-Formulars checken
+//Nutzername des Regeistrier-Formulars checken
     function validateUsername() {
         var re = /^[a-zA-Z0-9*?!-]*$/;
         if (re.test(r_username.value)) {
@@ -102,7 +101,7 @@
     }
     r_username.onkeyup = validateUsername;
 
-        //AJAX: Login und Registrierung
+//AJAX: Login und Registrierung
       var login_username = document.getElementById("login_username"), login_password = document.getElementById("login_password");
       function login() {
           var xhttp = new XMLHttpRequest();
@@ -127,7 +126,7 @@
                 document.getElementById("response_container").innerHTML = serverResponse;
               }
           }
-          xhttp.open("GET", "login.php?password=" +login_password.value+"&username="+ login_username.value , true);
+          xhttp.open("GET", "form_eval_login.php?password=" +login_password.value+"&username="+ login_username.value , true);
           xhttp.send();
       }
               function register() {
@@ -153,7 +152,7 @@
                        document.getElementById("response_container2").innerHTML = serverResponse;
                       }
                   }
-                  xhttp.open("GET", "register.php?password=" + password.value + "&username=" + r_username.value+"&firstname="+r_lastname.value+"&lastname="+r_firstname.value, true);
+                  xhttp.open("GET", "form_eval_register.php?password=" + password.value + "&username=" + r_username.value+"&firstname="+r_lastname.value+"&lastname="+r_firstname.value, true);
                   xhttp.send();
               }
     </script>
