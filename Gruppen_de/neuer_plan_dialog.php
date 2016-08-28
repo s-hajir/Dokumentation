@@ -20,10 +20,16 @@
          erstellebutton .addEventListener('click', schliesseFenster);
          zurueckbutton .addEventListener('click', schliesseFenster);
 
-         function zeigeFenster() {
-          dialog.showModal();
-         }
          function schliesseFenster() {
           dialog.close();
+          document.getElementById("tags").value="";                    //Wert & img_container leeren
+          var img_container = document.getElementById("img_container");
+          while (img_container.firstChild) {                                    
+              img_container.removeChild(img_container.firstChild);
+          }
+         }
+         function schliesseFenster2() {
+                                                                      //Verbesserung: AJAX -> Server macht DB Eintrag -> JSON String zurück "Erfolgreich"/"Fehlgeschlagen"
+             dialog.close();
          }
     </script>
