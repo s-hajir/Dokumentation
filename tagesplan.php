@@ -17,7 +17,7 @@
     </header>
     <main>
         <?php include "navigationsleiste.php";  ?>  <!---->
-        <?php include "neuer_plan_dialog.php";  ?>  <!--include freischalten_markieren_freunde.html + JS für Dialog-->
+        <?php include "neuer_plan_dialog.php";  ?>  <!---->
         <section>
         </section>
     </main>
