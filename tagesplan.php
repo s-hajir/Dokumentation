@@ -23,4 +23,11 @@
     </main>
     <footer>&copy; Copyright 2016 Hajir</footer>
 </body>
+        <script>
+            //hole die autocomplete-input-Felder gebe ihnen eine unique ID
+            var tagsArray = document.getElementsByClassName("tags");
+            for (var i = 0; i < tagsArray.length; i++) {
+                tagsArray[i].setAttribute("id","tags"+i);
+            }
+        </script>
 </html>
