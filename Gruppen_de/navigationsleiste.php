@@ -3,7 +3,7 @@
     		<li><a href="index.php"><img src="logo.gif"></a></li>                       <!--Logo-->
     		<li>                                                                        <!--Such-Formular-Bereich-->
     		  <form action="such_ergebnis.php" action="get">                            <!--Suche nach Tasks/Plänen-->
-    		      <input id="navbar-suche" type="search" value="Suche...">
+    		      <input id="navbar-suche" type="search" value="Suche..." onkeyup="showHint(this.value)">  <!--Autocomplete Funktion -->
     		      <button type="submit">Suchen</button>                                         
     		  </form>
     		</li>
@@ -41,4 +41,9 @@
          function schliesseFenster() {
           dialog.close();
          }
+    </script>
+    <script>
+        function showHint(str) {
+            //AJAX : Autocomplete ähnlich, wie in 'freischalten_markieren_freunde.html' implementiert
+        }
     </script>
