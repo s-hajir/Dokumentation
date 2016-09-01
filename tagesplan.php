@@ -234,21 +234,16 @@
       						  .autocomplete({
       							minLength: 0,
       							source: function( request, response ) {
-      							  // delegate back to autocomplete, but extract the last term
       							  response( $.ui.autocomplete.filter(
       								nameArray, extractLast(request.term)));
       							},
       							focus: function() {
-      							  // prevent value inserted on focus
       							  return false;
       							},
       							select: function( event, ui ) {
       							  var terms = split( this.value );
-      							  // remove the current input
       							  terms.pop();
-      							  // add the selected item
       							  terms.push( ui.item.value );
-      							  // add placeholder to get the comma-and-space at the end
       							  terms.push( "" );
       							  this.value = terms.join(", ");
       							  var imgName = ui.item.value.replace(/\s/g, "_").concat("_profil.jpg");  
@@ -277,7 +272,7 @@
   			var strArray;
   			if(str.includes(",")){                    
   				strArray = str.split(" ");              //split beim " "-Leerzeichen, dann Array bilden. Leerzeichen werden entfernt Bsp: "Peru, Belgien, Ungarn" ->["Peru,", "Belgien,", "Ungarn"]
-  				str2 = strArray[strArray.length - 1];   //letztes Element des Array enthält kein "," und kein " ".
+  				str2 = strArray[strArray.length - 1];   //letztes Element des Arrays
   			}
   			console.log("Dein Input: "+str2);
   			xhttp.open("GET", "form_eval_freischalten_markieren_freunde.php?keyword=" + str2, true);
