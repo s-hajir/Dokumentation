@@ -59,7 +59,8 @@
             <section id="response_container2"></section>                                <!--wird als Container für die AJAX Antwort genutzt-->
         </section>
     </main>
-    <script>    
+    <script>
+//********************JS Code sollte ausgelagert werden**************************
 //Passwörter des Regeistrier-Formulars checken
       var password = document.getElementById("r-password"), confirm_password = document.getElementById("r-password-cnf");
       function validatePassword(){
