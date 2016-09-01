@@ -58,6 +58,7 @@
             </form>
             <section id="response_container2"></section>                                <!--wird als Container für die AJAX Antwort genutzt-->
         </section>
+        <?php include "werbung.php";  ?>
     </main>
     <script>
 //********************JS Code sollte ausgelagert werden**************************
