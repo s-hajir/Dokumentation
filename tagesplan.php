@@ -90,12 +90,199 @@
 
     </main>
     <footer>&copy; Copyright 2016 Hajir</footer>
-</body>
-        <script>
-            //hole die autocomplete-input-Felder gebe ihnen eine unique ID
+    <script>
+//***********************************JS Code auslagern*****************************************
+//gebe autocomplete input-Felder & bild-Containern eine unique ID
             var tagsArray = document.getElementsByClassName("tags");
             for (var i = 0; i < tagsArray.length; i++) {
                 tagsArray[i].setAttribute("id","tags"+i);
             }
-        </script>
+            var img_conteinerArray = document.getElementsByClassName("img_container");
+            for (var i = 0; i < img_conteinerArray.length; i++) {
+                img_conteinerArray[i].setAttribute("id", "img_container" + i);
+            }
+    </script>
+ <script>
+ //Dialog(neuer Plan) öffnen/schliessen
+         var startbutton = document.getElementById("Neuer-Plan"),
+         dialog = document.getElementById("dialog"),
+         erstellebutton = document.getElementById("Erstelle"),
+         zurueckbutton = document.getElementById("Zurueck");
+         startbutton.addEventListener('click', zeigeFenster);
+         erstellebutton .addEventListener('click', schliesseFenster2);
+         zurueckbutton .addEventListener('click', schliesseFenster);
+
+         function zeigeFenster() {
+          dialog.showModal();
+         }
+         function schliesseFenster() {
+             dialog.close();
+             document.getElementById("form_neuer_plan_dialog").reset();
+             var img_container = document.getElementById("img_container0")
+             while (img_container.firstChild) {
+             img_container.removeChild(img_container.firstChild);
+          }
+          }
+
+         function schliesseFenster2() {
+                                                                      //Verbesserung: AJAX -> Server macht DB Eintrag -> JSON String zurück "Erfolgreich"/"Fehlgeschlagen"
+             dialog.close();
+         }
+</script>
+<script>
+//Image Slider
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+        showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > x.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = x.length }
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" w3-white", "");
+        }
+        x[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " w3-white";
+    }
+//Video Slider
+    var vSlideIndex = 1;
+    showDivs2(vSlideIndex);
+
+    function plusDivs2(n) {
+        showDivs2(vSlideIndex += n);
+    }
+
+    function currentDiv2(n) {
+        showDivs2(vSlideIndex = n);
+    }
+
+    function showDivs2(n) {
+        var i;
+        var x = document.getElementsByClassName("myVSlides");
+        var dots = document.getElementsByClassName("demo2");
+        if (n > x.length) { vSlideIndex = 1 }
+        if (n < 1) { vSlideIndex = x.length }
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" w3-white", "");
+        }
+        x[vSlideIndex - 1].style.display = "block";
+        dots[vSlideIndex - 1].className += " w3-white";
+    }
+//Autocomplete
+        function showHint(e,objref) {
+            var xhttp;
+            var str = objref.value;
+            if (str.length == 0) {
+                return;
+            }
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+            if (xhttp.readyState == 4 && xhttp.status == 200) {
+                var serverResponse = xhttp.responseText;
+                        //server schickt JSON-String zurück
+      					console.log("Server raw JSON:"+serverResponse);
+      					console.log("Typeof response: "+typeof serverResponse);
+                        //liefert Array von JS-Objekten. jedes Objekt entspricht einer Zeile in der DB-Tabelle
+      					var jsObjArray = JSON.parse(serverResponse);  
+                        //iteriere über jedes Objekt im Array -> fülle Wert vom name-Attribut in nameArray UND Wert vom imgUrl-Attribut in imgUrlArray
+      					console.log(jsObjArray);
+      					var nameArray = new Array();
+      					var imgUrlProfilArray = new Array();
+      					var username ="";
+      					console.log("Die name/imgArrays: ");
+      					for (var i = 0; i < jsObjArray.length; i++) {
+      					    username = jsObjArray[i].username;
+      					    nameArray[i] = jsObjArray[i].name.concat("("+username+")");
+      					    imgUrlProfilArray[i] = jsObjArray[i].imgUrlProfil;
+      					    console.log(nameArray[i] + " und " + imgUrlProfilArray[i]);
+      					}
+      					console.log("JS Objekt: ");
+      					console.log(jsObjArray);
+
+      					$( function() {
+      						function split( val ) {
+      						  return val.split( /,\s*/ );
+      						}
+      						function extractLast( term ) {
+      						  return split( term ).pop();
+      						}
+      						$( ".tags" )
+      						  // don't navigate away from the field on tab when selecting an item
+      						  .on("keydown", function (event) {
+
+      							if ( event.keyCode ===$.ui.keyCode.TAB &&
+      								$( this ).autocomplete( "instance" ).menu.active ) {
+      							  event.preventDefault();
+      							}
+      						  })
+      						  .autocomplete({
+      							minLength: 0,
+      							source: function( request, response ) {
+      							  // delegate back to autocomplete, but extract the last term
+      							  response( $.ui.autocomplete.filter(
+      								nameArray, extractLast(request.term)));
+      							},
+      							focus: function() {
+      							  // prevent value inserted on focus
+      							  return false;
+      							},
+      							select: function( event, ui ) {
+      							  var terms = split( this.value );
+      							  // remove the current input
+      							  terms.pop();
+      							  // add the selected item
+      							  terms.push( ui.item.value );
+      							  // add placeholder to get the comma-and-space at the end
+      							  terms.push( "" );
+      							  this.value = terms.join(", ");
+      							  var imgName = ui.item.value.replace(/\s/g, "_").concat("_profil.jpg");  
+      							  var src = "";
+      							  for (var i = 0; i < imgUrlProfilArray.length; i++) {
+      							      var imgUrl = imgUrlProfilArray[i];
+      							      if (imgUrl.includes(imgName)) {                                   
+      							          src = imgUrl;
+      							      }
+      							  }
+      							  var child = document.createElement('img');
+      							  child.setAttribute('class','profilImg');
+      							  child.setAttribute('src', '' + src + '');
+      							  child.setAttribute('height', '70px');
+      							  child.setAttribute('width', '80px');
+      							  e.target.nextElementSibling.appendChild(child);
+      							  return false;
+      							}
+      						  });
+      					  } );
+
+                }
+            };
+  			//String splitten -> String Array -> letztes Element zum Server schicken
+  			var str2 = str;
+  			var strArray;
+  			if(str.includes(",")){                    
+  				strArray = str.split(" ");              //split beim " "-Leerzeichen, dann Array bilden. Leerzeichen werden entfernt Bsp: "Peru, Belgien, Ungarn" ->["Peru,", "Belgien,", "Ungarn"]
+  				str2 = strArray[strArray.length - 1];   //letztes Element des Array enthält kein "," und kein " ".
+  			}
+  			console.log("Dein Input: "+str2);
+  			xhttp.open("GET", "form_eval_freischalten_markieren_freunde.php?keyword=" + str2, true);
+        xhttp.send();
+          }
+</script>
+</body>
 </html>
