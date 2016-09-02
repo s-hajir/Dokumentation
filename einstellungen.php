@@ -11,32 +11,32 @@
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
 </head>
 <body>
-    <header>
+    <header>                                                                                <!--Kopfbereich des BODY-->
         <?php include "navigationsleiste.php";?>
     </header>
-    <main>
+    <main>                                                                                  <!--Hauptbereich des BODY-->
         <?php include "neuer_plan_dialog.php";?>
 
-        <section>
-            <h1>Profil</h1>
-            <figure id="profil-img-container">
-                <img id="profil-img" src="" width="150" height="140" />
+        <section>                                                                           <!--Container für Einstellungen-->
+            <h1>Profil</h1>                                                                 <!--Überschrift-->
+            <figure id="profil-img-container">                                              <!--Bereich für Profilbild-->
+                <img id="profil-img" src="" width="150" height="140" />                     <!--Profilbild-->
             </figure>
-            <form id="uploadProfilbild">
-                Wähle ein neues Profilbild:
-                <input type="file" name="fileToUpload" />
+            <form id="uploadProfilbild">                                                    <!--Formular zum Ändern des profilbildes-->
+                <label for="fileToUpload">Wähle ein neues Profilbild:</label>               <!--Label-->
+                <input type="file" name="fileToUpload" />                                   <!--Hier kann eine Datei zum Upload ausgewählt werden-->
                 <br />
-                <input type="submit" value="Bild Upload" name="submit" />
+                <input type="submit" value="Bild Upload" name="submit" />                   <!--Submit Button-->
             </form><br />
-            <h2>Name /Passwort ändern</h2>
-            <form>
+            <h2>Name /Passwort ändern</h2>                                                  <!--Überschrift zum Ändern das Passwortes/Namen-->           
+            <form>                                                                          <!--Formular zum Ändern des Namen. Inhalt des Formulares ist selbsterklärend-->
                 <label for="vorname">Vorname</label><br />
                 <input id="vorname" name="vorname" type="text" /><br /><br />
                 <label for="nachname">Nachname</label><br />
                 <input id="nachname" name="nachname" type="text" /><br />
                 <input type="submit" value="Ändern" />
             </form><br /><br />
-            <form>
+            <form>                                                                          <!--Formular zum Ändern des Passwortes. Inhalt des Formulares ist selbsterklärend-->
                 <label for="passwort">altes Passwort</label>
                 <br />
                 <input id="altes-passwort" name="altes-passwort" type="password" />
@@ -52,11 +52,10 @@
                 <br />
                 <input type="submit" value="Ändern" />
             </form>
-
         </section>
     </main>
     <br />
-    <footer>&copy; Copyright 2016 Hajir</footer>
+    <footer>&copy; Copyright 2016 Hajir</footer>                                                <!--Fußbereich des BODY-->
     <script>
 //***********************************JS Code auslagern*****************************************
 //uploadProfilbild  AJAX
@@ -152,7 +151,6 @@
       						  return split( term ).pop();
       						}
       						$( ".tags" )
-      						  // don't navigate away from the field on tab when selecting an item
       						  .on("keydown", function (event) {
       							if ( event.keyCode ===$.ui.keyCode.TAB &&
       								$( this ).autocomplete( "instance" ).menu.active ) {
