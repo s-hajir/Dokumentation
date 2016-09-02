@@ -10,7 +10,7 @@
         <br />
         <input type="date" id="datum" name="datum" required="required" />                    <!--Input Datum -->
         <br />
-        <?php include "freischalten_markieren_freunde.html" ?>                               <!-- Bereich: Freischalten für Freunde/Markieren von Freunden. Name des Dokumentes entspricht nicht buchstabengenu dem Namen der Gruppe, welche im 'strukt.html' steht-->
+        <?php include "freischalten_markieren_freunde.html" ?>                               <!-- Bereich: Freischalten für Freunde/Markieren von Freunden-->
         <br>
         <button type="submit" id="Erstelle">Erstelle</button>                                <!--Button schickt Formular ab und schließt modalen Dialog -->
         <button type="button" id="Zurueck">Zurueck</button>                                  <!--Button schließt modalen Dialog-->
