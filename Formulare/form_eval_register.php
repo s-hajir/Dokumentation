@@ -21,7 +21,7 @@ function validateRegistration() {
     $results = array();
     if ($isQueryOk) {
         $results = $stmt->fetchAll();
-        if(empty($results)){
+        if(empty($results)){           //wenn Nutzer nicht existiert
             $firstname = $_GET['firstname'];
             $lastname = $_GET['lastname'];
             $password = $_GET['password'];
@@ -36,7 +36,7 @@ function validateRegistration() {
                 echo "<p style='color:red;'>Datenbank-Problem beim Anlegen des Accounts</p>";
             }
 
-        }else{ //username gibt es in der Tabelle schon
+        }else{ //wenn Nutzer schon existiert
             echo "<p style='color:red;'>Fehler: Der Nutzername existiert schon</p>";
         }
     } else {
