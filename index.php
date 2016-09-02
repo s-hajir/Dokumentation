@@ -18,7 +18,7 @@
         <section>                                                                       <!--Bereich Login-Registrieren-Formular -->
             <form id="login_form" action="javascript:login();">                         <!--Formular ruft JS Methode auf -->
                                                                                         <!--Login-Formular -->
-                <h1 class="login-title">Login</h1>                                      <!--überschrift -->
+                <h1 class="login-title">Login</h1>                                      <!--Überschrift -->
                 <label for="login_username">Nutzername</label>
                 <br />                                                                  <!--Label für Nutzername -->
                 <input type="text" id="login_username" name="login_username" required="required" />   <!--Input Nutzername -->
