@@ -18,7 +18,7 @@ function validateLogin() {
     $username = $_GET['username'];
     $password = $_GET['password'];
     $db = getDbConnection();
-    $stmt = $db->prepare("SELECT CONCAT(vName,' ', nName) As name, username, passwort FROM `appuser` WHERE username='".$username."' AND passwort='".$password."'");
+    $stmt = $db->prepare("SELECT CONCAT(vName,' ', nName) As name, username, passwort FROM `appusers` WHERE username='".$username."' AND passwort='".$password."'");
     $isQueryOk = $stmt->execute();
     $results = array();
 
