@@ -11,7 +11,7 @@
         <br /><!--Label für Datum -->
         <input type="date" id="datum" name="datum" />
         <br /><!--Input Datum -->
-        <?php include "freischalten_markieren_freunde.html" ?><!-- Bereich: Freischalten für Freunde/Markieren von Freunden. Name des Dokumentes entspricht nicht buchstabengenu dem Namen der Gruppe-->
+        <?php include "freischalten_markieren_freunde.html" ?><!-- Bereich: Freischalten für Freunde/Markieren von Freunden. Name des Dokumentes entspricht nicht buchstabengenu dem Namen der Gruppe, welche im 'strukt.html' steht-->
         <br>
         <button type="submit" id="Erstelle">Erstelle</button><!--Button schickt Formular ab -->
         <button type="button" id="Zurueck">Zurueck</button><!--Button schickt Formular nicht ab -->
