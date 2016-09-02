@@ -24,12 +24,12 @@ function validateLogin() {
 
     if ($isQueryOk) {
         $results = $stmt->fetchAll(PDO::FETCH_COLUMN,0);  //Nur erste Spalte zurück als Array
-        if(!empty($results)){
+        if(!empty($results)){    //Nutzer existiert
             echo "<form action='tagesplan.php' method='get'><h2>Willkommen! ".$username."</h2><p style='color:green;'>Hier gehts weiter</p><br><button type='submit' style='color:green;' >Weiter</button></form>";
             $_SESSION['name']= $results[0];
             $_SESSION['username'] =$username;
 
-        }else{echo "<p style='color:red;'>Nutzername/Passwort falsch ! Bitte nochmal versuchen</p>";}
+        }else{echo "<p style='color:red;'>Nutzername/Passwort falsch ! Bitte nochmal versuchen</p>";} //Nutzer existiert nicht
     } else {
         trigger_error('Error executing statement.', E_USER_ERROR);
         echo "<p style='color:red;'>Datenbank-Problem beim Anlegen des Accounts</p>";
