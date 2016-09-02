@@ -16,7 +16,7 @@
     </header>
     <main>
         <section>                                                                       <!--Bereich Login-Registrieren-Formular -->
-            <form id="login_form" action="javascript:login();">                         <!-- ruft JS Methode auf -->
+            <form id="login_form" action="javascript:login();">                         <!--Formular ruft JS Methode auf -->
                                                                                         <!--Login-Formular -->
                 <h1 class="login-title">Login</h1>                                      <!--überschrift -->
                 <label for="login_username">Nutzername</label>
@@ -38,9 +38,9 @@
                 <br />
                 <br />                                                                  <!--Input Nutzername -->
                 <label for="r_firstname">Vorname</label>
-                <br />
+                <br />                                                                  <!--Label für Vorname-->
                 <input type="text" id="r_firstname" name="r_firstname" required="required" />
-                <br />
+                <br />                                                                  <!--Input Vorname-->
                 <label for="r_lastname">Nachname</label>
                 <br />
                 <input type="text" id="r_lastname" name="r_lastname" required="required" />
@@ -58,7 +58,7 @@
             </form>
             <section id="response_container2"></section>                                <!--wird als Container für die AJAX Antwort genutzt-->
         </section>
-        <?php include "werbung.php";  ?>
+        <?php include "werbung.php";  ?>                                                <!--Werbebereich-->
     </main>
     <script>
 //********************JS Code sollte ausgelagert werden**************************
