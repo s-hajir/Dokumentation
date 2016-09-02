@@ -38,7 +38,7 @@
             </a>
             <ul>                                                                        <!--Liste mit Dropdownfunktion-->
                 <li>
-                    <a href="einstellung.php">Profileinstellungen</a>                   <!--Link zur Einstellungen-Ansicht -->
+                    <a href="einstellungen.php">Profileinstellungen</a>                   <!--Link zur Einstellungen-Ansicht -->
                 </li>
                 <li>
                     <a href="">Ausloggen</a>                                            <!--Link zu Ausloggen-Ansicht(wird noch erstellt)-->
