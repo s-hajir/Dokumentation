@@ -26,7 +26,7 @@ function validateRegistration() {
             $lastname = $_GET['lastname'];
             $password = $_GET['password'];
 
-            $stmt2 = $db->prepare("INSERT INTO `appusers` (`id`, `vName`, `nName`, `imgUrlProfil`, `username`, `passwort`) VALUES (NULL, '".$firstname."', '".$lastname."', '".$firstname."_".$lastname."(".$username.")/".$firstname."_".$lastname."(".$username.")_profil.jpg', '".$username."', '".$password."');");
+            $stmt2 = $db->prepare("INSERT INTO `appusers` (`iduser`, `vName`, `nName`, `imgUrlProfil`, `username`, `passwort`) VALUES (NULL, '".$firstname."', '".$lastname."', '".$firstname."_".$lastname."(".$username.")/".$firstname."_".$lastname."(".$username.")_profil.jpg', '".$username."', '".$password."');");
             $isQueryOk2 = $stmt2->execute();
             if ($isQueryOk2){
                 echo "<form action='tagesplan.php' method='get'><h2>Willkommen! ".$username."</h2><p style='color:green;'>Hier gehts weiter</p><br><button type='submit' style='color:green;' >Weiter</button></form>";
