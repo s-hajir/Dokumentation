@@ -18,14 +18,41 @@
         <?php include "navigationsleiste.php";  ?>  <!--Navigationsleiste einbinden-->
     </header>
     <main>                                          <!--Hauptbereich des BODY-->
-        <?php include "neuer_plan_dialog.php";  ?>  <!--Dialog einbinden-->
+        <?php include "neuer_plan_dialog.php";  ?>  <!--modalen Dialog für 'neuen plan' einbinden-->
+        
+        <dialog id="neuer_task_dialog">                                                                <!--modaler Dialog für 'neuer Task'. Wird angezeigt bei Klick auf "+Neuer Task" im Tagesplan-Bereich-->
+            <h2>Neuen Task erstellen</h2>                                                              <!--Überschrift-->
+            <form id="form_neuer_task_dialog" action="form_eval_neuer_task_dialog.php" method="get">   <!--Formular zum Erstellen eines neuen Task -->
+                <label for="titel">Titel</label>                                                       <!--Label-->
+                <br />
+                <input type="text" id="titel" name="titel" required="required"/>                       <!--Input Titel-->
+                <br />
+                <label for="anfangszeit">Anfangszeit</label>                                           <!--Label-->
+                <br />
+                <input type="time" id="anfangszeit" name="anfangszeit" required="required"/>           <!--Input Anfangszeit-->
+                <br />
+                <label for="endzeit">Endzeit</label>                                                   <!--Label-->
+                <br />
+                <input type="time" id="endzeit" name="endzeit" required="required" />                  <!--Input Endzeit-->
+                <br />
+                <label for="beschreibung">Beschreibung</label>                                         <!--Label-->
+                <br />
+                <input type="text" id="beschreibung" name="beschreibung" />                            <!--Input Beschreibung-->
+                <br />
+                <?php include "freischalten_markieren_freunde.html" ?>                                 <!-- Bereich: Freischalten für Freunde/Markieren von Freunden-->
+                <br />
+                <button type="submit" id="Erstelle">Erstelle</button>                                  <!--Button schickt Formular ab und schließt modalen Dialog -->
+                <button type="button" id="Zurueck">Zurueck</button>                                    <!--Button schließt modalen Dialog-->
+            </form>
+        </dialog>
+        
         <article id="tagesplan">                    <!--Bereich für Tagesplan. Wird später dynamisch erzeugt-->
             <header>                                <!--Tagesplan Kopfbereich-->
                 <h1>                                <!--Überschrift-->                                                   
                     Tagesplan
                 </h1>
                 <time>28.08.16</time>               <!--Tagesplan-Datum-->
-                <button id="neuer_task">+Neuer Task</button>                <!--Button öffnet modalen Dialog(Neuer-Plan-Dialog)-->
+                <button id="Neuer-Task">+Neuer Task</button>                <!--Button öffnet modalen Dialog(Neuer-Plan-Dialog)-->
             </header>
             <ul>                                                            <!--Liste von Tasks-->
                 <li>                                                        <!--Listen-Element beinhaltet Task-Container. Wird später dynamisch erzeugt-->
@@ -127,6 +154,10 @@
                                                                       //Verbesserung: AJAX -> Server macht DB Eintrag -> JSON String zurück "Erfolgreich"/"Fehlgeschlagen"
              dialog.close();
          }
+</script>
+<script>
+//Dialog(neuer Task) öffnen/schliessen
+//Code kommt noch
 </script>
 <script>
 //Image Slider
