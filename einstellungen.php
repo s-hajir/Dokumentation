@@ -53,6 +53,7 @@
                 <input type="submit" value="Ändern" />
             </form>
         </section>
+        <?php include "werbung.php";  ?>                                        
     </main>
     <br />
     <footer>&copy; Copyright 2016 Hajir</footer>                                                <!--Fußbereich des BODY-->
