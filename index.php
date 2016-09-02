@@ -11,10 +11,10 @@
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
 </head>
 <body>
-    <header>
-        <img src="logo.jpg" />
+    <header>                                                                            <!--Kopfbereich des BODY-->
+        <img src="logo.jpg" />                                                          <!--Logo der Applikation-->
     </header>
-    <main>
+    <main>                                                                              <!--Hauptbereich des BODY-->
         <section>                                                                       <!--Bereich Login-Registrieren-Formular -->
             <form id="login_form" action="javascript:login();">                         <!--Formular ruft JS Methode auf -->
                                                                                         <!--Login-Formular -->
@@ -60,7 +60,8 @@
         </section>
         <?php include "werbung.php";  ?>                                                <!--Werbebereich-->
     </main>
-    <script>
+ <footer>&copy; Copyright 2016 Hajir</footer>                                           <!--Fußbereich des BODY-->
+     <script>
 //********************JS Code sollte ausgelagert werden**************************
 //Passwörter des Regeistrier-Formulars checken
       var password = document.getElementById("r-password"), confirm_password = document.getElementById("r-password-cnf");
@@ -158,6 +159,5 @@
                   xhttp.send();
               }
     </script>
- <footer>&copy; Copyright 2016 Hajir</footer>
 </body>
 </html>
