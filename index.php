@@ -110,7 +110,6 @@
           var xhttp = new XMLHttpRequest();
           xhttp.onreadystatechange = function () {
               if (xhttp.readyState == 4 && xhttp.status == 200) {
-                  //submitbutton.disabled=false;
                   var serverResponse = xhttp.responseText;
                   if (serverResponse.includes("falsch")) {
                   } else {
@@ -121,7 +120,7 @@
                       }
                       //register_form leeren
                       var register_form = document.getElementById("register_form");
-                      while (register_form.firstChild) {                                 //solange der Knoten ein 'firstChild' hat -> entferne 'firstChild'
+                      while (register_form.firstChild) {                                 
                           register_form.removeChild(register_form.firstChild);
                       }                            
                   }
@@ -136,7 +135,6 @@
                   var xhttp = new XMLHttpRequest();
                   xhttp.onreadystatechange = function () {
                       if (xhttp.readyState == 4 && xhttp.status == 200) {
-                          //submitbutton.disabled=false;
                           var serverResponse = xhttp.responseText;
                           if(serverResponse.includes("Fehler")){
                           } else {
