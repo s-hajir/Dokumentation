@@ -14,10 +14,10 @@
 
 </head>
 <body>
-    <header>
+    <header>                                        <!--Kopfbereich des BODY-->
         <?php include "navigationsleiste.php";  ?>  <!--Navigationsleiste einbinden-->
     </header>
-    <main>
+    <main>                                          <!--Hauptbereich des BODY-->
         <?php include "neuer_plan_dialog.php";  ?>  <!--Dialog einbinden-->
         <article id="tagesplan">                    <!--Bereich für Tagesplan. Wird später dynamisch erzeugt-->
             <header>                                <!--Tagesplan Kopfbereich-->
@@ -87,9 +87,8 @@
                 <button onclick="javascript:planFreischalten();">Freischalten</button>  <!--Button ermöglicht Freischalten des Planes für ausgewählte Freunde-->
             </footer>
         </article>
-
     </main>
-    <footer>&copy; Copyright 2016 Hajir</footer>
+    <footer>&copy; Copyright 2016 Hajir</footer>                                        <!--Fußbereich des BODY-->
     <script>
 //***********************************JS Code auslagern*****************************************
 //gebe autocomplete input-Felder & bild-Containern eine unique ID
