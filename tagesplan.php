@@ -25,7 +25,7 @@
             <form id="form_neuer_task_dialog" action="form_eval_neuer_task_dialog.php" method="get">   <!--Formular zum Erstellen eines neuen Task -->
                 <label for="titel">Titel</label>                                                       <!--Label-->
                 <br />
-                <input type="text" id="titel" name="titel" required="required"/>                       <!--Input Titel-->
+                <input type="text" id="taskTitel" name="titel" required="required"/>                       <!--Input Titel-->
                 <br />
                 <label for="anfangszeit">Anfangszeit</label>                                           <!--Label-->
                 <br />
@@ -35,14 +35,14 @@
                 <br />
                 <input type="time" id="endzeit" name="endzeit" required="required" />                  <!--Input Endzeit-->
                 <br />
-                <label for="beschreibung">Beschreibung</label>                                         <!--Label-->
+                <label for="taskBeschreibung">Beschreibung</label>                                         <!--Label-->
                 <br />
-                <input type="text" id="beschreibung" name="beschreibung" />                            <!--Input Beschreibung-->
+                <input type="text" id="taskBeschreibung" name="taskBeschreibung" />                            <!--Input Beschreibung-->
                 <br />
                 <?php include "freischalten_markieren_freunde.html" ?>                                 <!-- Bereich: Freischalten für Freunde/Markieren von Freunden-->
                 <br />
-                <button type="submit" id="Erstelle">Erstelle</button>                                  <!--Button schickt Formular ab und schließt modalen Dialog -->
-                <button type="button" id="Zurueck">Zurueck</button>                                    <!--Button schließt modalen Dialog-->
+                <button type="submit" id="ErstelleTask">Erstelle</button>                                  <!--Button schickt Formular ab und schließt modalen Dialog -->
+                <button type="button" id="ZurueckTask">Zurueck</button>                                    <!--Button schließt modalen Dialog-->
             </form>
         </dialog>
         
@@ -60,7 +60,7 @@
                         <header><h3>Name dieses Tasks</h3></header>         <!--Task Kopfbereich mit Überschrift-->
                         <time>Anfang: 10:00</time><br>                      <!--Task Anfangszeit-->
                         <time>Ende: &nbsp; &nbsp; 13:00</time><br>          <!--Task Endzeit-->
-                        <textarea id="beschr" rows="4" cols="60" placeholder="Beschreibe den Task hier..."></textarea>  <!--Task Beschreibung-->
+                        <textarea id="beschr" rows="4" cols="60" placeholder="Beschreibe den Task hier..." readonly></textarea> <!--Task Beschreibung-->
                         <figure id="image_slider" class="w3-content w3-display-container">                              <!--Container für Imageslider-->
                             <img class="mySlides" src="mountain01.jpg" />                                               <!--Image. Wird später dynamisch erzeugt-->
                             <img class="mySlides" src="mountain02.jpg" />
@@ -102,7 +102,8 @@
                                <form action="javascript:kommentar-msg-senden();">                           <!--Formular zum Posten eines Kommentars-->
                                    <input type="text" placeholder="Kommentar..." />                         <!--Kommentar Input-->
                                    <input type="submit" value="posten" />                                   <!--Submit Button-->
-                               </form>
+                               </form><br />
+                               <button id="task-aendern">Task Ändern</button>                               <!--Button. Anfangs-Endzeit oder Beschreibung ändern und Bilder/Videos hochladen. Hierfür wird ein modaler Dialog initiiert(wird später implementiert)-->
                             </section>
                         </footer>
                     </section>
@@ -135,8 +136,8 @@
          erstellebutton = document.getElementById("Erstelle"),
          zurueckbutton = document.getElementById("Zurueck");
          startbutton.addEventListener('click', zeigeFenster);
-         erstellebutton .addEventListener('click', schliesseFenster2);
-         zurueckbutton .addEventListener('click', schliesseFenster);
+         erstellebutton.addEventListener('click', schliesseFenster2);
+         zurueckbutton.addEventListener('click', schliesseFenster);
 
          function zeigeFenster() {
           dialog.showModal();
@@ -149,15 +150,36 @@
              img_container.removeChild(img_container.firstChild);
           }
           }
-
          function schliesseFenster2() {
                                                                       //Verbesserung: AJAX -> Server macht DB Eintrag -> JSON String zurück "Erfolgreich"/"Fehlgeschlagen"
              dialog.close();
          }
 </script>
 <script>
-//Dialog(neuer Task) öffnen/schliessen
-//Code kommt noch
+//Dialog(neuer Task) öffnen/schliessen (gleiche Vorgehensweise wie oben)
+         var startbuttonTask = document.getElementById("Neuer-Task"),
+         dialogTask = document.getElementById("neuer_task_dialog"),
+         erstellebuttonTask = document.getElementById("ErstelleTask"),
+         zurueckbuttonTask = document.getElementById("ZurueckTask");
+         startbuttonTask.addEventListener('click', zeigeFensterTask);
+         erstellebuttonTask.addEventListener('click', schliesseFensterTask2);
+         zurueckbuttonTask.addEventListener('click', schliesseFensterTask);
+
+         function zeigeFensterTask() {
+          dialogTask.showModal();
+         }
+         function schliesseFensterTask() {
+             dialogTask.close();
+             document.getElementById("form_neuer_task_dialog").reset();
+             var img_container1 = document.getElementById("img_container1")
+             while (img_container1.firstChild) {
+             img_container1.removeChild(img_container1.firstChild);
+          }
+          }
+         function schliesseFensterTask2() {
+                                                                      //Verbesserung: AJAX -> Server macht DB Eintrag -> JSON String zurück "Erfolgreich"/"Fehlgeschlagen"
+             dialogTask.close();
+         }
 </script>
 <script>
 //Image Slider
