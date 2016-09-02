@@ -1,7 +1,7 @@
 <dialog id="dialog">
     <!--Dialog Bereich. Wird angezeigt bei Klick auf "+neuer plan" -->-->
     <h2>Neuen Plan erstellen</h2>
-    <form id="form_neuer_plan_dialog" action="tagesplan2.php" method="get">
+    <form id="form_neuer_plan_dialog" action="form_eval_neuer_plan_dialog.php" method="get">
         <!--Bereich Neuer-Plan-Formular -->
         <label for="titel">Titel</label>
         <br /><!--Label für Titel -->
