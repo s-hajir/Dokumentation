@@ -18,7 +18,7 @@ function getDbConnection() {
 //suchen
 function searchForKeyword($keyword) {
     $db = getDbConnection();
-    $stmt = $db->prepare("SELECT CONCAT(vName,' ', nName) As name, imgUrlProfil, username FROM `appuser`  WHERE (CONCAT(vName,' ', nName) LIKE ?)"); // 2 spalten zu 1 konkatenieren. optional: ORDER BY (CONCAT(vName,' ', nName))
+    $stmt = $db->prepare("SELECT CONCAT(vName,' ', nName) As name, imgUrlProfil, username FROM `appusers`  WHERE (CONCAT(vName,' ', nName) LIKE ?)"); // 2 spalten zu 1 konkatenieren. optional: ORDER BY (CONCAT(vName,' ', nName))
     $keyword ='%' . $keyword . '%';
     $stmt->bindParam(1, $keyword, PDO::PARAM_STR, 100);
 
