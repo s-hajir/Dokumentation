@@ -11,60 +11,61 @@
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
 </head>
 <body>
-    <header>
+    <header>                                                                        <!--Kopfbereich des BODY-->
         <?php include "navigationsleiste.php";?>
     </header>
-    <main>
+    <main>                                                                          <!--Hauptbereich des BODY-->
         <?php include "neuer_plan_dialog.php";?>
 
-        <section id="feed-container">
-              <h1>Notifikationen</h1>
-            <ul>
-                <li>
-                    <form action="tagesplan.php" method="get">
-                        <figure>
-                            <img src="" width="80" height="70" />                                    <!--Profilbild-->
+        <section id="feed-container">                                               <!--Container für Feed-->
+              <h1>Notifikationen</h1>                                               <!--Überschrift-->
+            <ul>                                                                    <!--Liste mit List-Elementen. Jedes Element enthält eine Notifikation-->
+                <li>                                                                <!--List-Element-->
+                    <form action="tagesplan.php" method="get">                      <!--Formular beinhaltet die Notifikation. Beim absenden wird tagesplan.php aufgerufen und der Parameter "task_id-plan_id" übergeben-->
+                        <figure>                                                    <!--Bereich für Profilbild des Nutzers, welcher die Notifikation ausgelöst hat-->
+                            <img src="" width="80" height="70" />                   <!--Profilbild-->
                         </figure>
-                        <button id="notifikation-text" type="submit">                                <!--wird als Hyperlink gestylt-->
+                        <button id="notifikation-text" type="submit">              <!--Submit Button beinhaltet Notifikation-Text. Wird als Hyperlink gestylt. Notifikation-Text beschreibt worum es geht und welcher Task betroffen ist-->
                             Thomas hat deinen Task <strong>Tasktitel</strong> kommentiert
                         </button>
-                        <time>am 29.08.16  16:30Uhr</time><br />
-                        <label>betrifft den Plan <strong>Tagesplantitel <time>22.08.16</time></strong></label>
-                        <input type="hidden" name="task_id-plan_id" value="6,13" />
+                        <time>am 29.08.16  16:30Uhr</time><br />                                                <!--Zeitraum der Notifikation-->
+                        <label>betrifft den Plan <strong>Tagesplantitel <time>22.08.16</time></strong>          <!--Gibt an welcher Plan betroffen ist und wer den Plan erstellt hatte-->
+                            <em>Ersteller: peter</em>
+                        </label>  
+                        <input type="hidden" name="task_id-plan_id" value="6,13" />                             <!--Unsichtbar für Nutzer. Hilfreich bei interner Zuordnung der Notifikation mit einem Task und einem Plan-->
                     </form>
                 </li>
             </ul>
         </section><br />
-        <section id="freunschaftsanfrage-container">
-            <h3>Freunschaftsanfrage senden</h3>
-            <form id="anfrage-senden" action="javascript:anfrage-senden();">
-                <label for="suche">nach anderen Nutzer suchen  </label><br />
-                <input id="suche" type="search" placeholder="Nutzername.."/><br />
-                <input id="anfragetext" placeholder="Anfragetext..." /><br />
-                <input type="submit" value="Anfrage senden" />
+        <section id="freunschaftsanfrage-container">                                <!--Conatiner für: Freunschaftsanfrage versenden-->
+            <h3>Freunschaftsanfrage senden</h3>                                     <!--Überschrift-->
+            <form id="anfrage-senden" action="javascript:anfrage-senden();">        <!--Formular beinhaltet die Anfrage-Daten-->
+                <label for="suche">nach anderen Nutzer suchen  </label><br />       <!--Label-->
+                <input id="suche" type="search" placeholder="Nutzername.." required="required"/><br />  <!--Suche eines Nutzers mit Autocompletefunktion-->
+                <input id="anfragetext" placeholder="Anfragetext..." /><br />                           <!--Anfragetext (optional)-->
+                <input type="submit" value="Anfrage senden" />                                          <!--Submit Button-->
             </form>
 
         </section><br />
 
-        <section id="chat-container">
-            <h2>Chat</h2>
-            <figure id="chatpartner">
-                <img id="profilbild-chatpartner" src="" width="80" height="70" />
-                <figcaption>Name des Chatpartners</figcaption>
+        <section id="chat-container">                                               <!--Conatiner für Chat-->          
+            <h2>Chat</h2>                                                           <!--Überschrift-->
+            <figure id="chatpartner">                                               <!--Bereich für Profilbild + Name des Chatpartners--> 
+                <img id="profilbild-chatpartner" src="" width="80" height="70" />   <!--Profilbild-->
+                <figcaption>Name des Chatpartners</figcaption>                      <!--Nutzername-->
             </figure>
-            <ul>
-                <li>Textnachricht 1        </li>
+            <ul>                                                                    <!--Liste. Beinhaltet Chatverlauf in form von List-Elementen-->
+                <li>Textnachricht 1        </li>                                    <!--List-Element beinhaltet eine Chatnachricht-->
                 <li>Textnachricht 2        </li>
             </ul>
-            <form id="form-chat" action="javascript:chat-msg-senden();">
-                <input id="chat-msg" type="text" placeholder="Nachricht..."/>
-                <input type="submit" value="absenden"/>
+            <form id="form-chat" action="javascript:chat-msg-senden();">            <!--Formular beinhaltet Text-Input zum eingeben einer Chatnachricht-->
+                <input id="chat-msg" type="text" placeholder="Nachricht..."/>       <!--Chatnachricht-->
+                <input type="submit" value="absenden"/>                             <!--Submit Button-->
             </form>
         </section>
-
     </main>
     <br />
-    <footer>&copy; Copyright 2016 Hajir</footer>
+    <footer>&copy; Copyright 2016 Hajir</footer>                                            <!--Fußbereich des BODY-->
 <script>
 //***********************************JS Code auslagern*****************************************
 //gebe autocomplete input-Felder & bild-Containern eine unique ID
