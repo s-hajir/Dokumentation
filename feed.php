@@ -20,7 +20,7 @@
         <section id="feed-container">                                               <!--Container für Feed-->
               <h1>Notifikationen</h1>                                               <!--Überschrift-->
             <ul>                                                                    <!--Liste mit List-Elementen. Jedes Element enthält eine Notifikation-->
-                <li>                                                                <!--List-Element-->
+                <li>                                                                <!--List-Element wird samt Inhalt dynamisch erzeugt anhand von DB Daten.-->
                     <form action="tagesplan.php" method="get">                      <!--Formular beinhaltet die Notifikation. Beim absenden wird tagesplan.php aufgerufen und der Parameter "task_id-plan_id" übergeben-->
                         <figure>                                                    <!--Bereich für Profilbild des Nutzers, welcher die Notifikation ausgelöst hat-->
                             <img src="" width="80" height="70" />                   <!--Profilbild-->
@@ -54,7 +54,7 @@
                 <img id="profilbild-chatpartner" src="" width="80" height="70" />   <!--Profilbild-->
                 <figcaption>Name des Chatpartners</figcaption>                      <!--Nutzername-->
             </figure>
-            <ul>                                                                    <!--Liste. Beinhaltet Chatverlauf in form von List-Elementen-->
+            <ul>                                                                    <!--Liste. Beinhaltet Chatverlauf in form von List-Elementen.-->
                 <li>Textnachricht 1        </li>                                    <!--List-Element beinhaltet eine Chatnachricht-->
                 <li>Textnachricht 2        </li>
             </ul>
