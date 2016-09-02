@@ -12,10 +12,10 @@
     <script src="Chart.min.js"></script>
 </head>
 <body>
-    <header>
+    <header>                                                                            <!--Kopfbereich des BODY-->
         <?php include "navigationsleiste.php";?>
     </header>
-    <main>
+    <main>                                                                              <!--Hauptbereich des BODY-->
         <?php include "neuer_plan_dialog.php";?>
 
         <section id="uebersicht">                                                       <!--Container für Tabelle und Tabellen-Navigation-->
@@ -53,7 +53,7 @@
                 <canvas id="nutzer_statistik" height="250"></canvas>    <!--Fläche, auf der das Diagramm gezeichnet wird--> 
         </section>
     </main><br />
-    <footer>&copy; Copyright 2016 Hajir</footer>
+    <footer>&copy; Copyright 2016 Hajir</footer>                        <!--Fußbereich des BODY-->
     <script>
 //***********************************JS Code auslagern*****************************************
 //Diagramm(nutzer_statistik) Achtung: das ist nur ein Dummy-Diagramm. Der tatsächliche Diagramm wird noch entwickelt.
