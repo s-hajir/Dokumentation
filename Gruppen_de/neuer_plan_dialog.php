@@ -1,6 +1,6 @@
 <dialog id="dialog">
     <!--Dialog Bereich. Wird angezeigt bei Klick auf "+neuer plan" in der Navigationsleiste-->
-    <h2>Neuen Plan erstellen</h2>
+    <h2>Neuen Plan erstellen</h2>                                                            <!--Überschrift-->
     <form id="form_neuer_plan_dialog" action="form_eval_neuer_plan_dialog.php" method="get"> <!--Formular zum Erstellen eines neuen Planes -->
         <label for="titel">Titel</label>                                                     <!--Label für Titel-->
         <br />
