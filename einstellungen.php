@@ -63,7 +63,7 @@
     $("#uploadProfilbild").on('submit', (function (e) {
         e.preventDefault();                    
         $.ajax({
-            url: "form_eval_upload.php",
+            url: "form_eval_profil_einstellung.php",
             type: "POST",
             data: new FormData(this), 
             contentType: false,
