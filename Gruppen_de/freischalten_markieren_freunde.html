@@ -1,5 +1,9 @@
-    <section class="ui-widget" id="autocomplete_section">
-        <label>Schalte frei für </label>
-        <input class="tags" name="fuer_freunde_freischalten" placeholder="Name des Freundes..." size="26" onkeyup="showHint(event, this)">
-        <figure class="img_container">  </figure>
+    <section class="ui-widget" id="autocomplete_section">                       <!--Container für: Freischalten für Freunde -->
+        <label>Schalte frei für </label>                                        <!--Label-->
+        <input class="tags" name="fuer_freunde_freischalten" placeholder="Name des Freundes..." size="26" onkeyup="showHint(event, this)"> <!--Texteingabebereich für Name eines Freundes.
+        Hier wird nach jeder Eingabe eines Zeichens eine Javascriptfuntkion aufgerufen, welche den Autoconplete-Mechanismus bereitstellt. 
+        Grob gesagt: Es wird in der DB nach Treffern gesucht, diese werden dann an Javascript gesendet, welcher dann die Treffer dargestellt.
+        Die dargestellten Treffer können dann ausgewählt werden.-->
+        <figure class="img_container">  </figure>                               <!--Bereich für die Profilbilder der ausgewählten Freunde. 
+        Profilbilder werden per Javascriptfunktion an diesen figure-Container als <img> angehängt -->
     </section>
