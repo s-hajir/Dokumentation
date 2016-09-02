@@ -11,30 +11,30 @@
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
 </head>
 <body>
-<header>
-    <?php include "navigationsleiste.php";?>
+<header>                                                                                <!--Kopfbereich des BODY-->
+    <?php include "navigationsleiste.php";?>                                            <!--Navigationsleiste-->
 </header>
-<main>
-    <?php include "neuer_plan_dialog.php";?>
+<main>                                                                                  <!--Hauptbereich des BODY-->
+    <?php include "neuer_plan_dialog.php";?>                                            <!--Dialog(neuer Plan)-->
 
-    <section>
-        <header><h1>Suchergebnisse</h1></header>
-        <table>
-            <caption><h3>Folgende Tasks wurden gefunden</h3></caption>
-            <tbody>
-            <tr>                                                                                                                       <!--tr-Elemente werden dynamisch erzeugt-->
-                <td class="zelle">                                                                                                                   <!--Inhalt der tr werden auch dynamisch mit einer Schleife erzeugt-->
-                    <form action="tagesplan.php" method="get">
-                        <h3>Titel des Task</h3>
-                        <time>Anfangs/Endzeit: 13:00 bis 14:00</time><br><br />
-                        <span id="beschr" readonly rows="4" cols="50">Beschreibung des Task.... </span><br /><br />
+    <section id="suchergebnis-container">                                               <!--Container für Suchergebnis-->
+        <header><h1>Suchergebnisse</h1></header>                                        <!--Suchergebnis Kopfbereich mit Überschrift-->
+        <table>                                                                         <!--Tabelle mit Suchergebnissen als Zellen-->
+            <caption><h3>Folgende Tasks wurden gefunden</h3></caption>                  <!--Tabellenüberschrift-->
+            <tbody>                                                                     <!--Tabellenkörper-->
+            <tr>                                                                        <!--Tabellenzeile. Wird später dynamisch erzeugt und mit Inhalt(Zellen) gefüllt-->  
+                <td class="zelle">                                                      <!--Tabellenzelle. Inhalt wird dynamisch erzeugt. Dabei werden Daten aus einer DB ausgelesen und hier eingefügt-->
+                    <form action="tagesplan.php" method="get">                          <!--Formular beinhaltet einen Task-> beim absenden wird tagesplan.php aufgerufen-->
+                        <h3>Titel des Task</h3>                                         <!--Überschrift(Titel des Task)-->
+                        <time>Anfangs/Endzeit: 13:00 bis 14:00</time><br><br />         <!--Anfangs/Endzeit des Task-->
+                        <span id="beschr" readonly rows="4" cols="50">Beschreibung des Task.... </span><br /><br /> <!--Beschreibung(die der Taskersteller eingegeben hatte)-->
                         <a href="javascript:;" onclick="this.parentNode.submit();">befindet sich im :
-                            <strong>Tagesplan vom <time>08.07.16</time></strong>
+                            <strong>Tagesplan vom <time>08.07.16</time></strong><em> Ersteller: shahir</em>         <!--Verweis. Zeigt an in welchem Plan sich dieser Task befindet und wem der Plan gehört. Beim Betätigen wird das Formular abgesendet-->
                         </a>
-                        <input type="hidden" name="plan_id" value="5"> <!--Id des Planes, in der sich dieser Task befindet-->
+                        <input type="hidden" name="plan_id" value="5">                                              <!--Id des Planes, in der sich dieser Task befindet. Unsichtbar für Nutzer. Hilfreich bei interner Zuordnung des Task mit einem Plan-->
                     </form>
                 </td>
-                <td class="zelle">
+                <td class="zelle">                                                      <!--nächste Zelle s.o.-->
                     <form action="tagesplan.php" method="get">
                         <h3>Titel des Task2</h3>
                         <time>Anfangs/Endzeit: 18:00 bis 19:00</time>
@@ -75,7 +75,7 @@
         </table>
     </section>
 </main>
-<footer>&copy; Copyright 2016 Hajir</footer>
+<footer>&copy; Copyright 2016 Hajir</footer>                                                        <!--Fußbereich des BODY-->
 <script>
 //***********************************JS Code auslagern*****************************************
 //gebe autocomplete input-Feldern & bild-Containern eine unique ID
