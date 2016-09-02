@@ -41,7 +41,7 @@
                     <a href="einstellung.php">Profileinstellungen</a>                   <!--Link zur Einstellungen-Ansicht -->
                 </li>
                 <li>
-                    <a href="ausloggen.php">Ausloggen</a>                               <!--Link zu Ausloggen-Ansicht(wird noch erstellt)-->
+                    <a href="">Ausloggen</a>                                            <!--Link zu Ausloggen-Ansicht(wird noch erstellt)-->
                 </li>
             </ul>
         </li>
