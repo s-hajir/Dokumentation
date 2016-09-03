@@ -18,7 +18,8 @@
         <section>                                                                       <!--Bereich Login-Registrieren-Formular -->
             <form id="login_form" action="javascript:login();">                         <!--Formular ruft JS Methode auf -->
                                                                                         <!--Login-Formular -->
-                <h1 class="login-title">Login</h1>                                      <!--Überschrift -->
+            <fieldset>
+                <legend class="login-title">Login</legend>                              <!--Überschrift -->
                 <label for="login_username">Nutzername</label>
                 <br />                                                                  <!--Label für Nutzername -->
                 <input type="text" id="login_username" name="login_username" required="required" />   <!--Input Nutzername -->
@@ -26,12 +27,14 @@
                 <label for="login_password">Passwort</label>
                 <br />                                                                  <!--Label für Passwort -->
                 <input type="password" id="login_password" name="login_password" required="required" /> <!--Input Passwort -->
-                <button type="submit">Login</button>                                    <!--Submit Button -->
+                <input type="submit"/>                                                  <!--Submit Button -->
+            </fieldset>
             </form>
             <section id="response_container"></section>                                 <!--wird als Container für die AJAX Antwort genutzt-->
             
             <form id="register_form" action="javascript:register();">                   <!--Registrieren-Formular -->
-                <h1 class="register-title">Registrieren</h1>                            <!--Üerschrift -->
+            <fieldset>
+                <legend class="register-title">Registrieren</legend>                            <!--Üerschrift -->
                 <label for="r_username">Nutzername</label>
                 <br />                                                                  <!--Label für Nutzername -->
                 <input type="text" id="r_username" name="r_username" required="required" />
@@ -54,7 +57,8 @@
                 <input type="password" id="r-password-cnf" name="r-password-cnf" required="required" />
                 <br />
                 <br />                                                                  <!--Input Passwort-wdh -->
-                <button type="submit">OK</button>                                       <!--Submit Button -->
+                <input type="submit"/>                                                  <!--Submit Button -->
+            </fieldset>
             </form>
             <section id="response_container2"></section>                                <!--wird als Container für die AJAX Antwort genutzt-->
         </section>
