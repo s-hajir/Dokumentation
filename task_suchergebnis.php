@@ -30,7 +30,7 @@
                         <legend>Titel des Task</legend>                                 <!--Überschrift(Titel des Task)-->
                         <time>Anfangs/Endzeit: 13:00 bis 14:00</time><br><br />         <!--Anfangs/Endzeit des Task-->
                         <span id="beschr" readonly rows="4" cols="50">Beschreibung des Task.... </span><br /><br /> <!--Beschreibung(die der Taskersteller eingegeben hatte)-->
-                        <a href="javascript:;" onclick="this.parentNode.submit();">befindet sich im :
+                        <a href="javascript:" onclick="this.parentNode.submit();">befindet sich im :
                             <strong>Tagesplan vom <time>08.07.16</time></strong><em> Ersteller: shahir</em>         <!--Verweis. Zeigt an in welchem Plan sich dieser Task befindet und wem der Plan gehört. Beim Betätigen wird das Formular abgesendet-->
                         </a>
                         <input type="hidden" name="plan_id" value="5">                                              <!--Id des Planes, in der sich dieser Task befindet. Unsichtbar für Nutzer. Hilfreich bei interner Zuordnung des Task mit einem Plan-->
@@ -46,7 +46,7 @@
                         <span id="beschr" readonly rows="4" cols="50">Beschreibung des Task.... </span>
                         <br />
                         <br />
-                        <a href="javascript:;" onclick="this.parentNode.submit();">
+                        <a href="javascript:" onclick="this.parentNode.submit();">
                             befindet sich im :
                             <strong>
                                 Tagesplan vom
@@ -66,7 +66,7 @@
                         <span id="beschr" readonly rows="4" cols="50">Beschreibung des Task.... </span>
                         <br />
                         <br />
-                        <a href="javascript:;" onclick="this.parentNode.submit();">
+                        <a href="javascript:" onclick="this.parentNode.submit();">
                             befindet sich im :
                             <strong>
                                 Tagesplan vom
