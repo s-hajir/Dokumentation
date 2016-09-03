@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--Die Datei wurde mit .php-Endung gespeichert, da sonst <?php //include?> nicht funktioniert-->
 <html lang="de">
 <head>
     <meta charset="utf-8" />
