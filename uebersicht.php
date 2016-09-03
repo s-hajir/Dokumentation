@@ -34,7 +34,8 @@
                     <tr>                                                                <!--Bereich für Tabellenzeile. Tabellenzeilen werden später dynamisch erzeugt & mit Zellen befüllt-->
                         <td>                                                            <!--Bereich für Tabellenzelle. Zellen werden später dynamisch erzeugt & mit DB-Daten befüllt. eine Zelle entspricht einem Tagesplan im Monat-->
                             <form action="tagesplan.php" method="get">                  <!--Formular umhüllt Zellendaten, ruft beim absenden tagesplan.php auf-->
-                                <h3>Titel des Planes</h3>                               <!--Titel-->
+                              <fieldset>  
+                                <legend>Titel des Planes</legend>                               <!--Titel-->
                                 <time>22.08.16</time>                                   <!--Datum des Planes-->
                                 <br />
                                 <label>                                                 <!--Gibt Anzahl der im Plan enthaltenen Tasks an-->
@@ -43,6 +44,7 @@
                                 </label>
                                 <input type="submit" value="zum plan" />                <!--Formular Submit-->
                                 <input type="hidden" name="plan_id" value="13" />       <!--Beinhaltet die Id dieses Planes.Feld ist unsichtbar. Id wird an tagesplan.php gesendet-->
+                              </fieldset>
                             </form>
                         </td>
                     </tr>
