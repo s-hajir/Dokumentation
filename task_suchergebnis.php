@@ -51,7 +51,7 @@
                             <strong>
                                 Tagesplan vom
                                 <time>21.07.16</time>
-                            </strong>
+                            </strong><em> Ersteller: ali</em> 
                         </a>
                         <input type="hidden" name="plan_id" value="8" />
                     </fieldset>
@@ -71,7 +71,7 @@
                             <strong>
                                 Tagesplan vom
                                 <time>22.08.16</time>
-                            </strong>
+                            </strong><em> Ersteller: thomas</em> 
                         </a>
                         <input type="hidden" name="plan_id" value="13" />
                     </fieldset>
