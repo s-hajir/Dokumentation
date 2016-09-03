@@ -12,7 +12,7 @@
         <br />
         <?php include "freischalten_markieren_freunde.html" ?>                               <!-- Bereich: Freischalten für Freunde/Markieren von Freunden-->
         <br>
-        <button type="submit" id="Erstelle">Erstelle</button>                                <!--Button schickt Formular ab und schließt modalen Dialog -->
-        <button type="button" id="Zurueck">Zurueck</button>                                  <!--Button schließt modalen Dialog-->
+        <input type="submit" id="Erstelle" value="Erstelle" />                               <!--Button schickt Formular ab und schließt modalen Dialog -->
+        <input type="button" id="Zurueck" value="Zurueck"/>                                  <!--Button schließt modalen Dialog-->
     </form>
 </dialog>
