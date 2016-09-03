@@ -41,7 +41,7 @@
                 <br />
                 <?php include "freischalten_markieren_freunde.html" ?>                                 <!-- Bereich: Freischalten für Freunde/Markieren von Freunden-->
                 <br />
-                <button type="submit" id="ErstelleTask">Erstelle</button>                                  <!--Button schickt Formular ab und schließt modalen Dialog -->
+                <input type="submit" id="ErstelleTask" value="Erstelle"/>                                  <!--Button schickt Formular ab und schließt modalen Dialog -->
                 <button type="button" id="ZurueckTask">Zurueck</button>                                    <!--Button schließt modalen Dialog-->
             </form>
         </dialog>
