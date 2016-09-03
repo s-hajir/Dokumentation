@@ -103,7 +103,7 @@
                                    <input type="text" placeholder="Kommentar..." />                         <!--Kommentar Input-->
                                    <input type="submit" value="posten" />                                   <!--Submit Button-->
                                </form><br />
-                               <button id="task-aendern">Task Ändern</button>                               <!--Button. Anfangs-Endzeit oder Beschreibung ändern und Bilder/Videos hochladen. Hierfür wird ein modaler Dialog initiiert(wird später implementiert)-->
+                               <button id="task-aendern">Task Ändern</button>                               <!--Button. Ein modaler Dialog wird initiiert(wird später implementiert). Folgende Funktionen bietet der Dialog:  Anfangs-Endzeit oder Beschreibung ändern, Bilder/Videos hochladen/löschen, vergebene Berechtigungen an einzelne Freunde zurücknehmen, kompletten Task löschen-->
                             </section>
                         </footer>
                     </section>
@@ -113,6 +113,7 @@
                 <h4>Schalte Plan frei für Freunde</h4>                                  <!--Überschrift-->
                 <?php include "freischalten_markieren_freunde.html"; ?>                 <!--Freunde suchen und auswählen-->
                 <button onclick="javascript:planFreischalten();">Freischalten</button>  <!--Button ermöglicht Freischalten des Planes für ausgewählte Freunde-->
+                <br /><button id="plan-aendern">Plan Ändern</button>                    <!--Button. Ein modaler Dialog wird initiiert(wird später implementiert). Folgende Funktionen bietet der Dialog:  Plantitel/Datum ändern, vergebene Berechtigungen an einzelne Freunde zurücknehmen, kompletten Task löschen-->
             </footer>
         </article>
     </main>
