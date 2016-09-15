@@ -13,6 +13,8 @@
 <body>
     <header>                                                                            <!--Kopfbereich des BODY-->
         <img src="logo.jpg" />                                                          <!--Logo der Applikation-->
+        <h1>Herzlich Willkommen zu ihrem Tagesplaner</h1>
+        <h3>Sie können sich unten in ihrem Konto einloggen oder ein neues Konto anlegen</h2>
     </header>
     <main>                                                                              <!--Hauptbereich des BODY-->
         <section>                                                                       <!--Bereich Login-Registrieren-Formular -->
