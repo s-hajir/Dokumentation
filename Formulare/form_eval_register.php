@@ -32,6 +32,9 @@ function validateRegistration() {
                 echo "<form action='tagesplan.php' method='get'><h2>Willkommen! ".$username."</h2><p style='color:green;'>Ihr Konto wurde erfolgreich angelegt. Hier gehts weiter</p><br><button type='submit' style='color:green;' >Weiter</button></form>";
                 $_SESSION['name'] = $firstname." ".$lastname;
                 $_SESSION['username'] = $username;
+                
+                $foldername = $firstname."_".$lastname."(".$username.")";
+                $_SESSION['imgUrl'] = $foldername."/".$foldername."_profil.jpg";
             }else{
                 echo "<p style='color:red;'>Datenbank-Problem beim Anlegen des Accounts</p>";
             }
