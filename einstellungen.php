@@ -21,7 +21,7 @@
         <section>                                                                           <!--Container für Einstellungen-->
             <h1>Profil</h1>                                                                 <!--Überschrift-->
             <figure id="profil-img-container">                                              <!--Bereich für Profilbild-->
-                <img id="profil-img" src="" width="150" height="140" />                     <!--Profilbild-->
+                <img id="profil-img" src="<?php echo $_SESSION['imgUrl'];?>" width="150" height="140" /> <!--Profilbild-->
             </figure>
             <form id="uploadProfilbild">                                                    <!--Formular zum Ändern des profilbildes-->
                 <label for="fileToUpload">Wähle ein neues Profilbild:</label>               <!--Label-->
