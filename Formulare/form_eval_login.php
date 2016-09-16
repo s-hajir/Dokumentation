@@ -28,6 +28,10 @@ function validateLogin() {
             echo "<form action='tagesplan.php' method='get'><h2>Willkommen! ".$username."</h2><p style='color:green;'>Hier gehts weiter</p><br><button type='submit' style='color:green;' >Weiter</button></form>";
             $_SESSION['name']= $results[0];
             $_SESSION['username'] =$username;
+            
+            $fullnameNoSpace = str_replace(" ","_",$results[0]); 
+            $foldername = $fullnameNoSpace."(".$username.")"; 
+            $_SESSION['imgUrl'] = $foldername."/".$foldername."_profil.jpg";
 
         }else{echo "<p style='color:red;'>Nutzername/Passwort falsch ! Bitte nochmal versuchen</p>";} //Nutzer existiert nicht
     } else {
