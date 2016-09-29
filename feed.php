@@ -17,6 +17,8 @@
     </header>
     <main>                                                                          <!--Hauptbereich des BODY-->
         <?php include "neuer_plan_dialog.php";?>
+        <dialog id="server_antwort_dialog">                                         <!--Zeigt an, ob Plan oder Task erfolgreich angelegt wurde oder nicht -->
+        </dialog>
 
         <section id="feed-container">                                               <!--Container für Feed-->
               <h1>Notifikationen</h1>                                               <!--Überschrift-->
@@ -83,11 +85,10 @@
  //Dialog(neuer Plan) öffnen/schliessen
          var startbutton = document.getElementById("Neuer-Plan"),
          dialog = document.getElementById("dialog"),
-         erstellebutton = document.getElementById("Erstelle"),
+         serverAntwortDialog = document.getElementById("server_antwort_dialog"),
          zurueckbutton = document.getElementById("Zurueck");
          startbutton.addEventListener('click', zeigeFenster);
-         erstellebutton .addEventListener('click', schliesseFenster2);
-         zurueckbutton .addEventListener('click', schliesseFenster);
+         zurueckbutton.addEventListener('click', schliesseFenster);
          function zeigeFenster() {
           dialog.showModal();
          }
@@ -99,10 +100,36 @@
              img_container.removeChild(img_container.firstChild);
           }
           }
-         function schliesseFenster2() {
-                                                                      //Verbesserung: AJAX -> Server macht DB Eintrag -> JSON String zurück "Erfolgreich"/"Fehlgeschlagen"
-             dialog.close();
-         }
+//AJAX -> Server macht DB Eintrag -> JSON String zurück "Erfolgreich"/"Fehlgeschlagen"
+    $("#form_neuer_plan_dialog").on('submit', (function (e) {
+        e.preventDefault();                    
+        var planTitel = document.getElementById("titel").value,
+        planDatum = document.getElementById("datum").value,
+        freischaltenFuer = document.getElementById("tags0").value;
+        $.ajax({
+            url: "form_eval_neuer_plan_dialog.php",
+            type: "GET",
+            data: "titel="+planTitel+"&datum="+planDatum+"&freischaltenFuer="+freischaltenFuer, 
+            success: function (data)    
+            {
+                serverAntwortDialog.innerHTML = data + "</br></br><button onclick='schliessen()'>Schließen</button>";
+                serverAntwortDialog.showModal();
+            },
+            error: function ()          
+            {
+            }
+        });
+    }));
+     
+         function schliessen() {
+              dialog.close();
+              serverAntwortDialog.close();
+              document.getElementById("form_neuer_plan_dialog").reset();
+             var img_container0 = document.getElementById("img_container0")
+             while (img_container0.firstChild) {
+             img_container0.removeChild(img_container0.firstChild);
+          }
+        }
 //Autocomplete
         function showHint(e,objref) {
             var xhttp;
@@ -114,25 +141,17 @@
             xhttp.onreadystatechange = function () {
             if (xhttp.readyState == 4 && xhttp.status == 200) {
                 var serverResponse = xhttp.responseText;
-                        //server schickt JSON-String zurück
-      					console.log("Server raw JSON:"+serverResponse);
-      					console.log("Typeof response: "+typeof serverResponse);
                         //liefert Array von JS-Objekten. jedes Objekt entspricht einer Zeile in der DB-Tabelle
       					var jsObjArray = JSON.parse(serverResponse);  
                         //iteriere über jedes Objekt im Array -> fülle Wert vom name-Attribut in nameArray UND Wert vom imgUrl-Attribut in imgUrlArray
-      					console.log(jsObjArray);
       					var nameArray = new Array();
       					var imgUrlProfilArray = new Array();
       					var username ="";
-      					console.log("Die name/imgArrays: ");
       					for (var i = 0; i < jsObjArray.length; i++) {
       					    username = jsObjArray[i].username;
       					    nameArray[i] = jsObjArray[i].name.concat("("+username+")");
       					    imgUrlProfilArray[i] = jsObjArray[i].imgUrlProfil;
-      					    console.log(nameArray[i] + " und " + imgUrlProfilArray[i]);
       					}
-      					console.log("JS Objekt: ");
-      					console.log(jsObjArray);
       					$( function() {
       						function split( val ) {
       						  return val.split( /,\s*/ );
@@ -189,7 +208,6 @@
   				strArray = str.split(" ");              //split beim " "-Leerzeichen, dann Array bilden. Leerzeichen werden entfernt Bsp: "Peru, Belgien, Ungarn" ->["Peru,", "Belgien,", "Ungarn"]
   				str2 = strArray[strArray.length - 1];   //letztes Element des Arrays
   			}
-  			console.log("Dein Input: "+str2);
   			xhttp.open("GET", "form_eval_freischalten_markieren_freunde.php?keyword=" + str2, true);
         xhttp.send();
           }
