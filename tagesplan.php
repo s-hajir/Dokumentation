@@ -19,6 +19,8 @@
     </header>
     <main>                                          <!--Hauptbereich des BODY-->
         <?php include "neuer_plan_dialog.php";  ?>  <!--modalen Dialog für 'neuen plan' einbinden-->
+        <dialog id="server_antwort_dialog">         <!--Zeigt an, ob Plan oder Task erfolgreich angelegt wurde oder nicht -->
+        </dialog>
         
         <dialog id="neuer_task_dialog">                                                                <!--modaler Dialog für 'neuer Task'. Wird angezeigt bei Klick auf "+Neuer Task" im Tagesplan-Bereich-->
             <h2>Neuen Task erstellen</h2>                                                              <!--Überschrift-->
@@ -134,10 +136,9 @@
  //Dialog(neuer Plan) öffnen/schliessen
          var startbutton = document.getElementById("Neuer-Plan"),
          dialog = document.getElementById("dialog"),
-         erstellebutton = document.getElementById("Erstelle"),
+         serverAntwortDialog = document.getElementById("server_antwort_dialog"),
          zurueckbutton = document.getElementById("Zurueck");
          startbutton.addEventListener('click', zeigeFenster);
-         erstellebutton.addEventListener('click', schliesseFenster2);
          zurueckbutton.addEventListener('click', schliesseFenster);
 
          function zeigeFenster() {
@@ -151,10 +152,39 @@
              img_container.removeChild(img_container.firstChild);
           }
           }
-         function schliesseFenster2() {
-                                                                      //Verbesserung: AJAX -> Server macht DB Eintrag -> JSON String zurück "Erfolgreich"/"Fehlgeschlagen"
-             dialog.close();
-         }
+//AJAX -> Server macht DB Eintrag -> JSON String zurück "Erfolgreich"/"Fehlgeschlagen"
+    $("#form_neuer_plan_dialog").on('submit', (function (e) {
+        //Defaultfunktion von <form> abstellen
+        e.preventDefault();                    
+        //hole die Eingaben
+        var planTitel = document.getElementById("titel").value,
+        planDatum = document.getElementById("datum").value,
+        freischaltenFuer = document.getElementById("tags0").value;
+
+        $.ajax({
+            url: "form_eval_neuer_plan_dialog.php",
+            type: "GET",
+            data: "titel="+planTitel+"&datum="+planDatum+"&freischaltenFuer="+freischaltenFuer, 
+            success: function (data)    //on success do this. 'data' is http.responseText
+            {
+                serverAntwortDialog.innerHTML = data + "</br></br><button onclick='schliessen()'>Schließen</button>";
+                serverAntwortDialog.showModal();
+            },
+            error: function ()          
+            {
+            }
+        });
+    }));
+     
+         function schliessen() {
+              dialog.close();
+              serverAntwortDialog.close();
+              document.getElementById("form_neuer_plan_dialog").reset();
+             var img_container0 = document.getElementById("img_container0")
+             while (img_container0.firstChild) {
+             img_container0.removeChild(img_container0.firstChild);
+          }
+        }
 </script>
 <script>
 //Dialog(neuer Task) öffnen/schliessen (gleiche Vorgehensweise wie oben)
