@@ -6,6 +6,10 @@
         <br />
         <input type="text" id="titel" name="titel" />                                        <!--Input Titel(optional)-->
         <br />
+        <label for="beschreibung">Beschreibung</label>
+        <br />                                                                               <!--Label für Beschreibung -->
+        <input type="text" id="beschreibung" name="beschreibung" />
+        <br/>
         <label for="datum">Datum</label>                                                     <!--Label für Datum -->
         <br />
         <input type="date" id="datum" name="datum" required="required" />                    <!--Input Datum -->
