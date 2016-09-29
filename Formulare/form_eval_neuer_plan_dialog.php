@@ -37,6 +37,8 @@ if(isset($_GET['datum']) && !empty($_GET['datum'])){
      }else{
         trigger_error('Error executing statement.', E_USER_ERROR);
      }
+    
+     $db = null;
 }else{
       echo json_encode("<p style='color:red;'>Fehler: Datum nicht angegeben</p>");
 }
