@@ -157,12 +157,13 @@
         e.preventDefault();                    
         var planTitel = document.getElementById("titel").value,
         planDatum = document.getElementById("datum").value,
-        freischaltenFuer = document.getElementById("tags0").value;
+        freischaltenFuer = document.getElementById("tags0").value
+        beschreibung = document.getElementById("beschreibung").value;
 
         $.ajax({
             url: "form_eval_neuer_plan_dialog.php",
             type: "GET",
-            data: "titel="+planTitel+"&datum="+planDatum+"&freischaltenFuer="+freischaltenFuer, 
+            data: "titel="+planTitel+"&datum="+planDatum+"&freischaltenFuer="+freischaltenFuer+"&beschreibung="+beschreibung, 
             success: function (data)    
             {
                 serverAntwortDialog.innerHTML = data + "</br></br><button onclick='schliessen()'>Schließen</button>";
