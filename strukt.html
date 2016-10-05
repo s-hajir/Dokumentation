@@ -13,8 +13,7 @@
   8--header / Kopfteil der Seite
   9--main / Hauptteil der Seite 
   10--footer / Fußteil der Seite
-  11--nav / Navigationsleiste
-  12--form / Suche
+  11--nav / Navigationsleiste12--form / Suche
   	13-- >input search / Eingabe Suchtext. sucht in den Tasks aller Pläne dieses Users nach dem eingegebenen Textabschnitt
   	14-- >input submit
   15--button / erzeugt neuen Tagesplan
@@ -390,5 +389,107 @@ Wie oben geschrieben haben Sie sich einige Gedanken über die Struktur gemacht u
 Wichtig noch: Das hier sind lediglich einige ausgewählte Beispiele; leider müssen Sie ungefähr die Hälfte der notierten strukturellen Elemente nochmal überarbeiten.
 
 Deshalb kann ich momentan auch noch keine Wertung erstellen. Bitte verstehen Sie das aber nicht als negative Wertung; es ist keine negative Wertung, sondern hier geht es wichtige Detailarbeiten.
+
+-->
+
+<!--
+===================================
+=== Feedback Alpers, 2016-07-27 ===
+===================================
+
+=== 1.) Strukturelle Elemente ===
+
+== 1.1.) 6--label / Applikationsname ==
+Das folgende ist lediglich eine Anmerkung, keine Korrektur. Bitte prüfen Sie, ob Sie bei diesem Element etwas ändern müssen.
+
+Ein Label ist eine Beschriftung, die z.B. neben an einen input-Container gebunden wird. (Für mehr Details schauen Sie bitte ins Buch.)
+Wenn Sie den Namen der Anwendung einblenden wollen, dann wird das voraussichtlich eher als Text/Grafik im Header passieren.
+
+== 1.2.) 4--button / Login ==
+Auch wenn wir als Nutzer an dieser Stelle von einem Button sprechen würden, handelt es sich um einen input type submit.
+
+== 1.3.) 8--header / Kopfteil der Seite, 9--main / Hauptteil der Seite, 10--footer / Fußteil der Seite, 11--nav / Navigationsleiste ==
+Diese Container gibt es, allerdings sollten Sie bei diesem Aufgabenteil vorrangig prüfen, welche strukturellen Elemente Sie benötigen, um Ihre Anwendung umzusetzen.
+
+== 1.4.) Schauen wir uns dazu Ihre Beschreibung an: ==
+
+--Nutzer legt Account an
+--Profil kann ergänzt werden mit Profilbild & persönlichen Infos
+
+Es wäre jetzt sinnvoll, wenn die ersten strukturellen Elemente genau diese Teile der Anwendung umsetzen würden. (Bitte ändern Sie aber die Nummerierung von vorhandenen Elementen nicht mehr ab.)
+
+Generell ist es schwierig, bei Ihrer Aufstellung zu erkennen, welche Teile der Beschreibung in welchen Teilen der Struktur umgesetzt werden. Dadurch ist es effektiv nicht möglich zu erkennen, ob und wenn ja welche Teile der Beschreibung noch nicht umgesetzt werden bzw. ob und wenn ja wo Logikfehler eingebaut wurden. Das ist aber wichtig, da die Planung sonst später nicht mehr überarbeitet werden kann.
+
+== 1.5.) Liste ohne Duplikate ==
+
+Leider haben Sie bei der Eliminierung der Duplikate den Grund für den Einsatz der strukturellen Elemente entfernt, sodass auch hier nicht mehr erkennbar ist, wofür die einzelnen Elemente eingesetzt werden sollen. Dadurch sind logische Fehler und ein unnötig hoher Zeitaufwand bei der Umsetzung und Änderung der Planung vorprogrammiert.
+
+=== Zusammenfassung ===
+
+Ihre Liste ist zwar nur schwer nutzbar, um damit weiter zu arbeiten, weshalb Sie sie nochmal nach den gerade genannten Punkten überarbeiten sollten. Momentan kann ich deshalb auch noch kein abschließendes Feedback abgeben, weil bereits das zusammenstellen einer Gruppe aus den Einzelteilen sehr viel Zeit in Anspruch nimmt.
+
+================================================================
+=== Wertung 3: Ausarbeitung der strukt. Elem. gesamt: 10 / 10 ===
+================================================================
+- Knappe Form (0 - 3 Pk.): 3
+- Für je 5 unterschiedl. strukt. Elem (keine Gruppierungen) 1 Pk.: 7
+=== (Malus bei strukt. Elem.) ===
+- Vermischung strukt. Elem., Gruppierung, Abläufe usw. -5 bis 0 Pk.: 
+
+=== 2.) Gruppen ===
+
+Bei der Aufstellung der Gruppen haben Sie gut gearbeitet, allerdings wird die Programmierung schwierig: Da bei den Zahlen für die strukturellen Elemente nicht steht, um welches strukturelle Element es sich handelt, wird die Programmierung eine sehr umfangreiche Recherchearbeit: Wer auch immer hier programmiert oder Fehler sucht, muss nun zunächst das passende strukturelle Element heraussuchen und dann versuchen herauszufinden, welcher Teil der Beschreibung damit umgesetzt werden soll.
+
+Leider fehlt deshalb oben auch einiges bzw. Ihnen ist ein Missverständnis unterlaufen, dass bei vielen Projekten zu finden ist. Hier ein Beispiel:
+
+(I)Login/Register:
+  19 section
+  1 aside
+  2 input text
+  0 h1,h2
+  4 button
+  5 hyperlink (a-Element)
+  
+== 2.1.) Keine main/aside/... in Gruppen ==
+Gruppen sind Zusammenstellungen von strukturellen Elementen, die gemeinsam eine sinnvolle Aufgabe übernehmen. Der Log-In bzw. die Registrierung ist eine solche Gruppe. Die Idee für diese Gruppe ist also richtig.
+
+Aber die Positionierung einer Gruppe innerhalb einer Ansicht (die z.B. mit dem aside-Container programmiert werden kann) ist eine Frage, die eher unter das Design der Anwendung fällt, bzw. in die Struktur einer Ansicht. Deshalb ist der Container 1-aside hier falsch.
+
+== 2.2.) section ==
+
+Den section-Container können Sie hier nutzen, auch wenn er eher überflüssig ist.
+
+== 2.3.) input-Container ==
+
+Hier ist Ihnen leider ein Fehler unterlaufen: input-Container werden innerhalb eines form-Containers genutzt, um mehrere Eingaben von Nutzern anzunehmen.
+
+Ein weiteres Problem hier besteht darin, dass Sie bei einem Log-In mehrere input-Container für die Eingaben verwenden. Es ist also an dieser Stelle nicht redundant, 2-input text mehrfach aufzuführen.
+
+== 2.4.) Fehlender label-Container ==
+
+Wenn innerhalb eines Formulars ein input-Container auftaucht, dann benötigen wir mit ganz wenigen Ausnahmen eine Beschriftung bzw. ein Bild, das Nutzern anzeigt, welche Eingabe erwartet wird. Und genau der fehlt leider in Ihrer Aufstellung.
+
+== 2.5.) Überschriften ==
+
+Bei Formularen (und ein Log-In oder eine Registrierung wird mit einem Formular in HTML programmiert) gibt es einen eigenen Container für die erste "Überschrift". Das ist der legend-Container. Bei Ihnen fehlt er. Evtl. wollten Sie dafür 0-h1,h2 verwenden.
+
+== 2.6.) form und fieldset fehlen ==
+
+Ebenfalls fehlen bei Ihnen der äußere form-Container, durch den die Gruppe erst zum Formular wird. 
+Das selbe gilt für den fieldset-Container, der die einzelnen input-Container zu gruppieren.
+
+== 2.7.) fehlender input type submit ==
+
+Um die Daten von einem Formular abzuschicken nutzen User einen Button. Im Quellcode handelt es sich hier aber nicht um einen button-Container, sondern um einen input vom Typ submit.
+
+== 2.8.) Hyperlink ==
+
+Prüfen Sie bitte, ob dieser Link tatsächlich ein sinnvoller Teil der Gruppe ist.
+
+=== Zusammenfassung ===
+
+Wie geschrieben ist Ihre Liste leider nur schwer nutzbar, um damit weiter zu arbeiten. Momentan kann ich deshalb auch noch kein abschließendes Feedback zu den Gruppen und Ansichten abgeben, weil bereits das Zusammenstellen einer Gruppe aus den Einzelteilen zu viel Zeit in Anspruch nimmt.
+
+Deshalb kann ich momentan auch noch nichts zur Umsetzung in HTML sagen. Die sieht allerdings ähnlich wie die Struktur oberflächlich betrachtet bis auf ein Detail sehr gut aus. Dieses Detail besteht darin, dass Sie JavaScript für die DB-Anbindung verwendet haben. In der Praxis werden Sie es später leider erleben, dass ein Unternehmen Ihnen verweigert mit einer Programmiersprache Ihrer Wahl zu arbeiten. Das ist aber für den Moment nicht relevant.
 
 -->
