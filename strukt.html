@@ -1,80 +1,97 @@
 <!--  Um die Struktur zu konzipieren wurden folgende Annahmen gemacht: Eine einfache Gruppe enthält nur strukturelle Elemente. 
       Eine komplexe Gruppe enthält zusätzlich noch andere Gruppen als Elemente. Ansichten enthalten nur Gruppen.
 
-== strukturelle Elemente (mit Duplikaten)==
+== strukturelle Elemente (mit Duplikaten)==19.10.2016 editiert==
+Info: Um besser erkennen zu können welche Teile der Beschreibung in welchen Teilen der Struktur umgesetzt werden, werden unten einige 'Marker' gesetzt.
+Werbung
   0--aside / Bereich für Werbung
   	1-- >img mit hyperlink / Werbebild 
+Login/Register
   2--input text/ Nutzername
   3--input password/ Passwort mit Punkten maskiert
-  4--button / Login
-  5--hyperlink / führt zu Registrierung-Ansicht
-  6--label / Applikationsname
+  4--button / Login				<-wird ersetzt durch ( 90--input type submit / Login / allgemeiner Button-Ersatz in Formularen)             
+  5--hyperlink / führt zu Registrierung-Ansicht	<-wird ersetzt durch die Punkte (92,94,95,96 und 97)
+Applikationsname und Logo
+  6--label / Applikationsname			<-wird ersetzt durch (89--h1 / Applikationsname)
   7--img / Logo
-  8--header / Kopfteil der Seite
-  9--main / Hauptteil der Seite 
-  10--footer / Fußteil der Seite
-  11--nav / Navigationsleiste12--form / Suche
+
+  8--header / Kopfteil der Seite		<-gehört nicht zu den strukturellen Elementen
+  9--main / Hauptteil der Seite 		<-gehört nicht zu den strukturellen Elementen
+  10--footer / Fußteil der Seite		<-gehört nicht zu den strukturellen Elementen
+  11--nav / Navigationsleiste			<-gehört nicht zu den strukturellen Elementen
+Suchfunktion
+  12--form / Suche	
   	13-- >input search / Eingabe Suchtext. sucht in den Tasks aller Pläne dieses Users nach dem eingegebenen Textabschnitt
   	14-- >input submit
-  15--button / erzeugt neuen Tagesplan
-  16--Input text / Eingabe Titel des Planes (optional)
- 17--Input date / Eingabe Datum des Planes (Pflicht)
- 18--button / Drücken -> klappt weitere Elemente aus:
-   19-- >hyperlink / Tagesplan-> öffnet Tagesplan-Ansicht 
-   20-- >hyperlink / Feed-> öffnet Feed-Ansicht   
-   21-- >hyperlink / Chat-> öffnet Chat-Ansicht
+Plan erstellen
+  15--button / erzeugt neuen Tagesplan (macht modalen Dialog sichtbar)
+  	16--Input text / Eingabe Titel des Planes (optional)
+ 	17--Input date / Eingabe Datum des Planes (Pflicht)	<-Ergänzung: 90--input type submit
+
+Navigation							<-gehört evtl. nicht zu den strukturellen Elementen 
+18--button / Drücken -> klappt weitere Elemente aus:		<-gehört evtl. nicht zu den strukturellen Elementen
+   19-- >hyperlink / Tagesplan-> öffnet Tagesplan-Ansicht	<-gehört evtl. nicht zu den strukturellen Elementen 
+   20-- >hyperlink / Feed-> öffnet Feed-Ansicht			<-gehört evtl. nicht zu den strukturellen Elementen   
+   21-- >hyperlink / Chat-> öffnet Chat-Ansicht			<-gehört evtl. nicht zu den strukturellen Elementen
+Notifikation
  22--hyperlink mit badge / badge zeigt Anzahl der nicht gelesenen Nofifikationen an. Drücken -> klappt scrollbare Liste aus:
 	 23-- >unordered list / Liste von Notifikationen(nicht-detailliert)
 	 	24-- >li-Element / jeder Eintrag besteht aus einem Tupel: 
 	 		25-- >img / Profilbild des Nutzers 
 	 		26-- >hyperlink / Aktivitäts-Info des Nutzers.  (Beispiel: "[Bild] Peter hat einen Task von dir kommentiert"). Link führt zur Feed-Ansicht, dort sind alle Notifikationen detailliert dargestellt.  
- 27--img mit hyperlink / Drücken -> klappt weitere Elemente aus:
+Profil 
+27--img mit hyperlink / Drücken -> klappt weitere Elemente aus:
  	28-- >li-Element mit hyperlink / öffnet Profil-Einstellung
  	29-- >li-Element mit hyperlink / loggt aus
+Freunde
  30--input search/ Suche eines Freundes (autocomplete)
- 31--label und img(in einem div) / Anzeige des Ergebnisses: Name und Profilbild des gesuchten Nutzers
- 32--button / bestätigen & freischalten
- 33--button / bestätigen & markieren
- 34--button / bestätigen & Anfrage senden
-
+ 	31--label und img(in einem div) / Anzeige des Ergebnisses: Name und Profilbild des gesuchten Nutzers
+ 	32--button / bestätigen & freischalten				<-alle Buttons werden ersetzt durch ( 90--input type submit )
+ 	33--button / bestätigen & markieren
+ 	34--button / bestätigen & Anfrage senden
+Profil-Einstellung
  35--input file / öffnet Fenster zum auswählen einer Bilddatei -> Profilbild ändern
  36--input text / alter Nutzername
  37--input text/ neuer Nutzername
  38--input password / altes Passwort
  39--input password / neues Passwort
  40--button / Submit
+Feed
  41--section / Feed beinhaltet Notifikationen(detailliert). Jede Notifikation im Feed besteht aus einem Quadrupel.
     	42-- >div / Notifikation:
    		43-- >img / Profilbild des Nutzers
    		44-- >label / Aktivitäts-Info 
    		45-- >hyperlink / Name des betroffenen Tasks (oder Planes) mit Verweis darauf
    		46-- >label / Datum des Ereignisses
+Chat
  47--section / Chat
  	48-- >img / zeigt den Chatpartner an
  	49-- >div / beinhaltet den Chatverlauf:
  		50-- >unordered list / beinhaltet einzelne Nachrichten
  			51-- >li-Element mit label / eine Nachricht
  	52--input text / Chat Texteingabe
+Suchergebnis
  53 section / Task-und Plan-Suchergebnis
  	54-- >Tabelle mit 3 Spalten / Anzeige der gesuchten Tasks. Anzahl der Treffer bestimmt Anzahl der Zeilen. Jedes Feld bekommt einen Task. Die Tasks sind nach Datum ihres zugehörigen Eltern-Planes sortiert
  		55-- >hyperlink / Drücken -> führt zum Ort, wo der Task sich befindet
  	56-- >input radio / Toggel zwischen Anzeige der Suchergebnisse in Form von: betroffenen Tasks oder betroffenen Tagesplänen
-
+Pläne Übersicht
  57--großer Kalender / zeigt alle Tage im Monat tabellenförmig an. jeder Tag ist ein Feld. Tage mit Tagesplänen sind markiert. alle Felder sind anklickbar
  58--2 buttons / mit 'Vor' und 'Zurück'. Monatsweise geht es im Kalender vor und zurück
- 59--canvas /Graph zeigt die Häufigkeit der Nutzung der App an
+ 59--canvas /Graph zeigt die Häufigkeit der Nutzung der App an			<-Ergänzung: 84--input date / Datum kann ausgewählt werden...
+Task
  60--dialog / Task-Input-Dialog. Öffnet sich bei Task-Erstellung & Task-Änderung
- 61--input text / Eingabe Titel des Tasks
- 62--input time / Auswahl Anfangs-und Endzeit
- 63--input text / Eingabe Beschreibung (optional)
- 64--button / Auswahl der Art z.B. Sport,Arbeit,Freizeit ->klappt eine scrollbare Liste aus:
+ 	61--input text / Eingabe Titel des Tasks
+ 	62--input time / Auswahl Anfangs-und Endzeit
+ 	63--input text / Eingabe Beschreibung (optional)
+ 	64--button / Auswahl der Art z.B. Sport,Arbeit,Freizeit ->klappt eine scrollbare Liste aus:
  	  65-- >unordered List / Liste
- 	  	66 -- >li-Element mit img und hyperlink / jeder Eintrag besteht aus einem anklickbarem Tupel: Icon + Bezeichnung
- 67--input text / Titel des Tasks
- 68--input text / Anfangs-und Endzeit des Tasks
- 69--input text / Beschreibung des Tasks
- 70--input text / Art des Tasks: z.B. Sport,Arbeit,Freizeit
- 71--input search / Markierungen der Freunde
+ 	  	66 -- >li-Element mit img und hyperlink / jeder Eintrag besteht aus einem anklickbarem Tupel: Icon + Bezeichnung  <-Ergänzung: 90--input type submit
+ 67--input text / Titel des Tasks				<-wird ersetzt durch  (98--h3 / Tasktitel)   
+ 68--input text / Anfangs-und Endzeit des Tasks			<-wird ersetzt durch  (99--time / Taskzeit)
+ 69--input text / Beschreibung des Tasks			<-wird ersetzt durch  (100--small / Taskbeschreibung)
+ 70--input text / Art des Tasks: z.B. Sport,Arbeit,Freizeit	<-wird ersetzt durch  (101--small / Taskart)
+ 71--input search / Markierungen der Freunde			<-wird ersetzt durch  (102--em / Markierung-Freunde)
  72--button ->klappt Optionen aus:
    73-- >input file / Bild/Video/Audio -> hinzufügen
    74-- >button / triggert Task-Input-Dialog:
@@ -83,22 +100,36 @@
  	77-- >video /Video
  	78-- >button / löschen des Bilde/Videos
  	79-- >2 buttons / mit 'Vor' und 'Zurück'
- 80--button / Kommentarbereich für diesen Task wird geöffnet:
+ 80--button / Kommentarbereich für diesen Task wird geöffnet:	
  	81-- >unordered list / Kommentare
    		82-- >li-Element mit label / Name und Kommentar eines Nutzers wird angezeigt(davon kann es viele geben)
    		83-- >li-Element mit input text / hier kann der aktuell eingeloggte Nutzer kommentieren
+----------------------
  84--input date / Datum kann ausgewählt werden -> der Plan mit diesem Datum wird angezeigt, falls er existiert
  85--button / Bearbeiten des aktuell angezeigten Plans, klappt Optionen auf:
    86-- >input date / Datum des Planes ändern
    87-- >buton / Löschen des Planes
- 88--button / neuer Task 
- -------------------------------------------------------------------------------------------------------------------------------------
-== strukturelle Elemente (ohne Duplikate, ungeordnet)==
-0 h1,h2
-1 aside
-2 input text
-3 input password
-4 button
+ 88--button / neuer Task (macht modalen Dialog sichtbar)
+ 89--h1 / Applikationsname
+ 90--input type submit / Login / Button-Ersatz in allen Formularen ! (alle oben genannten Buttons innerhalb von Formularen werden hiermit ersetzt !)
+ 91--h2 / Begrüßungstext 
+ 93--input text / Nutzername
+ 94--input text / Vorname
+ 95--input text / Nachname
+ 96--input password / Passwort
+ 97--input password / Passwort Wiederholung
+ 98--h3 / Tasktitel
+ 99--time / Taskzeit
+ 100--small / Taskbeschreibung
+ 101--small / Taskart
+ 102--em / Markierung-Freunde
+-------------------------------------------------------------------------------------------------------------------------------------
+== strukturelle Elemente (ohne Duplikate, ungeordnet)==19.10.2016 editiert==
+0 h1,h2,h3 / Applikationsname / Begrüßungstext (wurden zusammengelegt, da alle h-Elemente jeweils als Überschrift benutzt werden)
+1 aside / Bereich für Werbung
+2 input text / Nutzername / Eingabe Titel des Tasks / Eingabe Beschreibung (optional) / alter Nutzername / neuer Nutzername (wird noch in diversen weiteren Situationen verwendet, siehe oben)
+3 input password / Passwort mit Punkten maskiert / Passwort / Passwort Wiederholung
+4 button / erzeugt neuen Tagesplan (macht modalen Dialog sichtbar)
 5 hyperlink (a-Element)
 6 label
 7 img
