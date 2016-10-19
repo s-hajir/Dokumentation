@@ -62,7 +62,7 @@ Feed
    		43-- >img / Profilbild des Nutzers
    		44-- >label / Aktivitäts-Info 
    		45-- >hyperlink / Name des betroffenen Tasks (oder Planes) mit Verweis darauf
-   		46-- >label / Datum des Ereignisses
+   		46-- >label / Datum des Ereignisses			<-wird ersetzt durch (103--time / Ereigniszeitpunkt)
 Chat
  47--section / Chat
  	48-- >img / zeigt den Chatpartner an
@@ -92,15 +92,15 @@ Task
  69--input text / Beschreibung des Tasks			<-wird ersetzt durch  (100--small / Taskbeschreibung)
  70--input text / Art des Tasks: z.B. Sport,Arbeit,Freizeit	<-wird ersetzt durch  (101--small / Taskart)
  71--input search / Markierungen der Freunde			<-wird ersetzt durch  (102--em / Markierung-Freunde)
- 72--button ->klappt Optionen aus:
-   73-- >input file / Bild/Video/Audio -> hinzufügen
-   74-- >button / triggert Task-Input-Dialog:
+ 72--button ->klappt Optionen aus:				<-gehört nicht zu den strukturellen Elementen
+ 73-- >input file / Bild/Video/Audio -> hinzufügen
+ 74-- >button / triggert Task-Input-Dialog:			<-gehört nicht zu den strukturellen Elementen
  75--figure /Slideshow der angefügten Bilder/Videos
  	76-- >img / Bild
  	77-- >video /Video
  	78-- >button / löschen des Bilde/Videos
  	79-- >2 buttons / mit 'Vor' und 'Zurück'
- 80--button / Kommentarbereich für diesen Task wird geöffnet:	
+ 80--button / Kommentarbereich für diesen Task wird geöffnet:	<-gehört nicht zu den strukturellen Elementen
  	81-- >unordered list / Kommentare
    		82-- >li-Element mit label / Name und Kommentar eines Nutzers wird angezeigt(davon kann es viele geben)
    		83-- >li-Element mit input text / hier kann der aktuell eingeloggte Nutzer kommentieren
@@ -123,37 +123,41 @@ Task
  100--small / Taskbeschreibung
  101--small / Taskart
  102--em / Markierung-Freunde
+ 103--time / Ereigniszeitpunkt
 -------------------------------------------------------------------------------------------------------------------------------------
 == strukturelle Elemente (ohne Duplikate, ungeordnet)==19.10.2016 editiert==
-0 h1,h2,h3 / Applikationsname / Begrüßungstext (wurden zusammengelegt, da alle h-Elemente jeweils als Überschrift benutzt werden)
+Info: einige Elemente werden für mehrere Beschreibungen verwendet, siehe oben. Bei diesen Elementen wird nur die erste Beschreibung angegeben, da sonst teilweise sehr viel Text geschrieben werden müsste. 
+Diese Elemente werden mit [weitere] markiert. 
+
+0 h1,h2,h3 / Applikationsname / Begrüßungstext (zusammengelegt, da alles h-Elemente)
 1 aside / Bereich für Werbung
-2 input text / Nutzername / Eingabe Titel des Tasks / Eingabe Beschreibung (optional) / alter Nutzername / neuer Nutzername (wird noch in diversen weiteren Situationen verwendet, siehe oben)
-3 input password / Passwort mit Punkten maskiert / Passwort / Passwort Wiederholung
-4 button / erzeugt neuen Tagesplan (macht modalen Dialog sichtbar)
-5 hyperlink (a-Element)
-6 label
-7 img
+2 input text / Nutzername / [weitere]
+3 input password / Passwort mit Punkten maskiert / [weitere]
+4 button / erzeugt neuen Tagesplan (macht modalen Dialog sichtbar) / [weitere]
+5 hyperlink (a-Element) / Drücken -> führt zum Ort, wo der Task sich befindet / [weitere]
+6 label / Verwendung in diversen Formularen 
+7 img / Logo / [weitere]
 8 header
 9 main
 10 footer
 11 nav
-12 input search
-13 input date
-14 hyperlink mit badge
-15 unordered list
-16 li-Element
-17 div
-18 input file
-19 section
-20 table
-21 input radio
-22 canvas
-23 input time
-24 figure
-25 video
-26 input submit
-27 form
-28 dialog
+12 input search / Suche eines Freundes
+13 input date / Eingabe Datum des Planes / [weitere]
+14 hyperlink mit badge / Notifikation
+15 unordered list / Liste von Notifikationen(nicht-detailliert) / [weitere]
+16 li-Element / eine Nachricht / [weitere]
+17 div / beinhaltet den Chatverlauf / [weitere]
+18 input file / öffnet Fenster zum auswählen einer Bilddatei -> Profilbild ändern / [weitere]
+19 section / Chat / [weitere]
+20 table / Anzeige der gesuchten Tasks
+21 input radio / Toggel zwischen Anzeige der Suchergebnisse in Form von: betroffenen Tasks oder betroffenen Tagesplänen
+22 canvas /Graph zeigt die Häufigkeit der Nutzung der App an
+23 input time / Auswahl Anfangs-und Endzeit des Task
+24 figure /Slideshow der angefügten Bilder/Videos
+25 video / angefügte Videos
+26 input submit / diverse Formulare absenden
+27 form / Login Formular / [weitere]
+28 dialog / modaler Dialog (neuen Task erstellen) / [weitere]
 29 textarea (neu)
 30 tr (neu)
 31 td (neu)
@@ -163,25 +167,26 @@ Task
 35 article (neu)
 --------------------------------------------------------------------------------------------------------------------------------------
 == einfache Gruppen ==
+Info: Elemente, die aus den Gruppen entfernt werden müssen (da sie dort nicht hingehören), werden mit [entfernen] markiert.
 
 (I)Login/Register:
-  19
-  1
-  2
-  0
-  4
-  5
+  19 section
+  1 aside	[entfernen]
+  2 input text
+  0 h1,h2
+  4 button
+  5 hyperlink (a-Element)
 
 (II)Navigationsleiste:
-  8
-  11
-  17
-  27
-  2
-  26
-  15
-  16
-  4
+  8 header	[entfernen]
+  11 nav
+  17 div
+  27 form
+  2 input text
+  26 input submit
+  15 unordered list
+  16 li-Element
+  4 button
   5
 
 (III)Freischalten für Freunde/ Markieren von Freunden:
