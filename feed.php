@@ -25,6 +25,7 @@
             <ul>                                                                    <!--Liste mit List-Elementen. Jedes Element enthält eine Notifikation-->
                 <li>                                                                <!--List-Element wird samt Inhalt dynamisch erzeugt anhand von DB Daten.-->
                     <form action="tagesplan.php" method="get">                      <!--Formular beinhaltet die Notifikation. Beim absenden wird tagesplan.php aufgerufen und der Parameter "task_id-plan_id" übergeben-->
+                        <fieldset>
                         <figure>                                                    <!--Bereich für Profilbild des Nutzers, welcher die Notifikation ausgelöst hat-->
                             <img src="" width="80" height="70" />                   <!--Profilbild-->
                         </figure>
@@ -36,6 +37,7 @@
                             <em>Ersteller: peter</em>
                         </label>  
                         <input type="hidden" name="task_id-plan_id" value="6,13" />                             <!--Unsichtbar für Nutzer. Hilfreich bei interner Zuordnung der Notifikation mit einem Task und einem Plan-->
+                        </fieldset>
                     </form>
                 </li>
             </ul>
@@ -43,10 +45,12 @@
         <section id="freunschaftsanfrage-container">                                <!--Conatiner für: Freunschaftsanfrage versenden-->
             <h3>Freunschaftsanfrage senden</h3>                                     <!--Überschrift-->
             <form id="anfrage-senden" action="javascript:anfrage-senden();">        <!--Formular beinhaltet die Anfrage-Daten-->
+                <fieldset>
                 <label for="suche">nach anderen Nutzer suchen  </label><br />       <!--Label-->
                 <input id="suche" type="search" placeholder="Nutzername.." required="required"/><br />  <!--Suche eines Nutzers mit Autocompletefunktion-->
                 <input id="anfragetext" placeholder="Anfragetext..." /><br />                           <!--Anfragetext (optional)-->
                 <input type="submit" value="Anfrage senden" />                                          <!--Submit Button-->
+                </fieldset>
             </form>
 
         </section><br />
@@ -62,8 +66,10 @@
                 <li>Textnachricht 2        </li>
             </ul>
             <form id="form-chat" action="javascript:chat-msg-senden();">            <!--Formular beinhaltet Text-Input zum eingeben einer Chatnachricht-->
+                <fieldset>
                 <input id="chat-msg" type="text" placeholder="Nachricht..."/>       <!--Chatnachricht-->
                 <input type="submit" value="absenden"/>                             <!--Submit Button-->
+                </fieldset>
             </form>
         </section>
     </main>
