@@ -201,8 +201,7 @@ Info: Elemente, die aus den Gruppen entfernt werden müssen, werden mit [entfern
   5  hyperlink (a-Element)
   36 fieldset			[neu]
 
-(III)Freischalten für Freunde/ Markieren von Freunden: 
-(hier kein Formular notwendig, die gesamte Gruppe wird innerhalb anderer Formulare benutzt)
+(III)Freischalten für Freunde/ Markieren von Freunden: (hier kein Formular notwendig, die gesamte Gruppe wird meistens innerhalb anderer Formulare benutzt)
   19 section			[entfernen]
   12 input search
   6  label
@@ -326,52 +325,53 @@ Info: Elemente, die aus den Gruppen entfernt werden müssen, werden mit [entfern
 == komplexe Gruppen ==
 
 (XIII)Neuer-Task-Dialog:
-   2  input text
+   28 dialog			[neu]
    27 form
-   23 input time
-   7  img			[entfernen]
-   12 input search		[entfernen]
-  (III)Freischalten für Freunde/ Markieren von Freunden
-   4  button			[entfernen]
    36 fieldset			[neu]
-   
+   27 legend			[neu]
+   6  label
+   2  input text
+   13 input time
+   (III)Freischalten für Freunde/ Markieren von Freunden
+   26 input submit		[neu]
 
+   
 (XIV)Task:
-   15
-   16
-   33
-   32
-   7
-  (XIII)Neuer-Task-Dialog
-   4
-   25
-   5
-   27
-   2
+   0 h3				[neu]
+   15 unordered list
+   16 li-Element
+   33 time
+   29 textarea			[neu]
+   24 figure			[neu]
+   7  img
+   25 video			[neu]
+   17 div			[neu]
+   34 span			[neu]
+  (III)Freischalten für Freunde/ Markieren von Freunden
+   4  button ("Freischalten", hier kein Formular. stattdessen wird JS AJAX benutzt)
+  (XII)Komentarbereich 
+   4  button ("Task ändern". ruft modalen Dialog auf)
 
 (XV)Tagesplan:
-   35
-   13
-   4
-   27
-   2
-   26
-  (III)Freischalten für Freunde/ Markieren von Freunden
+   0  h1,h4			[neu]
+   33 time			[neu]
+   4  button ("Neuer Task". ruft modalen Dialog auf)
+   15 unordered list		[neu]
+   16 li-Element		[neu]
   (XIV)Task
-   20
-   15
-   16
-   30
-   31
+  (III)Freischalten für Freunde/ Markieren von Freunden   
+   4  button ("Plan Freischalten", hier kein Formular. stattdessen wird JS AJAX benutzt)
   
 (XVI)Neuer-Plan-Dialog:
-   34
-   0
-   27
-   2
-   4
+   28 dialog			[neu]
+   27 form
+   36 fieldset			[neu]
+   27 legend			[neu]
+   6  label
+   2  input text
+   13 input date
    (III)Freischalten für Freunde/ Markieren von Freunden
-   13
+   26 input submit		[neu]
   ----------------------------------------------------------------------------------------------------------------------------------
 == Ansichten ==
 ------------------
@@ -396,7 +396,6 @@ Info: Elemente, die aus den Gruppen entfernt werden müssen, werden mit [entfern
 
 (XIV)Tagesplan
 
-(XII)Komentarbereich
 
 -----------------
 --- view_feed ---
