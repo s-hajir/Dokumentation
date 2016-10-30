@@ -161,12 +161,14 @@ Diese Elemente werden mit [weitere] markiert.
 29 textarea (neu) / lange Taskbeschreibung
 30 tr (neu)  / Zeile von 'Anzeige der gesuchten Tasks' Tabelle
 31 td (neu) / Datenfeld der oben genannten Zeile
-32 p (neu) 
+32 p (neu) ->wieder entfernen, unnötig
 33 time (neu) / Ereigniszeitpunkt einer Notifikation / [weitere]
-34 span (neu) / Navigation im Bild/Video Slider
+34 span (neu) / Kommentar im Tagesplan Kommentarbereich 
 35 article (neu) / Markierung von ganzen Bereichen (z.B. Tagesplan Bereich) [gehört zum Design, da Ansicht]
 36 fieldset (neu) / Gruppieren der die einzelnen input-Container in diversen Formularen(z.B. Login Formular)
 37 legend (neu) / Überschrift für das fieldset Element (z.B. Überschrift für Login Formular)
+38 figcaption (neu) / Profilbild des Freundes mit seinem Namen markieren / [weitere]
+39 em (neu) / Kommentarinfo im Kommentarbereich
 --------------------------------------------------------------------------------------------------------------------------------------
 == einfache Gruppen ==editiert==
 Info: Elemente, die aus den Gruppen entfernt werden müssen, werden mit [entfernen] markiert.
@@ -220,85 +222,119 @@ Info: Elemente, die aus den Gruppen entfernt werden müssen, werden mit [entfern
   36 fieldset			[neu]
   37 legend			[neu]		
   26 input submit		[neu]
+  24 figure			[neu]  
 
 (VI)Profil-Einstellung:
-  19
-  18
-  0
-  7
-  2
-  3
-  26
+  19 section			[entfernen]
+  18 input file
+  0  h1,h2			[entfernen]
+  7  img			
+  2  input text
+  3  input password
+  26 input submit 
+  27 form			[neu]
+  36 fieldset			[neu]
+  37 legend			[neu]		
+  24 figure			[neu]  
 	
 (VII)Feed:
-  19
-  0
-  7
-  6
-  4
-  5
-  33
+  19 section			[entfernen] 
+  0  h2,h3
+  7  img
+  6  label
+  4  button			[entfernen]
+  5  hyperlink			[entfernen]
+  33 time
+  27 form			[neu]
+  36 fieldset			[neu]
+  37 legend			[neu]		
+  26 input submit		[neu]
+  24 figure			[neu]  
+  15 unordered list		[neu]
+  16 li-Element			[neu]
 
 (VIII)Chat:
-  19
-  7
-  30
-  33
-  2
-  4
-	
+  19 section			[entfernen] 
+  7  img
+  33 time
+  2  input text
+  4  button			[entfernen]
+  27 form			[neu]
+  36 fieldset			[neu]
+  37 legend			[neu]
+  26 input submit		[neu]
+  24 figure			[neu]
+  38 figcaption			[neu]
+  15 unordered list		[neu]
+  16 li-Element			[neu]
+
 (IX)Task-Suchergebnis:
-  9
-  19
-  0
-  20
-  6
-  33
-  7
-  4
-  21
-  15
-  16
-  30
-  31
+  9  main			[entfernen] 
+  19 section			[entfernen] 
+  0  h1,h2
+  20 table
+  30 tr
+  31 td
+  27 form			[neu]
+  36 fieldset			[neu]
+  37 legend			[neu]
+  26 input submit		[neu]
+  6  label
+  33 time 
+  7  img 
+  4  button			[entfernen] 
+  21 input radio
+  
  
 (X)Übersicht der Pläne:
-  9
-  19
-  0
-  15
-  16
-  4
-  22
-  33
+  9  main			[entfernen] 
+  19 section			
+  0  h1,h2
+  15 unordered list
+  16 li-Element
+  4  button			[entfernen] 
+  22 canvas
+  33 time
+  20 table			[neu]
+  30 tr				[neu]
+  31 td				[neu]
+  27 form			[neu]
+  36 fieldset			[neu]
+  37 legend			[neu]
+  26 input submit		[neu]
   
 (XI)Werbung:
-  1
-  0
-  7
-  5
+  1  aside			[entfernen] 
+  0  h1,h2
+  7  img
+  5  hyperlink 
   
 (XII)Komentarbereich:
-  19
-  0
-  15
-  16
-  27
-  4
+  19 section
+  0  h3
+  15 unordered list
+  16 li-Element
+  27 form
+  4  button			[entfernen]
+  36 fieldset			[neu]
+  34 span			[neu]
+  39 em				[neu]
+  33 time			[neu]
+  26 input submit		[neu]
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 == komplexe Gruppen ==
 
 (XIII)Neuer-Task-Dialog:
-   34
-   2
-   27
-   23
-   7
-   12
-   34
+   2  input text
+   27 form
+   23 input time
+   7  img			[entfernen]
+   12 input search		[entfernen]
   (III)Freischalten für Freunde/ Markieren von Freunden
-   4
+   4  button			[entfernen]
+   36 fieldset			[neu]
+   
 
 (XIV)Task:
    15
