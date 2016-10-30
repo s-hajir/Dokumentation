@@ -89,7 +89,7 @@ Task
  	  	66 -- >li-Element mit img und hyperlink / jeder Eintrag besteht aus einem anklickbarem Tupel: Icon + Bezeichnung  <-Ergänzung: 90--input type submit
  67--input text / Titel des Tasks				<-wird ersetzt durch  (98--h3 / Tasktitel)   
  68--input text / Anfangs-und Endzeit des Tasks			<-wird ersetzt durch  (99--time / Taskzeit)
- 69--input text / Beschreibung des Tasks			<-wird ersetzt durch  (100--small / Taskbeschreibung)
+ 69--input text / Beschreibung des Tasks			<-wird ersetzt durch  (100--small / kurze Taskbeschreibung)
  70--input text / Art des Tasks: z.B. Sport,Arbeit,Freizeit	<-wird ersetzt durch  (101--small / Taskart)
  71--input search / Markierungen der Freunde			<-wird ersetzt durch  (102--em / Markierung-Freunde)
  72--button ->klappt Optionen aus:				<-gehört nicht zu den strukturellen Elementen
@@ -120,12 +120,12 @@ Task
  97--input password / Passwort Wiederholung
  98--h3 / Tasktitel
  99--time / Taskzeit
- 100--small / Taskbeschreibung
+ 100--small / kurze Taskbeschreibung
  101--small / Taskart
  102--em / Markierung-Freunde
  103--time / Ereigniszeitpunkt
 -------------------------------------------------------------------------------------------------------------------------------------
-== strukturelle Elemente (ohne Duplikate, ungeordnet)==19.10.2016 editiert==
+== strukturelle Elemente (ohne Duplikate, ungeordnet)==editiert==
 Info: einige Elemente werden für mehrere Beschreibungen verwendet, siehe oben. Bei diesen Elementen wird nur die erste Beschreibung angegeben, da sonst teilweise sehr viel Text geschrieben werden müsste. 
 Diese Elemente werden mit [weitere] markiert. 
 
@@ -141,7 +141,7 @@ Diese Elemente werden mit [weitere] markiert.
 9 main
 10 footer
 11 nav
-12 input search / Suche eines Freundes
+12 input search / Suche eines Freundes / [weitere]
 13 input date / Eingabe Datum des Planes / [weitere]
 14 hyperlink mit badge / Notifikation
 15 unordered list / Liste von Notifikationen(nicht-detailliert) / [weitere]
@@ -155,55 +155,71 @@ Diese Elemente werden mit [weitere] markiert.
 23 input time / Auswahl Anfangs-und Endzeit des Task
 24 figure /Slideshow der angefügten Bilder/Videos
 25 video / angefügte Videos
-26 input submit / diverse Formulare absenden
+26 input submit / Verwendung in diversen Formularen, zum Absenden
 27 form / Login Formular / [weitere]
 28 dialog / modaler Dialog (neuen Task erstellen) / [weitere]
-29 textarea (neu)
-30 tr (neu)
-31 td (neu)
-32 p (neu)
-33 time (neu)
-34 span (neu)
-35 article (neu)
+29 textarea (neu) / lange Taskbeschreibung
+30 tr (neu)  / Zeile von 'Anzeige der gesuchten Tasks' Tabelle
+31 td (neu) / Datenfeld der oben genannten Zeile
+32 p (neu) 
+33 time (neu) / Ereigniszeitpunkt einer Notifikation / [weitere]
+34 span (neu) / Navigation im Bild/Video Slider
+35 article (neu) / Markierung von ganzen Bereichen (z.B. Tagesplan Bereich) [gehört zum Design, da Ansicht]
+36 fieldset (neu) / Gruppieren der die einzelnen input-Container in diversen Formularen(z.B. Login Formular)
+37 legend (neu) / Überschrift für das fieldset Element (z.B. Überschrift für Login Formular)
 --------------------------------------------------------------------------------------------------------------------------------------
-== einfache Gruppen ==
-Info: Elemente, die aus den Gruppen entfernt werden müssen (da sie dort nicht hingehören), werden mit [entfernen] markiert.
+== einfache Gruppen ==editiert==
+Info: Elemente, die aus den Gruppen entfernt werden müssen, werden mit [entfernen] markiert.
+      Elemente, die neu eingefügt werden, werden mit [neu] markiert.
 
 (I)Login/Register:
-  19 section
-  1 aside	[entfernen]
-  2 input text
-  0 h1,h2
-  4 button
-  5 hyperlink (a-Element)
-
+  19 section			[entfernen]
+  1  aside			[entfernen]
+  2  input text
+  0  h1,h2
+  4  button			[entfernen]
+  5  hyperlink (a-Element)	[entfernen]
+  27 form			[neu]
+  36 fieldset			[neu]
+  37 legend			[neu]
+  26 input submit		[neu]
+  3  input password		[neu]
+  6  label			[neu]
+  
 (II)Navigationsleiste:
-  8 header	[entfernen]
-  11 nav
-  17 div
+  8  header			[entfernen]
+  11 nav			[entfernen]
+  17 div			[entfernen]			
   27 form
-  2 input text
+  2  input text
   26 input submit
   15 unordered list
   16 li-Element
-  4 button
-  5
+  4  button
+  5  hyperlink (a-Element)
+  36 fieldset			[neu]
 
-(III)Freischalten für Freunde/ Markieren von Freunden:
-  19
-  12
-  6
-  0
-  7
-  4
+(III)Freischalten für Freunde/ Markieren von Freunden: 
+(hier kein Formular notwendig, die gesamte Gruppe wird innerhalb anderer Formulare benutzt)
+  19 section			[entfernen]
+  12 input search
+  6  label
+  0  h1				[entfernen]
+  7  img			
+  4  button			[entfernen]
+  24 figure			[neu]
 
 (V)Freundschaftsanfrage senden:
-  19
-  12
-  0
-  6
-  7
-  4
+  19 section			[entfernen]
+  12 input search
+  0  h1,h2			[entfernen]
+  6  label
+  7  img
+  4  button			[entfernen]
+  27 form			[neu]
+  36 fieldset			[neu]
+  37 legend			[neu]		
+  26 input submit		[neu]
 
 (VI)Profil-Einstellung:
   19
