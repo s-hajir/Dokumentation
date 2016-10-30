@@ -8,8 +8,10 @@
         </li>
         <li>                                                                
             <form action="task_suchergebnis.php" action="get">                      <!--Such-Formular-Bereich-->
+                <fieldset>
                 <input id="navbar-suche" type="search" placeholder="Suche..." />    <!--Suche nach Tasks-->
-                <button type="submit">Suchen</button>                               <!--Formular abschicken-->
+                <input type="submit" value="Suchen">                                <!--Formular abschicken-->
+                </fieldset>
             </form>
         </li>
         <li>
