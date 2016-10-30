@@ -26,20 +26,25 @@
                 <img id="profil-img" src="<?php echo $_SESSION['imgUrl'];?>" width="150" height="140" /> <!--Profilbild-->
             </figure>
             <form id="uploadProfilbild">                                                    <!--Formular zum Ändern des profilbildes-->
+                <fieldset>
                 <label for="fileToUpload">Wähle ein neues Profilbild:</label>               <!--Label-->
                 <input type="file" name="fileToUpload" />                                   <!--Hier kann eine Datei zum Upload ausgewählt werden-->
                 <br />
                 <input type="submit" value="Bild Upload" name="submit" />                   <!--Submit Button-->
+                </fieldset>
             </form><br />
             <h2>Name /Passwort ändern</h2>                                                  <!--Überschrift zum Ändern das Passwortes/Namen-->           
             <form>                                                                          <!--Formular zum Ändern des Namen. Inhalt des Formulares ist selbsterklärend-->
+                <fieldset>
                 <label for="vorname">Vorname</label><br />
                 <input id="vorname" name="vorname" type="text" /><br /><br />
                 <label for="nachname">Nachname</label><br />
                 <input id="nachname" name="nachname" type="text" /><br />
                 <input type="submit" value="Ändern" />
+                </fieldset>
             </form><br /><br />
             <form>                                                                          <!--Formular zum Ändern des Passwortes. Inhalt des Formulares ist selbsterklärend-->
+                <fieldset>
                 <label for="passwort">altes Passwort</label>
                 <br />
                 <input id="altes-passwort" name="altes-passwort" type="password" />
@@ -54,6 +59,7 @@
                 <input id="neues-passwort-wdh" name="neues-passwort-wdh" type="password" />
                 <br />
                 <input type="submit" value="Ändern" />
+                </fieldset>
             </form>
         </section>
         <?php include "werbung.php";  ?>                                        
