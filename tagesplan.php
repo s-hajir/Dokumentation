@@ -25,9 +25,10 @@
         <dialog id="neuer_task_dialog">                                                                <!--modaler Dialog für 'neuer Task'. Wird angezeigt bei Klick auf "+Neuer Task" im Tagesplan-Bereich-->
             <h2>Neuen Task erstellen</h2>                                                              <!--Überschrift-->
             <form id="form_neuer_task_dialog" action="form_eval_neuer_task_dialog.php" method="get">   <!--Formular zum Erstellen eines neuen Task -->
+                <fieldset>
                 <label for="titel">Titel</label>                                                       <!--Label-->
                 <br />
-                <input type="text" id="taskTitel" name="titel" required="required"/>                       <!--Input Titel-->
+                <input type="text" id="taskTitel" name="titel" required="required"/>                   <!--Input Titel-->
                 <br />
                 <label for="anfangszeit">Anfangszeit</label>                                           <!--Label-->
                 <br />
@@ -45,6 +46,7 @@
                 <br />
                 <input type="submit" id="ErstelleTask" value="Erstelle"/>                                  <!--Button schickt Formular ab und schließt modalen Dialog -->
                 <input type="button" id="ZurueckTask" value="Zurueck"/>                                    <!--Button schließt modalen Dialog-->
+                </fieldset>
             </form>
         </dialog>
         
@@ -102,9 +104,11 @@
                                     </li>
                                 </ul><br /><br />
                                <form action="javascript:kommentar-msg-senden();">                           <!--Formular zum Posten eines Kommentars-->
+                                   <fieldset>   
                                    <input type="text" placeholder="Kommentar..." />                         <!--Kommentar Input-->
                                    <input type="submit" value="posten" />                                   <!--Submit Button-->
-                               </form><br />
+                                   </fieldset>
+                                </form><br />
                                <button id="task-aendern">Task Ändern</button>                               <!--Button. Ein modaler Dialog wird initiiert(wird später implementiert). Folgende Funktionen bietet der Dialog:  Anfangs-Endzeit oder Beschreibung ändern, Bilder/Videos hochladen/löschen, vergebene Berechtigungen an einzelne Freunde zurücknehmen, kompletten Task löschen-->
                             </section>
                         </footer>
