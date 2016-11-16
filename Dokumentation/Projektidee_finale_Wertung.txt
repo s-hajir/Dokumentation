@@ -1,0 +1,228 @@
+================================================
+===neue Projektidee Shahir Hajir, 2016-07-10 ===
+================================================
+Tagesplaner mit sozialem Netzwerk Feature & adaptivem Verhalten
+
+Account
+
+--Nutzer legt Account an
+--Profil kann ergänzt werden mit Profilbild & persönlichen Infos
+-----------------------------------------------------------------------------------------------------------------------------
+Plan erstellen
+
+--über die Tagesplanerfunktion kann Nutzer für einen bestimmten Tag (oder eine Menge an Tagen) einen Plan machen
+
+---Der Plan setzt sich aus einzelnen Tasks zusammen, die einzeln angelegt werden müssen. Bei einer Task-Erzeugung müssen Titel, 
+    Anfangs, Endzeit, Art(z.B. Sport,Arbeit,Freizeit), Beschreibung(optional) und Markierung(optional) angegeben werden
+         ->bei der Markierung werden andere Nutzer/Freunde angegeben, die an diesem Task beteiligt sein sollen(diese werden darüber 
+           informiert und können zusagen/absagen). Markierte Nutzer mit Zusage und Absage werden unterschiedlich gekennzeichnet 
+---Nutzer kann an jedem Task Foto/Video/Audio anhängen. Entweder kann er bereits vorhandene Dateien anhängen oder direkt neue 
+   Bilder/Videos mit der Kamera aufnehmen
+-------------------------------------------------------------------------------------------------------------------------------
+Notifikation & Plan ändern
+
+---ist der Plan erzeugt, wird der Nutzer über Notifikationen informiert, bevor ein (neuer) Task beginnt
+
+--Nutzer kann aktuelle & alte Tagespläne, sowie einzelne Tasks oder Foto/Video/Audio Dateien einsehen, kommentieren und löschen. 
+  Im aktuellen Plan kann er neue Tasks hinzufügen
+-------------------------------------------------------------------------------------------------------------------------------
+Freunde & Chat
+--Nutzer kann über eine Suche nach anderen Nutzern suchen & ihnen Freundschaftsanfragen senden. Anfragen können akzeptiert/abgelehnt werden
+
+--Nutzer kann mit Freunden über einen Chat kommunizieren
+-------------------------------------------------------------------------------------------------------------------------------
+Plan teilen
+--Nutzer kann einzelne Tasks, einzelne Pläne oder eine Menge von Plänen für einzelne andere Nutzer/Freunde (oder Menge von Nutzern) freischalten 
+   ->andere Nutzer(mit den entsprechenden Rechten) können diese einsehen. Sie können den Plan, die Tasks und die Foto/Video/Audio 
+     Dateien (im Task) je nach freigegebenen Rechten auch kommentieren oder ändern/löschen
+
+--Nutzer kann die vorher (an die anderen Nutzer) vergebenen Rechte einzeln wieder wegnehmen
+-------------------------------------------------------------------------------------------------------------------------------
+Feed
+--es gibt ein Activity Feed, hier werde ich(als Nutzer) informiert: 
+			-falls ich in einem Task markiert wurde
+			 
+ 			-falls ein anderer Nutzer seinen Plan oder einzelne Tasks für mich freigeschaltet hat
+			 
+			-falls ein anderer Nutzer einen Task von mir kommentiert oder gelöscht hat
+			
+			-falls ein anderer Nutzer Foto/Video/Audio Dateien von mir kommentiert oder gelöscht hat
+			
+			-falls ein anderer Nutzer neue Tasks oder Dateien in meinen Plan hinzugefügt hat
+			
+			-falls ein anderer Nutzer mir eine Freundschaftsanfrage gesendet hat 
+			 
+			-falls meine Freundschaftsanfrage akzeptiert wurde
+------------------------------------------------------------------------------------------------------------------------------
+Pläne Übersicht
+
+--über einen Kalender kann man auf die vergangenen Pläne zugreifen
+--über eine Suche kann man nach einzelnen Tasks suchen
+------------------------------------------------------------------------------------------------------------------------------
+Interaktivität/Adaptivität: Das Programm lernt mein Verhalten & meine Vorlieben anhand meiner eingegebenen Daten
+
+-Markierung bei der Taskerstellung:  oft markierte Freunde werden vorgeschlagen
+				     ->bei bestimmten Task-Arten werden Freunde, die früher oft in solchen Tasks markiert wurden als
+				       Markierung vorgeschlagen 
+				     ->auto-complete beim Tippen
+
+-Taskvorschläge an bestimmten Tagen: Programm merkt sich welche Art von Tasks ich an welchem Wochentagen oft mache 
+				     ->darauf basierend macht es Vorschläge welche Tasks ich in meinen Plan integrieren soll
+				    
+-Planvorschläge für bestimmte Tage: Programm merkt sich die Konstellation der Pläne, die ich an bestimmten Tagen oft mache
+				    ->darauf basierend macht es mir komplette Planvorschläge(mit fertigen Tasks), die zu diesem Wochentag
+				      passen könnten -> Vorteil für mich: ich kann den vorgegebenen Plan leicht ändern & muss selbst
+				      nicht viel machen
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+========================================
+=== Projektidee s-haijir, 2016-04-05 ===
+========================================
+
+Die Projektidee: Ein 2D Game
+
+-Geschicklichkeitsspiel
+
+-Der Nutzer erstellt ein Account (seine Daten werden in einer Datenbank gespeichert)/ Der Nutzer loggt sich ein(falls Account schon vorhanden).
+-Der Nutzer soll eine Spielfigur bewegen. Ziel ist es Geldscheine zu sammeln und dabei Hindernissen
+auszuweichen. Hindernisse nehmen mit der Zeit zu.
+-jede Berührung mit einem Hindernis kostet Lebenspunkte
+-Die Bewegungen der Spielfigur: links, rechts, unten, oben.
+-Der Spieler hat 30 Lebenspunkte.
+-In einem Intervall(alle 30 Sekunden) tauchen Objekte(Herze) auf, die man sammeln kann um seine Lebenspunkte zu erhöhen.
+-am Ende wird der Highscore angezeigt(sowie eine Übersicht der Highscores aller Nutzer)
+
+
+=== Feedback Alpers, 2016-04-07 ===
+
+Auch wenn die Interaktionsmöglichkeiten hier recht beschränkt sind, ist das eine gute Projektidee.
+
+Sie können jetzt an dieser Projektidee weiterarbeiten, in dem Fall überlegen Sie sich bitte noch weitere Interaktionsmöglichkeiten. (Und vor allem: Denken Sie bitte daran, dass es eine Anwendung sein soll, die Sie schon immer haben wollten, keine Anwendung, die Sie schon kennen und nachprogrammieren wollen.) Alternativ dazu können Sie auch das folgende Brettspiel als Vorlage nehmen, um darauf basierend eine neue Projektbeschreibung zu erstellen: Aquaretto http://www.brettspiele-report.de/aquaretto/
+
+===============================================================
+=== Zweiter Aufgabenblock (identisch für alle Studierenden) ===
+===============================================================
+(gelöscht, da im Lernraum für alle einsehbar)
+
+===================================
+=== Feedback Alpers, 2016-04-29 ===
+===================================
+
+Leider haben Sie keine neuen Interaktionsmöglichkeiten beschrieben. Mit Interaktionsmöglichkeiten ist gemeint, dass Spieler wesentlich mehr Möglichkeiten haben, um mit dem Spiel zu interagieren. Die Anzeige einer Highscoreliste oder die Festlegung, dass eine Kollision Lebenspunkte kostet sind beides leider keine Interaktionsmöglichkeiten. Mir ist klar, dass es bei Ihrer Spielidee schwierig ist, mehr Interaktionen zu integrieren, aber genau deshalb hatte ich Ihnen ja auch einen Alternativvorschlag gemacht.
+
+Bevor Sie den nächsten Aufgabenteil bearbeiten können müssen Sie sich jetzt entscheiden:
+
+Entweder Sie entwickeln für dieses Spiel mehr Interaktionsmöglichkeiten oder Sie beschreiben ein Spiel, das auf dem Alternativvorschlag basiert und mehrere Interaktionsmöglichkeiten bietet.
+
+Bitte erweitern Sie die Beschreibung so, dass das Spiel von mehreren Spielern gleichzeitig gespielt werden kann. Es soll ja eine webbasierte Anwendung werden.
+
+Wertung 2: Projektbeschreibung: gesamt: 7 / 10
+- Interaktionsmöglichkeiten: 2 (Bewegung in vier Richtungen)
+- Knappe aber klare Beschreibung: 5
+- Werbeslogans u.ä.: 0
+- Designaspekte: 0
+- Voraussetzung bekannten Wissens: 0
+
+===================================
+=== Feedback Alpers, 2016-06-08 ===
+===================================
+
+Leider haben Sie seit dem letzten Feedback keine Änderugen am Projekt durchgeführt.
+
+===================================
+=== Shahir Hajir, 2016-06-18 ===
+===================================
+
+Nach langem intensivem Überlegen bin ich zu dem Entschluss gekommen das Projekt komplett zu ändern.
+Fortan möchte ich eine Tagesplanerapplikation mit Tagebuchfunktion und sozialem Netzwerk-Aspekt entwickeln.
+
+===================================
+=== Shahir Hajir, 2016-06-20 ===
+===================================
+Persönliches Gespräch mit Herrn Alpers gehabt
+---------------------------------------------
+Gesprächsergebnis: -Ich füge die neue Projektidee an den Anfang der Datei 'Projektidee.txt'
+                   -Ich verschiebe alle Dateien des alten Projektes in das neuangelegte Verzeichnis 'altes-Projekt'
+                   -Ich fange mit der Bearbeitung des neuen Projektes an
+                   
+                   
+
+===================================
+=== Feedback Alpers, 2016-07-14 ===
+===================================
+
+Gut, das ist eine Basis für für ein Projekt. Dann machen Sie jetzt mit der strukt.html weiter.
+
+Wertung 2: Projektbeschreibung: gesamt: 8 / 10
+- Interaktionsmöglichkeiten: 3
+- Knappe aber klare Beschreibung: 5
+- Werbeslogans u.ä.: 0
+- Designaspekte: 0
+- Voraussetzung bekannten Wissens: 0
+
+======================================
+=== Wertung 1: Formale Vorgaben: - ===
+======================================
+- Missachtung der Konventionen für Dateinamen, Verzeichnisstruktur usw. (je -1 Pk.)
+
+=================================================
+=== Wertung 2: Projektentwurf: gesamt: 9 / 10 ===
+=================================================
+- Knappe und klare Stichpunkte 0 bis 2 Pk.: 1
+- Umfang der eigentlichen Anwendung 0 bis 3 Pk.: 3
+- Aspekte verteilter Anwendungen 0 bis 3 Pk.: 3
+- Aspekte adaptiver Anwendungen 0 bis 2 Pk.: 2
+=== (Malus beim Projektentwurf) ===
+- Werbeslogans u.ä. bis zu 3 Pk. Abzug: 0
+- Design- oder Layoutvorgaben bis zu 5 Pk. Abzug: 0
+- Voraussetzung bekannten Wissens bis zu 5 Pk. Abzug: 0
+
+================================================================
+=== Wertung 3: Ausarbeitung der strukt. Elem. gesamt: 9,5 / 10 ===
+================================================================
+- Knappe Form 0 bis 3 Pk.: 2,5 (Liste am Anfang irritierend, nachfolgende gut.)
+- Für je 5 unterschiedl. strukt. Elem (keine Gruppierungen) 1 Pk., 0 bis 7 Pk.: 7
+=== (Malus bei strukt. Elem.) ===
+- Vermischung strukt. Elem., Gruppierung, Abläufe usw. bis zu 5 Pk. Abzug: 0
+
+=======================================
+=== Wertung 4: Microservices: 3 / 5 ===
+=======================================
+- für jeden für die Kernanwendung sinnvollen Microservice 1 Pk.: 5
+=== (Malus bei strukt. Elem.) ===
+- Wenn Micrservices vergessen wurden, die für verteilte adaptive Anwendungen eine Voraussetzung sind, je 1 Pk. Abzug: 
+- Abzüge, da die Aufstellung so komprimiert erstellt wurde, dass es schwer ist, sie umzusetzen: -2
+
+=========================================
+=== Wertung 5: Ansichten/Views: 4 / 5 ===
+=========================================
+- für jede sinnvolle Ansicht 1 Pk.: 4
+(Dies ist keine abschließende Wertung.)
+
+Aufgabe 6 und 7 setzen voraus, dass in Aufgabe 1 - 5 insgesamt min. 20 Punkte erreicht wurden.
+Tipp: Dennoch ist es sinnvoll, dass Sie Microservices direkt in HTML mit PHP- und MySQL-Anbindung umsetzen. Denn so können Sie erkennen, wo Ihre Planung Schwächen hat.
+
+=================================
+=== Wertung 6: HTML 5: -1 / 10 ===
+=================================
+- Umsetzung pro Microservice je 1 Pk. (max. 10): 7
+- Missachtung von Änderungen von HTML 4.01 zu 5 (-5 bis 0 Pk.): -2
+- Abweichung von den Vorgaben in der strukt.txt (je -1/2 Pk.):
+- Integration von nicht zugelassenen Frameworks (je -1 Pk.): -2
+- Programmierung von Gruppen als Ansichten (je -1 Pk.): -4
+
+====================================
+=== Wertung 7: PHP/MySQL: 0 / 30 ===
+====================================
+- Funktionalität von Formularen 0 bis 5 Pk.:
+- Funktionalität für Microservices 0 bis 5 Pk.:
+- Realisierung einer Programmlogik 0 bis 10 Pk.:
+- Erzeugung einer DB 0 bis 5 Pk.:
+- Anbindung einer Transaktion, um Variablen in der Anwendung zu verwenden 0 bis 5 Pk.: I
+
+Damit haben Sie 24,5 von 35 nötigen Punkten erreicht. 
+
+Die fehlenden 10,5 Punkte können Sie wie beschrieben über die Umsetzung eines Projektes erreichen, das Sie in den nächsten Tagen erhalten werden. Sollten dann immer noch Punkte fehlen, können Sie an Ihrem Projekt weiterarbeiten. Sprechen Sie mich in dem Fall zeitnah an.
