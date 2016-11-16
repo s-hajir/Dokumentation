@@ -27,6 +27,7 @@
             </figure>
             <form id="uploadProfilbild">                                                    <!--Formular zum Ändern des profilbildes-->
                 <fieldset>
+                <legend>Profilbildupload</legend>
                 <label for="fileToUpload">Wähle ein neues Profilbild:</label>               <!--Label-->
                 <input type="file" name="fileToUpload" />                                   <!--Hier kann eine Datei zum Upload ausgewählt werden-->
                 <br />
@@ -36,6 +37,7 @@
             <h2>Name /Passwort ändern</h2>                                                  <!--Überschrift zum Ändern das Passwortes/Namen-->           
             <form>                                                                          <!--Formular zum Ändern des Namen. Inhalt des Formulares ist selbsterklärend-->
                 <fieldset>
+                <legend>Name ändern</legend>
                 <label for="vorname">Vorname</label><br />
                 <input id="vorname" name="vorname" type="text" /><br /><br />
                 <label for="nachname">Nachname</label><br />
@@ -45,6 +47,7 @@
             </form><br /><br />
             <form>                                                                          <!--Formular zum Ändern des Passwortes. Inhalt des Formulares ist selbsterklärend-->
                 <fieldset>
+                <legend>Passwort ändern</legend>
                 <label for="passwort">altes Passwort</label>
                 <br />
                 <input id="altes-passwort" name="altes-passwort" type="password" />

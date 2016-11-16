@@ -162,3 +162,14 @@ Wertung 2: Projektbeschreibung: gesamt: 8 / 10
 - Werbeslogans u.ä.: 0
 - Designaspekte: 0
 - Voraussetzung bekannten Wissens: 0
+
+
+===================================
+=== Shahir Hajir, 2016-11-15 ===
+===================================
+Hinweise an Herrn Alpers: 
+Lieber Herr Alpers denken Sie bitte daran, dass dies ein 'Projekt 1 vom Sommersemester 2016' ist und nach den
+'alten Regeln' abgearbeitet wurde("Gruppen" statt "Microservices").
+-------------------------------------------------------------------------------------------------------------
+
+
